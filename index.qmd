@@ -95,30 +95,30 @@ df[df$DATE == '2023-09-03', 2:3]
 # Question 1
 What is your differential for his diffuse ground glass opacities and hypoxemia?
 
-# Learning
+- ARDS
+- Infection
+- Pulmonary edema
+- Aspiration pneumonitis
+- Other
 
-## Ground Glass Opacities
+# Differential, Ground Glass Opacities
 
-### Acute
-Categories
+## Acute, Categories
 - infection
 - blood
 - protein
-- cells
-- inflammation
+- transudate
+- cells / inflammation
 
-- pulmonary edema
-- pulmonary infection
-  - bacterial, viral, PJP, mycoplasma
-- AIP (acute interstitial pneumonia)
-- ARDS (acute respiratory distress syndrome)
-- DAH (diffuse alveolar hemorrhage)
-- AEP (acute eosinphilic pneumonia)
+## Acute, Expanded
+- infection: bacterial, viral, PJP, mycoplasma
+- blood: DAH (vasculitis, trauma, medications, infections)
+- protein: PAP
+- transduate: pulmonary edema
+- cells / inflammation: AIP, ARDS, AEP
 
 
-### Subacute to Chronic
-- UIP
-- NSIP
+## Subacute to Chronic
 - PAP
 - OP
 - vasculitis (GPA, MPN)
@@ -126,7 +126,14 @@ Categories
 - lymphangitic tumor spread
 - sarcoidosis
 - lipid pneumonia
-- alveolar microlithasis
+
+# Question 2
+What are your next diagnostic steps?
+
+## Cytology
+![](data/raw/bal.png)
+
+![](data/raw/path_highlight_yes.png)
 
 
 ## Diagnosing DAH
