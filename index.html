@@ -29,7 +29,26 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -406,9 +425,6 @@ Eric Robbins, MD
 </ul></li>
 </ul>
 </section>
-<section id="vitals" class="slide level2">
-<h2>Vitals</h2>
-</section>
 <section id="exam" class="slide level2">
 <h2>Exam</h2>
 <ul>
@@ -417,23 +433,37 @@ Eric Robbins, MD
 <li>CARDS: RRR. No MRG</li>
 <li>PULM: Intubated. Inspiratory crackles, L &gt;&gt; R</li>
 <li>GI: Soft, non-distended</li>
-<li>EXT: No peripheral edema</li>
+<li>EXT: No peripheral edema. no joint deformities or skin tightness</li>
 <li>DERM: No rashes or lesions</li>
 </ul>
 </section>
 <section id="labs" class="slide level2">
 <h2>Labs</h2>
-<!--```{r}
-library(here)
-library(knitr)
-knitr::opts_chunk$set(echo = FALSE)
-
-df <- read.csv(here::here("data/raw/labs.csv"))
-
-df[df$DATE == '2023-09-03', 2:3]
-```
--->
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>          LAB  VALUE
+1        &lt;NA&gt; 136.00
+2           K   5.40
+3          CL 103.00
+4      BICARB  17.00
+5         BUN  28.00
+6  CREATININE   2.95
+7     LACTATE   7.90
+9      TOTPRO   7.90
+10    ALBUMIN   4.40
+11        AST 119.00
+12        ALT  44.00
+13    TOTBILI   0.50
+14    ALKPHOS  66.00
+15         PH   6.91
+16       PCO2 100.00</code></pre>
+</div>
+</div>
 </section>
+<section id="labs-1" class="slide level2">
+<h2>Labs</h2>
+
+<img data-src="data/raw/tox_highlight_no.png" class="r-stretch"></section>
 <section id="imaging" class="slide level2">
 <h2>Imaging</h2>
 <p><img data-src="data/raw/cta_sep2023_01.png"> <img data-src="data/raw/cta_sep2023_02.png"></p>
@@ -449,26 +479,27 @@ df[df$DATE == '2023-09-03', 2:3]
 <section id="interval-story" class="slide level2">
 <h2>Interval Story</h2>
 <ul>
-<li>Admitted to MICU
-<ul>
-<li>Vent, HOD#1:</li>
-</ul></li>
+<li>Admitted to MICU</li>
+<li>HOD#1: VC 400 cc / RR 20 / PEEP 8 / FIO2 50%</li>
 <li>HOD#2, significant dyssynchrony &amp; escalating FIO2 requirements
 <ul>
-<li>Paralyzed, with reduction in FIO2 requirements (100%–&gt;40%)</li>
+<li>FIO2 50% –&gt; 100%, PEEP 8 –&gt; 12</li>
+<li>Paralyzed; FIO2 requirements 100% –&gt; 60%</li>
 </ul></li>
 </ul>
 </section></section>
 <section id="question-1" class="title-slide slide level1 center">
 <h1>Question 1</h1>
 <p>What is your differential for his diffuse ground glass opacities and hypoxemia?</p>
+<div>
 <ul>
-<li>ARDS</li>
-<li>Infection</li>
-<li>Pulmonary edema</li>
-<li>Aspiration pneumonitis</li>
-<li>Other</li>
+<li class="fragment">ARDS</li>
+<li class="fragment">Pulmonary edema</li>
+<li class="fragment">Aspiration pneumonitis</li>
+<li class="fragment">Infection</li>
+<li class="fragment">Other</li>
 </ul>
+</div>
 </section>
 
 <section>
@@ -479,72 +510,98 @@ df[df$DATE == '2023-09-03', 2:3]
 <section id="acute-categories" class="slide level2">
 <h2>Acute, Categories</h2>
 <ul>
+<li>Alveolar Filling Process
+<ul>
 <li>infection</li>
 <li>blood</li>
 <li>protein</li>
 <li>transudate</li>
 <li>cells / inflammation</li>
+</ul></li>
 </ul>
 </section>
 <section id="acute-expanded" class="slide level2">
 <h2>Acute, Expanded</h2>
-<ul>
-<li>infection: bacterial, viral, PJP, mycoplasma</li>
-<li>blood: DAH (vasculitis, trauma, medications, infections)</li>
-<li>protein: PAP</li>
-<li>transduate: pulmonary edema</li>
-<li>cells / inflammation: AIP, ARDS, AEP</li>
-</ul>
+<p>Source: <span class="citation" data-cites="cozzi_ground-glass_2021">(<a href="#/references" role="doc-biblioref" onclick="">1</a>)</span> <img data-src="data/raw/ddx_01.png"></p>
 </section>
-<section id="subacute-to-chronic" class="slide level2">
-<h2>Subacute to Chronic</h2>
-<ul>
-<li>PAP</li>
-<li>OP</li>
-<li>vasculitis (GPA, MPN)</li>
-<li>CEP</li>
-<li>lymphangitic tumor spread</li>
-<li>sarcoidosis</li>
-<li>lipid pneumonia</li>
-</ul>
+<section id="acute-expanded-1" class="slide level2">
+<h2>Acute, Expanded</h2>
+<p>Source: <span class="citation" data-cites="parekh_review_2020">(<a href="#/references" role="doc-biblioref" onclick="">2</a>)</span> <img data-src="data/raw/ddx_02_upper.png"></p>
+</section>
+<section id="acute-expanded-2" class="slide level2">
+<h2>Acute, Expanded</h2>
+<p>Source: <span class="citation" data-cites="parekh_review_2020">(<a href="#/references" role="doc-biblioref" onclick="">2</a>)</span> <img data-src="data/raw/ddx_02_lower.png"> <!--
+- infection: bacterial, viral, PJP, mycoplasma
+- blood: DAH (vasculitis, trauma, medications, infections)
+- protein: PAP
+- transduate: pulmonary edema
+- cells / inflammation: AIP, ARDS, AEP
+
+
+## Subacute to Chronic
+- PAP
+- OP
+- vasculitis (GPA, MPN)
+- CEP
+- lymphangitic tumor spread
+- sarcoidosis
+- lipid pneumonia
+--></p>
 </section></section>
 <section>
 <section id="question-2" class="title-slide slide level1 center">
 <h1>Question 2</h1>
 <p>What are your next diagnostic steps?</p>
 </section>
+<section id="bal" class="slide level2">
+<h2>BAL</h2>
+
+<img data-src="data/raw/bal.png" class="r-stretch"></section>
 <section id="cytology" class="slide level2">
 <h2>Cytology</h2>
-<p><img data-src="data/raw/bal.png"></p>
-<p><img data-src="data/raw/path_highlight_yes.png"></p>
+
+<img data-src="data/raw/path_highlight_no.png" class="r-stretch"></section>
+<section id="story-update" class="slide level2">
+<h2>Story Update</h2>
+<div>
+<ul>
+<li class="fragment">After bronchoscopy, weaned off cisatracurium</li>
+<li class="fragment">Remained more synchronus with vent and better P:F</li>
+<li class="fragment">Remainder of workup negative
+<ul>
+<li class="fragment">HIV, PJP, viral panel, bronch cultures</li>
+</ul></li>
+<li class="fragment">Other systemic markers improved
+<ul>
+<li class="fragment">sCr 2.95 –&gt; 1.40 –&gt; 1.13</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="diagnosing-dah" class="slide level2">
-<h2>Diagnosing DAH</h2>
-</section>
-<section id="treating-dah" class="slide level2">
-<h2>Treating DAH</h2>
-</section>
-<section id="differential-diagnosis-for-acute-onset-pulmonary-ground-glass-opacities." class="slide level2">
-<h2>Differential diagnosis for acute-onset pulmonary ground glass opacities.</h2>
-</section>
-<section id="diagnostic-workup-for-presumed-diffuse-alveolar-hemorrhage." class="slide level2">
-<h2>Diagnostic workup for presumed diffuse alveolar hemorrhage.</h2>
-</section>
-<section id="life-threatening-side-effects-of-inhaled-cocaine-use." class="slide level2">
-<h2>Life-threatening side effects of inhaled cocaine use.</h2>
-</section>
-<section id="treatment-for-cocaine-induced-diffuse-alveolar-hemorrhage." class="slide level2">
-<h2>Treatment for cocaine-induced diffuse alveolar hemorrhage.</h2>
+<section id="story-update-1" class="slide level2">
+<h2>Story Update</h2>
+
+<img data-src="data/raw/blood_gas.png" class="r-stretch"></section>
+<section id="presumed-diagnosis" class="slide level2">
+<h2>Presumed Diagnosis</h2>
+<div>
+<ul>
+<li class="fragment">DAH secondary to inhaled cocaine
+<ul>
+<li class="fragment">Considered DAH secondary to aspiration pneumonitis</li>
+</ul></li>
+<li class="fragment">Apical predominance</li>
+<li class="fragment">Rapid improvement without specific interventions
+<ul>
+<li class="fragment"><em>i.e.</em>, no steroids</li>
+</ul></li>
+</ul>
+</div>
 </section></section>
 <section>
-<section id="background" class="title-slide slide level1 center">
-<h1>Background</h1>
-<!--DEC 2022 
+<section id="prior-event" class="title-slide slide level1 center">
+<h1>Prior Event</h1>
 
-ams w cf seizure. midaz then aed loaded (keppra). hypertensive. cxr w L opacity, asx and on room air, but got CT chest wo. 
-findings Tree-in-bud opacities in the right lower lobe likely reflect bronchiolitis and in conjunction with the lower lobe groundglass opacities on the left, findings may be related to aspiration/pneumonia.
-no utox at time, but multiple prior cocaine + fentanyl pos uds, so presumed aspiration iso intoxication. dc from ed w augmentin. 
--->
 </section>
 <section id="imaging-current-vs-9-months-prior" class="slide level2">
 <h2>Imaging, Current vs 9 months Prior</h2>
@@ -570,18 +627,115 @@ no utox at time, but multiple prior cocaine + fentanyl pos uds, so presumed aspi
 <h2>Imaging, Current vs 9 months Prior</h2>
 <p><img data-src="data/raw/cta_sep2023_06.png"> <img data-src="data/raw/cta_dec2022_07.png"></p>
 </section></section>
+<section>
+<section id="cocaine-toxicities" class="title-slide slide level1 center">
+<h1>Cocaine Toxicities</h1>
+
+</section>
+<section id="cocaine-adulterants" class="slide level2">
+<h2>Cocaine Adulterants</h2>
+<ul>
+<li>Levamisole
+<ul>
+<li>anti-helminthic</li>
+<li>effects: cutaneous vasculitis <span class="citation" data-cites="pieterse_cracking_2016">(<a href="#/references" role="doc-biblioref" onclick="">3</a>)</span>, agranulocytosis</li>
+</ul></li>
+<li>Fentanyl</li>
+<li>Talc, silica <span class="citation" data-cites="tashkin_airway_2001">(<a href="#/references" role="doc-biblioref" onclick="">4</a>)</span></li>
+</ul>
+</section>
+<section id="cocaine-toxicities-cardiac" class="slide level2">
+<h2>Cocaine Toxicities: Cardiac</h2>
+<p>Source: <span class="citation" data-cites="lange_cardiovascular_2001">(<a href="#/references" role="doc-biblioref" onclick="">5</a>)</span></p>
+<ul>
+<li>Hypertensive emergency</li>
+<li>Myocardial ischemia or infarction</li>
+<li>Myocarditis, cardiomyopathy</li>
+<li>Arrhythmias</li>
+<li>Stroke</li>
+<li>Aortic dissection</li>
+<li>Pulmonary Hypertension <span class="citation" data-cites="alzghoul_cocaine_2020">(<a href="#/references" role="doc-biblioref" onclick="">6</a>)</span></li>
+</ul>
+</section>
+<section id="cocaine-toxicities-respiratory" class="slide level2">
+<h2>Cocaine Toxicities: Respiratory</h2>
+<ul>
+<li>“Crack Lung”
+<ul>
+<li>DAD, hemorrhagic alveolitis</li>
+</ul></li>
+<li>DAH <span class="citation" data-cites="dushay_cocaine-induced_2016 de_almeida_high-resolution_2014">(<a href="#/references" role="doc-biblioref" onclick="">7</a>, <a href="#/references" role="doc-biblioref" onclick="">8</a>)</span></li>
+<li>cardiogenic pulmonary edema <span class="citation" data-cites="de_almeida_high-resolution_2014">(<a href="#/references" role="doc-biblioref" onclick="">8</a>)</span></li>
+<li>AEP</li>
+</ul>
+</section>
+<section id="cocaine-toxicities-neurologic" class="slide level2">
+<h2>Cocaine Toxicities: Neurologic</h2>
+<ul>
+<li>1990, Case Series of 233 patients <span class="citation" data-cites="brody_cocaine-related_1990">(<a href="#/references" role="doc-biblioref" onclick="">9</a>)</span></li>
+<li>39.1% had some kind of neurologic symptom
+<ul>
+<li>acute encephalopathy (27.4%)</li>
+<li>seizures</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="treatment-for-cocaine-induced-dah" class="title-slide slide level1 center">
+<h1>Treatment for Cocaine-Induced DAH</h1>
+
+</section>
+<section id="supportive-care" class="slide level2">
+<h2>Supportive Care</h2>
+<ul>
+<li>cocaine avoidance</li>
+<li>Bad lung down</li>
+<li>Low tidal volume ventilation</li>
+</ul>
+</section></section>
 <section id="learning-objectives" class="title-slide slide level1 center">
 <h1>Learning Objectives</h1>
-<div>
 <ul>
-<li class="fragment">List differential for acute-onset pulmonary ground glass opacities</li>
-<li class="fragment">Describe workup for presumed diffuse alveolar hemorrhage</li>
-<li class="fragment">Describe four life-threatening side effects of inhaled cocaine</li>
-<li class="fragment">Describe treatment for cocaine-induced diffuse alveolar hemorrhage</li>
+<li>List differential for acute-onset pulmonary ground glass opacities</li>
+<li>Describe workup for presumed diffuse alveolar hemorrhage</li>
+<li>Describe four life-threatening side effects of inhaled cocaine</li>
+<li>Describe treatment for cocaine-induced diffuse alveolar hemorrhage</li>
 </ul>
-</div>
+</section>
+
+<section id="references" class="title-slide slide level1 smaller scrollable">
+<h1>References</h1>
 <div class="footer footer-default">
 
+</div>
+<div id="refs" class="references csl-bib-body" data-line-spacing="2" role="list">
+<div id="ref-cozzi_ground-glass_2021" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Cozzi D, Cavigli E, Moroni C, Smorchkova O, Zantonelli G, Pradella S, Miele V. <a href="https://doi.org/10.1007/s11604-021-01120-w">Ground-glass opacity (<span>GGO</span>): A review of the differential diagnosis in the era of <span>COVID</span>-19</a>. <em>Jpn J Radiol</em> 2021;39:721–732.</div>
+</div>
+<div id="ref-parekh_review_2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Parekh M, Donuru A, Balasubramanya R, Kapur S. <a href="https://doi.org/10.1148/radiol.2020202504">Review of the chest <span>CT</span> differential diagnosis of ground-glass opacities in the <span>COVID</span> era</a>. <em>Radiology</em> 2020;297:E289–E302.</div>
+</div>
+<div id="ref-pieterse_cracking_2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Pieterse E, Van Der Vlag J. Cracking the pathogenesis of cocaine-induced vasculitis: A hard <span>NET</span> to crack. <em>Rheumatology</em> 2016;kew381.doi:<a href="https://doi.org/10.1093/rheumatology/kew381">10.1093/rheumatology/kew381</a>.</div>
+</div>
+<div id="ref-tashkin_airway_2001" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Tashkin DP. <a href="https://doi.org/10.1097/00063198-200103000-00001">Airway effects of marijuana, cocaine, and other inhaled illicit agents:</a> <em>Current Opinion in Pulmonary Medicine</em> 2001;7:43–61.</div>
+</div>
+<div id="ref-lange_cardiovascular_2001" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Lange RA, Hillis LD. <a href="https://doi.org/10.1056/NEJM200108023450507">Cardiovascular complications of cocaine use</a>. <em>N Engl J Med</em> 2001;345:351–358.</div>
+</div>
+<div id="ref-alzghoul_cocaine_2020" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Alzghoul BN, Abualsuod A, Alqam B, Innabi A, Palagiri DR, Gheith Z, Amer FN, Meena NK, Kenchaiah S. <a href="https://doi.org/10.1016/j.amjcard.2019.10.008">Cocaine use and pulmonary hypertension</a>. <em>The American Journal of Cardiology</em> 2020;125:282–288.</div>
+</div>
+<div id="ref-dushay_cocaine-induced_2016" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Dushay KM, Evans SK, Ghimire S, Liu J. <a href="https://www.ncbi.nlm.nih.gov/pubmed/27472774">Cocaine-induced diffuse alveolar hemorrhage: A case report and review of the literature</a>. <em>R I Med J (2013)</em> 2016;99:34–36.</div>
+</div>
+<div id="ref-de_almeida_high-resolution_2014" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">De Almeida RR, De Souza LS, Mançano AD, Souza AS, Irion KL, Nobre LF, Zanetti G, Hochhegger B, Pereira E Silva JL, Marchiori E. <a href="https://doi.org/10.1007/s00408-013-9553-6">High-resolution computed tomographic findings of cocaine-induced pulmonary disease: A state of the art review</a>. <em>Lung</em> 2014;192:225–233.</div>
+</div>
+<div id="ref-brody_cocaine-related_1990" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Brody SL, Slovis CM, Wrenn KD. <a href="https://doi.org/10.1016/0002-9343(90)90484-U">Cocaine-related medical problems: Consecutive series of 233 patients</a>. <em>The American Journal of Medicine</em> 1990;88:325–331.</div>
+</div>
 </div>
 </section>
     </div>
@@ -795,6 +949,44 @@ no utox at time, but multiple prior cocaine + fentanyl pos uds, so presumed aspi
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
