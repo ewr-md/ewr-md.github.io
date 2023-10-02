@@ -128,23 +128,6 @@ Source: [@parekh_review_2020]
 ## Acute, Expanded
 Source: [@parekh_review_2020]
 ![](data/raw/ddx_02_lower.png)
-<!--
-- infection: bacterial, viral, PJP, mycoplasma
-- blood: DAH (vasculitis, trauma, medications, infections)
-- protein: PAP
-- transduate: pulmonary edema
-- cells / inflammation: AIP, ARDS, AEP
-
-
-## Subacute to Chronic
-- PAP
-- OP
-- vasculitis (GPA, MPN)
-- CEP
-- lymphangitic tumor spread
-- sarcoidosis
-- lipid pneumonia
--->
 
 # Question 2
 What are your next diagnostic steps?
@@ -212,6 +195,16 @@ What are your next diagnostic steps?
 - Fentanyl
 - Talc, silica [@tashkin_airway_2001]
 
+## Cutaneous Vasculitis
+Source: [@gill_cocaine_2021]
+
+![](data/raw/vasculitis_ear.png){width=60%}
+
+## Cutaneous Vasculitis
+Source: [@gill_cocaine_2021]
+
+![](data/raw/vasculitis_arm.png){height=70%}
+
 ## Cocaine Toxicities: Cardiac
 Source: [@lange_cardiovascular_2001]
 
@@ -227,7 +220,7 @@ Source: [@lange_cardiovascular_2001]
 - "Crack Lung"
   - DAD, hemorrhagic alveolitis
 - DAH [@dushay_cocaine-induced_2016;@de_almeida_high-resolution_2014]
-- ANCA-associated vasculitis [@bucur_pulmonary-renal_2023]
+- ANCA-associated vasculitis [@bucur_pulmonary-renal_2023;@gill_cocaine_2021]
 - cardiogenic pulmonary edema [@de_almeida_high-resolution_2014]
 - AEP
 
