@@ -227,6 +227,7 @@ Source: [@lange_cardiovascular_2001]
 - "Crack Lung"
   - DAD, hemorrhagic alveolitis
 - DAH [@dushay_cocaine-induced_2016;@de_almeida_high-resolution_2014]
+- ANCA-associated vasculitis [@bucur_pulmonary-renal_2023]
 - cardiogenic pulmonary edema [@de_almeida_high-resolution_2014]
 - AEP
 
