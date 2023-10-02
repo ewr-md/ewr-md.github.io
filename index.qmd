@@ -203,7 +203,7 @@ Source: [@gill_cocaine_2021]
 ## Cutaneous Vasculitis
 Source: [@gill_cocaine_2021]
 
-![](data/raw/vasculitis_arm.png){height=70%}
+![](data/raw/vasculitis_arm.png){width=40%}
 
 ## Cocaine Toxicities: Cardiac
 Source: [@lange_cardiovascular_2001]
