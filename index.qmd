@@ -5,6 +5,9 @@ toc: True
 
 ---
 
+Note: This guide is directed at first-year PCCM fellows.
+It contains details not applicable to CCM-only fellows or senior PCCM fellows (such as schedule concerns, clinic tips, etc.).
+
 # Weekly Schedule
 
 |Day of Week | AM |  PM |
@@ -14,6 +17,14 @@ toc: True
 |WED|[DTC Consults](#dtcConsults)|[DTC Consults](#dtcConsults)|
 |THU| [DTC OR Cases](#dtcOR) (and [DTC Consults](#dtcConsults))|[DTC OR Cases](#dtcOR) (and [DTC Consults](#dtcConsults))|
 |FRI|[VA OR Cases](#vamcOR)|[VA OR Cases](#vamcOR) +/- [DTC Consults](#dtcConsults)|
+
+:::{.callout-note}
+Fellows do not work weekends.
+
+If the IP fellow is not on service, one of the PCCM or CCM fellows is expected to take overnight "call" by staying signed in to their Tiger role. Fellows typically rotation call between themselves.
+
+Hours are generally 07:00 to 17:00, but depending on the day may occasionally go until 19:00 or 20:00.
+:::
 
 # References
 ## Important People {#importantPeople}
