@@ -48,35 +48,51 @@ Thursdays are the primary OR day; that is, there are always cases on Thursday.
 However, [there may be OR cases on other days](#notesDTC).
 These days are typically the busiest of the rotation, as you're helping in the OR, seeing old consults, seeing any new consults, and doing any non-OR procedures.
 
-Best to set up all the cases beforehand (can pend the note and orders)
-
-If you get consults its best to step out of the procedure and see them to keep the day moving
-
-- If a HPI by Pulm hasn’t been done in the last month then need to do a full HPI (Telehealth doesn’t count). This needs to be done within done an hour before the procedure 
-- Consent patient before the procedure 
+:::{.callout-tip}
+- To save time, pend all post-op items (Brief Op Notes, PRN PACU orders) BEFORE the case.
+- If you get consults intra-op, use your judgement to decide if stepping out of the procedure and seeing the consult would optimize workflows. Alternatively, you may be of more use staying in the OR.
+:::
 
 #### Before an OR Case
-For any case in the OR you need a consent and a HPI at least 1 hour before the procedure. If the patient is inpatient you DO NOT need the HPI portion.
+:::{.callout-important}
+At least 1 hour prior to any OR case, an interval H&P and a consent MUST be done.
+:::
 
-For the Cases 
+- If this is an outpatient, check the last time a patient was seen by IP in clinic
+  - If >30 days, you must write an `Interval H&P` that _includes_ a full ROS and an exam.
+  - If <=30 days, you must write an `Interval H&P` but you do NOT need to include an exam or ROS.
+- Consent the patient
+  - Patients will be in the 2nd Floor, Same Day Surgery area
+  - Consents are on paper; typically, they'll be in the patient's physical chart at bedside.
 
-- In `Discharge` tab, need to put Follow up with provider tab and bronchoscopy discharge instructions in the ADT. Need to reconcile medications for discharge as well.
-  - The med rec should be done after they go to PACU; if you do it earlier then the meds they order in pacu will mess up the rec
+#### After an OR Case {#dcProcess}
+- Take a picture of the operative [samples sent](#sampleOutline)
+  - Any microbiology (e.g., BAL, tissue cultures) collected intra-op needs a paper order form filled out. These are usually in the OR at the computer station.
+    - These orders do NOT require a corresponding Epic order
+- While still in the OR, write your `Brief Op Note`
+  - Ensure it includes the [sample outline](#sampleOutline)
+- While still in the OR, place the cytology order
+  - Copy the [sample outline](#sampleOutline) from your `Brief Op Note` and paste it directly into the order comments
+- Place Post-op PRN orders
+  - Hatoon has a good set of these you can borrow (e.g., Tylenol, Zofran, advance diet, discharge patient, CXR)
+  - if indicated, place a CXR order
+- Either while still in the OR or after you get to PACU, complete the discharge process
+  - Click the `Discharge` or `Post-Op` tab
+  - Find `Follow up with provider` area and enter the attending
+  - Find `Discharge Instructions` and enter "flexible bronchoscopy"
+  - Find the area for `Diet and Activity` enter appropriate orders
+    - this seems redundant after entering the post-op PRNs above, but it is necessary for the PACU
+  - Find `DC Orders and Med Rec`. Complete the med rec. If you ordered a CXR, ensure you state the DC is conditional "pending CXR"
 - Walk with patient to the PACU
   - after the RNs' "hard stop", you are expected to give the RNs sign out.
     - includes procedure done, laterality, any complications, if a CXR is needed, and eventual discharge plan.
     - If a CXR is needed, give the RNs the IP Tiger so they can contact you after it's completed so you can discharge the patient
-- Order the IP post Bronch order set (Tylenol, Zofran, advance diet, discharge patient, CXR)
-- `Brief Op Note` needs to be done right after the procedure (I usually write it during the procedure)
-  - Brief op note should have the specimens noted in it (from the written sheet the RTs give you) Example: A. RUL TBNA (4 passes) B. Station 7 (5 passes) - make sure to use the exact letter that corresponds so pathology gets it right. 
-  - Copy and paste the specimen section from your brief op note and place an epic order for cytology - in the comments paste the specimen section you just did from the Op note
-  - If you need to send microbiology from BAL or tissue cultures there is a separate paper sheet that the OR RN can give you to fill out (no epic orders are placed for BAL in the OR)- Micro sheet 
-- Provation note 
+- Write the Provation note 
 
 #### To Set Up an OR Case
-- Place a Add on to OR order with the details of the case
-- Email the bronch suite to inform them of the procedure and what procedure so they can have supplies (pulmproc calendar email)
-- For any add on case this does not mean the procedure will happen; can call the OR charge nurse to ask if the procedure will happen
+- Place a `Add on to OR` order with the details of the case
+- Email the bronch suite to inform them of the procedure and what procedure so they can have supplies ([pulmproccalender@umm.edu](mailto:pulmproccalender@umm.edu))
+- For any add on case, there is no guarantee it will happen; you can call the OR charge nurse to ask if the procedure will happen
 
 ### Things to Note {#notesDTC}
 ::: {.callout-caution}
@@ -87,15 +103,40 @@ There may be OR cases on days other than Thursday. Be sure to check the OR sched
 All IP procedures performed at DTC (OR cases, bronch suite cases, or bedside procedures including thoras or chest tubes) need a Provation note.
 :::
 
+### Sample Outline {#sampleOutline}
+Whenever biopsy samples are collected, the RTs / RNs keep track on them in the order they were gathered, what site they occured at, and how many total passes were performed.
+
+_Example_
+```
+A - LUL nodule (2 passes)
+B - station 7 (5 passes)
+C - station 11Rs (3 passes)
+```
+
 ## MTC {#mtc}
+On Tuesdays, first-year PCCM fellows typically go to the IP cases at MTC.
+This is heavily encouraged, but attendance is not _per se_ mandatory.
+
 ### OR Cases {#mtcOR}
 #### Before on OR Case
 - Arrive at 07:00 to 07:15
-- Find and consent the patient.
+- Find and consent the patient
   - Consents are paper based without anything electronic. You'll find them at bedside.
+  
+#### During the OR Case
+After the procedure is done, ensure you take a picture of the [sample outline](#sampleOutline) for your notes.
+
+:::{.callout-note}
+Unlike DTC OR cases, you do NOT need to enter cytology orders for MTC cases.
+:::
 
 #### After on OR Case
-- Discharge process
+- [Discharge process](#dcProcess) is identical to [DTC](#dcProcess), with the following exceptions:
+  - You do not enter PRN post-op orders; anesthesia handles that
+- Write a `Brief Op Note`
+  - ensure this includes the [sample outline](#sampleOutline)
+- Write a Provation note
+  - As you exit Endo suite 2, turn RIGHT. On your RIGHT is a small room wiht three computers. These have Provation installed on it.
 
 ## VAMC
 ### Lung Mass Clinic {#lmc}
@@ -128,11 +169,12 @@ Check your email.
   - On this, write the patients name, last four of SSN, attending's name, and procedure without any abbreviations. (NOTE: Do NOT forget to do this; if you forget, they won't bring the patient back to the OR.)
 
 #### After an OR Case
+- Take a picture of the (sample outline)[#sampleOutline].
 - Write a brief op note
   - Select new note, then `BOILERPLATE <OPERATION REPORT-POST OP - BOILERPLATE>`
-  - Write out the samples sent.
+  - Include the sample outline you saved above.
   - After signing the note, right click and "Assign additional cosigners" to include the attending.
-- After the procedure finishes, walk with patient to PACU and give sign out to the nurse
+- After the patient is extubated, walk with patient to PACU and give sign out to the nurse.
 
 :::{.callout-tip}
 I give the PACU nurses my cell phone in case they have issues so that you don’t have to sit in there.
@@ -162,3 +204,10 @@ Without a [Green bracelet]{#greenBracelet} on your patient, RNs / anesthesia won
 :::
 
 ### Directions to GI Lab {#directionsGIlab}
+- Take elevators to Floor 3
+- Go through double doors "3C & 3D"
+- Immediately turn RIGHT
+- After walking down hall, on your LEFT will be double doors stating "Gastroenterology & Pulmonary Center"
+  - Go through these double doors
+  - Walk directly forward through door with "Authorized Personnel Only" on it
+  - Immediately turn RIGHT. There is a physician dictation room there with computers and a fridge. These computers have Provation installed.
