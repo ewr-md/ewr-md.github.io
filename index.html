@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Guide to IP Rotation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="guide_to_ip_files/libs/clipboard/clipboard.min.js"></script>
+<script src="guide_to_ip_files/libs/quarto-html/quarto.js"></script>
+<script src="guide_to_ip_files/libs/quarto-html/popper.min.js"></script>
+<script src="guide_to_ip_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="guide_to_ip_files/libs/quarto-html/anchor.min.js"></script>
+<link href="guide_to_ip_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="guide_to_ip_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="guide_to_ip_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="guide_to_ip_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="guide_to_ip_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#weekly-schedule" id="toc-weekly-schedule" class="nav-link active" data-scroll-target="#weekly-schedule">Weekly Schedule</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a>
+  <ul class="collapse">
+  <li><a href="#importantPeople" id="toc-importantPeople" class="nav-link" data-scroll-target="#importantPeople">Important People</a></li>
+  </ul></li>
+  <li><a href="#site-specific-guides" id="toc-site-specific-guides" class="nav-link" data-scroll-target="#site-specific-guides">Site-Specific Guides</a>
+  <ul class="collapse">
+  <li><a href="#dtc" id="toc-dtc" class="nav-link" data-scroll-target="#dtc">DTC</a>
+  <ul class="collapse">
+  <li><a href="#dtcConsults" id="toc-dtcConsults" class="nav-link" data-scroll-target="#dtcConsults">Consults</a></li>
+  <li><a href="#dtcOR" id="toc-dtcOR" class="nav-link" data-scroll-target="#dtcOR">OR Cases</a></li>
+  <li><a href="#notesDTC" id="toc-notesDTC" class="nav-link" data-scroll-target="#notesDTC">Things to Note</a></li>
+  </ul></li>
+  <li><a href="#mtc" id="toc-mtc" class="nav-link" data-scroll-target="#mtc">MTC</a>
+  <ul class="collapse">
+  <li><a href="#mtcOR" id="toc-mtcOR" class="nav-link" data-scroll-target="#mtcOR">OR Cases</a></li>
+  </ul></li>
+  <li><a href="#vamc" id="toc-vamc" class="nav-link" data-scroll-target="#vamc">VAMC</a>
+  <ul class="collapse">
+  <li><a href="#lmc" id="toc-lmc" class="nav-link" data-scroll-target="#lmc">Lung Mass Clinic</a></li>
+  <li><a href="#vamcOR" id="toc-vamcOR" class="nav-link" data-scroll-target="#vamcOR">OR Cases</a></li>
+  <li><a href="#notesVAMC" id="toc-notesVAMC" class="nav-link" data-scroll-target="#notesVAMC">Things to Note</a></li>
+  <li><a href="#directionsGIlab" id="toc-directionsGIlab" class="nav-link" data-scroll-target="#directionsGIlab">Directions to GI Lab</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Guide to IP Rotation</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="weekly-schedule" class="level1">
+<h1>Weekly Schedule</h1>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Day of Week</th>
+<th>AM</th>
+<th>PM</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MON</td>
+<td><a href="#dtcConsults">DTC Consults</a></td>
+<td><a href="#lmc">Lung Mass Clinic</a></td>
+</tr>
+<tr class="even">
+<td>TUE</td>
+<td><a href="#mtcOR">MTC OR Cases</a></td>
+<td><a href="#mtcOR">MTC OR Cases</a></td>
+</tr>
+<tr class="odd">
+<td>WED</td>
+<td><a href="#dtcConsults">DTC Consults</a></td>
+<td><a href="#dtcConsults">DTC Consults</a></td>
+</tr>
+<tr class="even">
+<td>THU</td>
+<td><a href="#dtcOR">DTC OR Cases</a> (and <a href="#dtcConsults">DTC Consults</a>)</td>
+<td><a href="#dtcOR">DTC OR Cases</a> (and <a href="#dtcConsults">DTC Consults</a>)</td>
+</tr>
+<tr class="odd">
+<td>FRI</td>
+<td><a href="#vamcOR">VA OR Cases</a></td>
+<td><a href="#vamcOR">VA OR Cases</a> +/- <a href="#dtcConsults">DTC Consults</a></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<section id="importantPeople" class="level2">
+<h2 class="anchored" data-anchor-id="importantPeople">Important People</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Person</th>
+<th>Site</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="mailto:sarah.procaccini@va.gov">Sarah PROCACCINI</a></td>
+<td>VAMC</td>
+<td>RN Navigator for Lung Mass</td>
+</tr>
+<tr class="even">
+<td><a href="mailto:MaInezAmparo.Ambata@va.gov">Ma Inez Amparo AMBATA</a></td>
+<td>VAMC</td>
+<td>RN Navigator for Lung Mass</td>
+</tr>
+<tr class="odd">
+<td><a href="mailto:Idal.Tchoundjo@va.gov">Idal TCHOUNDJO</a></td>
+<td>VAMC</td>
+<td>NP for Lung Mass Clinic</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="site-specific-guides" class="level1">
+<h1>Site-Specific Guides</h1>
+<section id="dtc" class="level2">
+<h2 class="anchored" data-anchor-id="dtc">DTC</h2>
+<section id="dtcConsults" class="level3">
+<h3 class="anchored" data-anchor-id="dtcConsults">Consults</h3>
+<p>As the first-year fellow, your ability to closely follow with consults will be somewhat limited. This is because you’ll be pulled to the VA on Monday afternoon for <a href="#lmc">lung mass clinic</a>, the <a href="#mtc">MTC OR</a> for Tuesday mornings, or the VA most to all of Friday for <a href="#vamcOR">OR cases</a>.</p>
+<p>That said, you’ll still be able to see consults and perform or assist with bedside procedures (thoras, chest tubes, etc.).</p>
+</section>
+<section id="dtcOR" class="level3">
+<h3 class="anchored" data-anchor-id="dtcOR">OR Cases</h3>
+<p>Thursdays are the primary OR day; that is, there are always cases on Thursday. However, <a href="#notesDTC">there may be OR cases on other days</a>. These days are typically the busiest of the rotation, as you’re helping in the OR, seeing old consults, seeing any new consults, and doing any non-OR procedures.</p>
+<p>Best to set up all the cases beforehand (can pend the note and orders)</p>
+<p>If you get consults its best to step out of the procedure and see them to keep the day moving</p>
+<ul>
+<li>If a HPI by Pulm hasn’t been done in the last month then need to do a full HPI (Telehealth doesn’t count). This needs to be done within done an hour before the procedure</li>
+<li>Consent patient before the procedure</li>
+</ul>
+<section id="before-an-or-case" class="level4">
+<h4 class="anchored" data-anchor-id="before-an-or-case">Before an OR Case</h4>
+<p>For any case in the OR you need a consent and a HPI at least 1 hour before the procedure. If the patient is inpatient you DO NOT need the HPI portion.</p>
+<p>For the Cases</p>
+<ul>
+<li>In <code>Discharge</code> tab, need to put Follow up with provider tab and bronchoscopy discharge instructions in the ADT. Need to reconcile medications for discharge as well.
+<ul>
+<li>The med rec should be done after they go to PACU; if you do it earlier then the meds they order in pacu will mess up the rec</li>
+</ul></li>
+<li>Walk with patient to the PACU
+<ul>
+<li>after the RNs’ “hard stop”, you are expected to give the RNs sign out.
+<ul>
+<li>includes procedure done, laterality, any complications, if a CXR is needed, and eventual discharge plan.</li>
+<li>If a CXR is needed, give the RNs the IP Tiger so they can contact you after it’s completed so you can discharge the patient</li>
+</ul></li>
+</ul></li>
+<li>Order the IP post Bronch order set (Tylenol, Zofran, advance diet, discharge patient, CXR)</li>
+<li><code>Brief Op Note</code> needs to be done right after the procedure (I usually write it during the procedure)
+<ul>
+<li>Brief op note should have the specimens noted in it (from the written sheet the RTs give you) Example: A. RUL TBNA (4 passes) B. Station 7 (5 passes) - make sure to use the exact letter that corresponds so pathology gets it right.</li>
+<li>Copy and paste the specimen section from your brief op note and place an epic order for cytology - in the comments paste the specimen section you just did from the Op note</li>
+<li>If you need to send microbiology from BAL or tissue cultures there is a separate paper sheet that the OR RN can give you to fill out (no epic orders are placed for BAL in the OR)- Micro sheet</li>
+</ul></li>
+<li>Provation note</li>
+</ul>
+</section>
+<section id="to-set-up-an-or-case" class="level4">
+<h4 class="anchored" data-anchor-id="to-set-up-an-or-case">To Set Up an OR Case</h4>
+<ul>
+<li>Place a Add on to OR order with the details of the case</li>
+<li>Email the bronch suite to inform them of the procedure and what procedure so they can have supplies (pulmproc calendar email)</li>
+<li>For any add on case this does not mean the procedure will happen; can call the OR charge nurse to ask if the procedure will happen</li>
+</ul>
+</section>
+</section>
+<section id="notesDTC" class="level3">
+<h3 class="anchored" data-anchor-id="notesDTC">Things to Note</h3>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>There may be OR cases on days other than Thursday. Be sure to check the OR schedule regularly to ensure you avoid missing a case!</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>All IP procedures performed at DTC (OR cases, bronch suite cases, or bedside procedures including thoras or chest tubes) need a Provation note.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="mtc" class="level2">
+<h2 class="anchored" data-anchor-id="mtc">MTC</h2>
+<section id="mtcOR" class="level3">
+<h3 class="anchored" data-anchor-id="mtcOR">OR Cases</h3>
+<section id="before-on-or-case" class="level4">
+<h4 class="anchored" data-anchor-id="before-on-or-case">Before on OR Case</h4>
+<ul>
+<li>Arrive at 07:00 to 07:15</li>
+<li>Find and consent the patient.
+<ul>
+<li>Consents are paper based without anything electronic. You’ll find them at bedside.</li>
+</ul></li>
+</ul>
+</section>
+<section id="after-on-or-case" class="level4">
+<h4 class="anchored" data-anchor-id="after-on-or-case">After on OR Case</h4>
+<ul>
+<li>Discharge process</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="vamc" class="level2">
+<h2 class="anchored" data-anchor-id="vamc">VAMC</h2>
+<section id="lmc" class="level3">
+<h3 class="anchored" data-anchor-id="lmc">Lung Mass Clinic</h3>
+<p>Lung mass clinic in the afternoon. You should be sent a list of patients by Deepak or Sarah with the patients information on it and why they are seeing lung mass (make sure to only prechart the MD patients, there is an NP who sees there own patients</p>
+<ul>
+<li>Make sure to pre write the note with the template they send you</li>
+<li>Make sure to look at the imaging (come up - with questions for Deepak she likes that)</li>
+<li>Need to have notes done within 48hrs</li>
+<li>To find the list in CPRS it is Pulm MD1 or Pulm MD2 (it is not under lung mass)</li>
+<li>Make sure if there is a lung mass consult in to use the consult note</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Its a good idea to ask the RN Navigator in clinic (<a href="#importantPeople">Sarah or Inez</a>) if you need any disc or set up for Friday Ion robotic cases. They have been having issues with the Ion and uploading images.</p>
+</div>
+</div>
+</section>
+<section id="vamcOR" class="level3">
+<h3 class="anchored" data-anchor-id="vamcOR">OR Cases</h3>
+<p>You should be emailed a schedule for the month on the cases by <a href="#importantPeople">Sarah or Inez</a>. There are usually just two – 08:00 and 12:00 – but occasionally there are three cases. Check your email.</p>
+<section id="before-an-or-case-1" class="level4">
+<h4 class="anchored" data-anchor-id="before-an-or-case-1">Before an OR Case</h4>
+<ul>
+<li>Arrive around 07:00 to 07:15 at the Same Day Surgery area.
+<ul>
+<li><em>Directions:</em> Go to VAMC Floor 5. Take signs toward SICU. Right before the SICU doors, turn RIGHT through the double doors. On your RIGHT will be the PACU doors. Once in PACU, go LEFT through the double doors and find <em>Same Day Surgery</em>. Patients will be here before their procedure.</li>
+</ul></li>
+<li>Consent the patient
+<ul>
+<li>Open CPRS</li>
+<li>Within CRPS, go to <code>Tools -&gt; iMed consent</code></li>
+<li>The consent is under “general not listed” and then you can type out the procedure. Make sure to WRITE OUT THE WHOLE PROCEDURE. E.g., “Navigational bronchoscopy with biopsy and Endobronchial ultrasound with biopsy”. For laterality, write “bilateral lungs”.</li>
+</ul></li>
+<li>Ask the RN for a green bracelet.
+<ul>
+<li>On this, write the patients name, last four of SSN, attending’s name, and procedure without any abbreviations. (NOTE: Do NOT forget to do this; if you forget, they won’t bring the patient back to the OR.)</li>
+</ul></li>
+</ul>
+</section>
+<section id="after-an-or-case" class="level4">
+<h4 class="anchored" data-anchor-id="after-an-or-case">After an OR Case</h4>
+<ul>
+<li>Write a brief op note
+<ul>
+<li>Select new note, then <code>BOILERPLATE &lt;OPERATION REPORT-POST OP - BOILERPLATE&gt;</code></li>
+<li>Write out the samples sent.</li>
+<li>After signing the note, right click and “Assign additional cosigners” to include the attending.</li>
+</ul></li>
+<li>After the procedure finishes, walk with patient to PACU and give sign out to the nurse</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>I give the PACU nurses my cell phone in case they have issues so that you don’t have to sit in there.</p>
+</div>
+</div>
+<ul>
+<li>Enter post-op orders
+<ul>
+<li><em>REQUIRED:</em> Ok to eat order (nursing communication)</li>
+<li><em>OPTIONAL:</em> if needed, CXR</li>
+<li><em>REQUIRED:</em> DC order
+<ul>
+<li>Go to <code>Orders</code> -&gt; <code>Add New Orders - BT</code> -&gt; <code>2 PATIENT MOVEMENT</code> -&gt; <code>Discharge</code></li>
+</ul></li>
+</ul></li>
+<li>Write a discharge instructions note
+<ul>
+<li>Create new note, then select the template <code>PATIENT DISCHARGE INSTRUCTIONS</code> note</li>
+<li>Fill out / click all required elements.</li>
+</ul></li>
+<li>Write a Provation note in the <a href="#directionsGIlab">GI lab</a> (your login should have been sent to you in an email)
+<ul>
+<li><a href="#directionsGIlab">See here for directions to GI Lab</a></li>
+</ul></li>
+</ul>
+<p>Normally before the procedure I pend the operative note, discharge instructions so its easy to do once the procedure is over.</p>
+</section>
+</section>
+<section id="notesVAMC" class="level3">
+<h3 class="anchored" data-anchor-id="notesVAMC">Things to Note</h3>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If someone gets a pneumo, there is a Wayne pneumothorax kit in the OR that is used</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Without a <span id="greenBracelet">Green bracelet</span> on your patient, RNs / anesthesia won’t bring the patient to the OR.</p>
+</div>
+</div>
+</section>
+<section id="directionsGIlab" class="level3">
+<h3 class="anchored" data-anchor-id="directionsGIlab">Directions to GI Lab</h3>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
