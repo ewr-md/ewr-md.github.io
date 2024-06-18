@@ -1,213 +1,132 @@
 ---
-title: "Guide to IP Rotation"
-format: html
-toc: True
+title: "Pulmonary Mucormycosis: The Evidence"
+author: "Eric W. Robbins"
+bibliography: export-data.bib
+csl: ajrccm.csl
 
+format: 
+  revealjs:
+    theme: dark
+    transition: slide
+    background-transition: fade
+    auto-animate-easing: ease-in-out
 ---
-
-Note: This guide is directed at first-year PCCM fellows.
-It contains details not applicable to CCM-only fellows or senior PCCM fellows (such as schedule concerns, clinic tips, etc.).
-
-# Weekly Schedule
-
-|Day of Week | AM |  PM |
-|---|---|---|
-|MON|[DTC Consults](#dtcConsults)| [Lung Mass Clinic](#lmc)|
-|TUE|[MTC OR Cases](#mtcOR)|[MTC OR Cases](#mtcOR)|
-|WED|[DTC Consults](#dtcConsults)|[DTC Consults](#dtcConsults)|
-|THU| [DTC OR Cases](#dtcOR) (and [DTC Consults](#dtcConsults))|[DTC OR Cases](#dtcOR) (and [DTC Consults](#dtcConsults))|
-|FRI|[VA OR Cases](#vamcOR)|[VA OR Cases](#vamcOR) +/- [DTC Consults](#dtcConsults)|
-
-:::{.callout-note}
-Fellows do not work weekends.
-
-If the IP fellow is not on service, one of the PCCM or CCM fellows is expected to take overnight "call" by staying signed in to their Tiger role. Fellows typically rotation call between themselves.
-
-Hours are generally 07:00 to 17:00, but depending on the day may occasionally go until 19:00 or 20:00.
-:::
-
-# References
-## Important People {#importantPeople}
-|Person | Site | Details|
-|---|---|---|
-|[Sarah PROCACCINI](mailto:sarah.procaccini@va.gov)|VAMC|RN Navigator for Lung Mass|
-|[Ma Inez Amparo AMBATA](mailto:MaInezAmparo.Ambata@va.gov)|VAMC|RN Navigator for Lung Mass|
-|[Idal TCHOUNDJO](mailto:Idal.Tchoundjo@va.gov)|VAMC|NP for Lung Mass Clinic|
-
-# Site-Specific Guides
-
-## DTC {#dtc}
-### Consults {#dtcConsults}
-As the first-year fellow, your ability to closely follow with consults will be somewhat limited.
-This is because you'll be pulled to the VA on Monday afternoon for [lung mass clinic](#lmc), the [MTC OR](#mtc) for Tuesday mornings, or the VA most to all of Friday for [OR cases](#vamcOR).
-
-That said, you'll still be able to see consults and perform or assist with bedside procedures (thoras, chest tubes, etc.).
-
-### OR Cases {#dtcOR}
-Thursdays are the primary OR day; that is, there are always cases on Thursday.
-However, [there may be OR cases on other days](#notesDTC).
-These days are typically the busiest of the rotation, as you're helping in the OR, seeing old consults, seeing any new consults, and doing any non-OR procedures.
-
-:::{.callout-tip}
-- To save time, pend all post-op items (Brief Op Notes, PRN PACU orders) BEFORE the case.
-- If you get consults intra-op, use your judgement to decide if stepping out of the procedure and seeing the consult would optimize workflows. Alternatively, you may be of more use staying in the OR.
-:::
-
-#### Before an OR Case
-:::{.callout-important}
-At least 1 hour prior to any OR case, an interval H&P and a consent MUST be done.
-:::
-
-- If this is an outpatient, check the last time a patient was seen by IP in clinic
-  - If >30 days, you must write an `Interval H&P` that _includes_ a full ROS and an exam.
-  - If <=30 days, you must write an `Interval H&P` but you do NOT need to include an exam or ROS.
-- Consent the patient
-  - Patients will be in the 2nd Floor, Same Day Surgery area
-  - Consents are on paper; typically, they'll be in the patient's physical chart at bedside.
-
-#### After an OR Case {#dcProcess}
-- Take a picture of the operative [samples sent](#sampleOutline)
-  - Any microbiology (e.g., BAL, tissue cultures) collected intra-op needs a paper order form filled out. These are usually in the OR at the computer station.
-    - These orders do NOT require a corresponding Epic order
-- While still in the OR, write your `Brief Op Note`
-  - Ensure it includes the [sample outline](#sampleOutline)
-- While still in the OR, place the cytology order
-  - Copy the [sample outline](#sampleOutline) from your `Brief Op Note` and paste it directly into the order comments
-- Place Post-op PRN orders
-  - Hatoon has a good set of these you can borrow (e.g., Tylenol, Zofran, advance diet, discharge patient, CXR)
-  - if indicated, place a CXR order
-- Either while still in the OR or after you get to PACU, complete the discharge process
-  - Click the `Discharge` or `Post-Op` tab
-  - Find `Follow up with provider` area and enter the attending
-  - Find `Discharge Instructions` and enter "flexible bronchoscopy"
-  - Find the area for `Diet and Activity` enter appropriate orders
-    - this seems redundant after entering the post-op PRNs above, but it is necessary for the PACU
-  - Find `DC Orders and Med Rec`. Complete the med rec. If you ordered a CXR, ensure you state the DC is conditional "pending CXR"
-- Walk with patient to the PACU
-  - after the RNs' "hard stop", you are expected to give the RNs sign out.
-    - includes procedure done, laterality, any complications, if a CXR is needed, and eventual discharge plan.
-    - If a CXR is needed, give the RNs the IP Tiger so they can contact you after it's completed so you can discharge the patient
-- Write the Provation note 
-
-#### To Set Up an OR Case
-- Place a `Add on to OR` order with the details of the case
-- Email the bronch suite to inform them of the procedure and what procedure so they can have supplies ([pulmproccalender@umm.edu](mailto:pulmproccalender@umm.edu))
-- For any add on case, there is no guarantee it will happen; you can call the OR charge nurse to ask if the procedure will happen
-
-### Things to Note {#notesDTC}
-::: {.callout-caution}
-There may be OR cases on days other than Thursday. Be sure to check the OR schedule regularly to ensure you avoid missing a case!
-:::
-
-:::{.callout-tip}
-All IP procedures performed at DTC (OR cases, bronch suite cases, or bedside procedures including thoras or chest tubes) need a Provation note.
-:::
-
-### Sample Outline {#sampleOutline}
-Whenever biopsy samples are collected, the RTs / RNs keep track on them in the order they were gathered, what site they occured at, and how many total passes were performed.
-
-_Example_
-```
-A - LUL nodule (2 passes)
-B - station 7 (5 passes)
-C - station 11Rs (3 passes)
+```{r}
+pacman::p_load("ggplot", "dplyr")
 ```
 
-## MTC {#mtc}
-On Tuesdays, first-year PCCM fellows typically go to the IP cases at MTC.
-This is heavily encouraged, but attendance is not _per se_ mandatory.
+# Overview
+## Systematic Reviews, ROCM
+Most systematic reviews focus on rhino-orbital-cerebral mucormycosis
+[@bhattacharyya_rhino-orbital-cerebral-mucormycosis_2021; @chegini_epidemiology_2020]
 
-### OR Cases {#mtcOR}
-#### Before on OR Case
-- Arrive at 07:00 to 07:15
-- Find and consent the patient
-  - Consents are paper based without anything electronic. You'll find them at bedside.
+
+## Systematic Reviews, Transplant
+Mucor in lung transplant patients [@wand_mucormycosis_2020]
   
-#### During the OR Case
-After the procedure is done, ensure you take a picture of the [sample outline](#sampleOutline) for your notes.
+  - conclusion: avoid surgery, use amphotericin + posaconazole
 
-:::{.callout-note}
-Unlike DTC OR cases, you do NOT need to enter cytology orders for MTC cases.
+# Evidence
+
+## Guidelines
+Global guideline for the diagnosis and management of mucormycosis [@cornely_global_2019]
+
+- *first line*: surgical debridement with clean margins
+- *next*: liposomal amphotericin B
+- *add-on*: isavuconazole or posaconazole
+
+## Outcomes
+- Mortality rates have *improved* since 2000 [@muthu_has_2021]
+  - survival: medical (31%) vs medical + surgery (69%)
+  
+|Year|Morality|
+|---|---|
+| before 2000 | 72.1% |
+|2000-2009 | 58.3% |
+|2010-2020 | 49.8% |
+  
+- Despite improvements, mortality rates remain *high* [@jeong_contemporary_2019; @muthu_has_2021]
+  - 90-day morality: 41%
+  
+## Outcomes, Malignancy
+- Outcomes in hematologic malignancies poor despite surgery [@kara_mucormycosis-associated_2009]
+  - Single center retrospective cohort
+  - N = 20, with n = 1 (5%) pulmonary disease
+    - 18 (90%) recent surgery
+  - morality at 1 month: n = 11 (55%)
+  
+
+## Treatments, Medications
+- _**MUCONAB trial, 2023**_: RCT of nebulized amphotericin B [@muthu_treatment_2023]
+  - conclusion: no improvement in outcomes
+- RCT of topical amphotericin gel at surgical site in COVID-associated mucormycosis [@shaikh_evaluate_2023]
+  - patients: nasopharyngeal mucor
+  - intervention: 0.1% Liposomal Amphotericin-B gel vs 10% povidone-iodine and saline
+  - outcome: need for surgical revision
+  - result: fewer revisions
+
+## Treatment, Medications
+**_COVID Associated Mucormycosis_** [@shaikh_evaluate_2023]
+
+**Conclusion**: "Topical Amphotericin-B gel application in the postoperative cavity can decrease the need for revision surgery."
+
+## Treatment, Medications
+- Case-control study isavuconazole [@marty_isavuconazole_2016]
+  - **Conclusion**: "Isavuconazole showed activity against mucormycosis with efficacy similar to amphotericin B."
+
+## Treatment, Surgery
+1994: *Seminal* Ann Thorac Surg Review out of Duke [@tedder_pulmonary_1994]
+
+- N = 255
+- Morality statistics below
+
+
+|Group|n (%)|
+|---|---|
+|overall|204 (80.0%)|
+|isolated pulmonary mucor|166 (65.1%)|
+|Medication, all comers|173 (67.8%)|
+|Surgery, all comers|28 (11.0%)|
+
+## Treatment, Surgery
+:::{.callout-warning}
+- Only 44% (92/209) of patients with pulmonary mucormycosis were diagnosed premortem!
 :::
 
-#### After on OR Case
-- [Discharge process](#dcProcess) is identical to [DTC](#dcProcess), with the following exceptions:
-  - You do not enter PRN post-op orders; anesthesia handles that
-- Write a `Brief Op Note`
-  - ensure this includes the [sample outline](#sampleOutline)
-- Write a Provation note
-  - As you exit Endo suite 2, turn RIGHT. On your RIGHT is a small room wiht three computers. These have Provation installed on it.
+|treatment|n (%)|
+|---|---|
+|medical only|56 (61%)|
+|surgery only|19 (21%)|
+|medical + surgery|17 (18%)|
 
-## VAMC
-### Lung Mass Clinic {#lmc}
-Lung mass clinic in the afternoon. You should be sent a list of patients by Deepak or Sarah with the patients information on it and why they are seeing lung mass (make sure to only prechart the MD patients, there is an NP who sees there own patients
+## Treatment, Surgery Specifics   
+Of the surgically treated patients with pulmonary-localized disease:
 
-- Make sure to pre write the note with the template they send you
-- Make sure to look at the imaging (come up - with questions for Deepak she likes that)
-- Need to have notes done within 48hrs
-- To find the list in CPRS it is Pulm MD1 or Pulm MD2 (it is not under lung mass)
-- Make sure if there is a lung mass consult in to use the consult note
+|treatment|n (%)|
+|---|---|
+|lobectomy|22 (61.1%)|
+|pneumonectomy|4 (11.1%)|
+|wedge resection|3 (8.3%)|
+|unspecified|7 (19.4%)|
 
-::: {.callout-tip}
-Its a good idea to ask the RN Navigator in clinic ([Sarah or Inez](#importantPeople)) if you need any disc or set up for Friday Ion robotic cases. They have been having issues with the Ion and uploading images. 
+## Treatment, Surgery
+- Meta-anlysis of 92 pulmonary mucor cases [@feng_characteristics_2018]
+
+**Correlates of Survival**
+
+|Treatment|OR [95% CI]|
+|---|---|
+|Medication vs not|53.9 \[3.1-945.6\]|
+|Surgery vs not|5.983 [1.5-23.9]|
+
+# Conclusions
+
+- **Medications**
+  - Yes. amphotericin + azole (isavuconazole or posaconazole)
+- **Surgery**
+  - Likely yes, preferably early.
+
+  
+# References
+:::{refs}
 :::
-
-### OR Cases {#vamcOR}
-
-You should be emailed a schedule for the month on the cases by [Sarah or Inez](#importantPeople).
-There are usually just two -- 08:00 and 12:00 -- but occasionally there are three cases.
-Check your email.
-
-#### Before an OR Case
-- Arrive around 07:00 to 07:15 at the Same Day Surgery area.
-  - *Directions:* Go to VAMC Floor 5. Take signs toward SICU. Right before the SICU doors, turn RIGHT through the double doors. On your RIGHT will be the PACU doors. Once in PACU, go LEFT through the double doors  and find _Same Day Surgery_. Patients will be here before their procedure. 
-- Consent the patient
-  - Open CPRS
-  - Within CRPS, go to `Tools -> iMed consent`
-  - The consent is under "general not listed" and then you can type out the procedure. Make sure to WRITE OUT THE WHOLE PROCEDURE. E.g., "Navigational bronchoscopy with biopsy and Endobronchial ultrasound with biopsy". For laterality, write "bilateral lungs". 
-- Ask the RN for a green bracelet.
-  - On this, write the patients name, last four of SSN, attending's name, and procedure without any abbreviations. (NOTE: Do NOT forget to do this; if you forget, they won't bring the patient back to the OR.)
-
-#### After an OR Case
-- Take a picture of the (sample outline)[#sampleOutline].
-- Write a brief op note
-  - Select new note, then `BOILERPLATE <OPERATION REPORT-POST OP - BOILERPLATE>`
-  - Include the sample outline you saved above.
-  - After signing the note, right click and "Assign additional cosigners" to include the attending.
-- After the patient is extubated, walk with patient to PACU and give sign out to the nurse.
-
-:::{.callout-tip}
-I give the PACU nurses my cell phone in case they have issues so that you don’t have to sit in there.
-:::
-
-- Enter post-op orders
-  - *REQUIRED:* Ok to eat order (nursing communication)
-  - *OPTIONAL:* if needed, CXR
-  - *REQUIRED:* DC order
-    - Go to `Orders` -> `Add New Orders - BT` -> `2 PATIENT MOVEMENT` -> `Discharge`
-
-- Write a discharge instructions note
-  - Create new note, then select the template `PATIENT DISCHARGE INSTRUCTIONS` note
-  - Fill out / click all required elements.
-- Write a Provation note in the [GI lab](#directionsGIlab) (your login should have been sent to you in an email)
-  - [See here for directions to GI Lab](#directionsGIlab)
-
-Normally before the procedure I pend the operative note, discharge instructions so its easy to do once the procedure is over.
-
-### Things to Note {#notesVAMC}
-:::{.callout-important}
-If someone gets a pneumo, there is a Wayne pneumothorax kit in the OR that is used
-:::
-
-:::{.callout-caution}
-Without a [Green bracelet]{#greenBracelet} on your patient, RNs / anesthesia won't bring the patient to the OR.
-:::
-
-### Directions to GI Lab {#directionsGIlab}
-- Take elevators to Floor 3
-- Go through double doors "3C & 3D"
-- Immediately turn RIGHT
-- After walking down hall, on your LEFT will be double doors stating "Gastroenterology & Pulmonary Center"
-  - Go through these double doors
-  - Walk directly forward through door with "Authorized Personnel Only" on it
-  - Immediately turn RIGHT. There is a physician dictation room there with computers and a fridge. These computers have Provation installed.
