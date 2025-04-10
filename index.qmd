@@ -1,132 +1,118 @@
 ---
-title: "Pulmonary Mucormycosis: The Evidence"
-author: "Eric W. Robbins"
-bibliography: export-data.bib
-csl: ajrccm.csl
-
+title: "CPET & Advanced Diagnostic Testing"
+author: "Eric W. Robbins, MD"
 format: 
   revealjs:
-    theme: dark
-    transition: slide
-    background-transition: fade
-    auto-animate-easing: ease-in-out
+    theme: dracula 
+    slide-number: c/t
+    transition: fade
 ---
-```{r}
-pacman::p_load("ggplot", "dplyr")
-```
 
 # Overview
-## Systematic Reviews, ROCM
-Most systematic reviews focus on rhino-orbital-cerebral mucormycosis
-[@bhattacharyya_rhino-orbital-cerebral-mucormycosis_2021; @chegini_epidemiology_2020]
+
+. . .
+
+(@) Summarize exercise limitations after an ICU course
+(@) Using Fick Equation, describe factors responsible for oxygen delivery
+(@) Understand CPET profile of (1) cardiac and (2) pulmonary vascular limitation to exercise
+(@) Summarize contemporary concepts of invasive exercise hemodynamics
+(@) Describe CPET features suggesting a ventilatory limitation to exercise
+
+## Scenario 1
+You're seeing a 47-year-old male after a prolonged hospital stay.
+
+- admitted for bilateral PNA
+- developed acute bilateral PEs; shocky, so got lytics
+- remaining course complicated by empyema and PTX with persistent air leak
+
+. . .
 
 
-## Systematic Reviews, Transplant
-Mucor in lung transplant patients [@wand_mucormycosis_2020]
-  
-  - conclusion: avoid surgery, use amphotericin + posaconazole
+**Concerns**
 
-# Evidence
+After finishing PT, exercise capacity not at pre-illness baseline
 
-## Guidelines
-Global guideline for the diagnosis and management of mucormycosis [@cornely_global_2019]
+## Scenario 1, Contiued
 
-- *first line*: surgical debridement with clean margins
-- *next*: liposomal amphotericin B
-- *add-on*: isavuconazole or posaconazole
+- **Baseline:** 1 hour daily on an elliptical
+- **Now:** 20-30 minutes, limited by dyspnea
 
-## Outcomes
-- Mortality rates have *improved* since 2000 [@muthu_has_2021]
-  - survival: medical (31%) vs medical + surgery (69%)
-  
-|Year|Morality|
-|---|---|
-| before 2000 | 72.1% |
-|2000-2009 | 58.3% |
-|2010-2020 | 49.8% |
-  
-- Despite improvements, mortality rates remain *high* [@jeong_contemporary_2019; @muthu_has_2021]
-  - 90-day morality: 41%
-  
-## Outcomes, Malignancy
-- Outcomes in hematologic malignancies poor despite surgery [@kara_mucormycosis-associated_2009]
-  - Single center retrospective cohort
-  - N = 20, with n = 1 (5%) pulmonary disease
-    - 18 (90%) recent surgery
-  - morality at 1 month: n = 11 (55%)
-  
+. . .
 
-## Treatments, Medications
-- _**MUCONAB trial, 2023**_: RCT of nebulized amphotericin B [@muthu_treatment_2023]
-  - conclusion: no improvement in outcomes
-- RCT of topical amphotericin gel at surgical site in COVID-associated mucormycosis [@shaikh_evaluate_2023]
-  - patients: nasopharyngeal mucor
-  - intervention: 0.1% Liposomal Amphotericin-B gel vs 10% povidone-iodine and saline
-  - outcome: need for surgical revision
-  - result: fewer revisions
-
-## Treatment, Medications
-**_COVID Associated Mucormycosis_** [@shaikh_evaluate_2023]
-
-**Conclusion**: "Topical Amphotericin-B gel application in the postoperative cavity can decrease the need for revision surgery."
-
-## Treatment, Medications
-- Case-control study isavuconazole [@marty_isavuconazole_2016]
-  - **Conclusion**: "Isavuconazole showed activity against mucormycosis with efficacy similar to amphotericin B."
-
-## Treatment, Surgery
-1994: *Seminal* Ann Thorac Surg Review out of Duke [@tedder_pulmonary_1994]
-
-- N = 255
-- Morality statistics below
-
-
-|Group|n (%)|
-|---|---|
-|overall|204 (80.0%)|
-|isolated pulmonary mucor|166 (65.1%)|
-|Medication, all comers|173 (67.8%)|
-|Surgery, all comers|28 (11.0%)|
-
-## Treatment, Surgery
-:::{.callout-warning}
-- Only 44% (92/209) of patients with pulmonary mucormycosis were diagnosed premortem!
+:::{.callout-important}
+$SpO_2$ drops to $85\%$ on home pulse-ox
 :::
 
-|treatment|n (%)|
+. . .
+
+**Symptoms**: No chest pain, dizziness, cough, or lower extremity edema
+
+## Exam
+Unremarkable, including normal strength
+
+**PFTs**
+
+|Item|Measure|
 |---|---|
-|medical only|56 (61%)|
-|surgery only|19 (21%)|
-|medical + surgery|17 (18%)|
+|$FEV_1$ (% predicted) |75%|
+|FVC (% predicted) |75%|
+|$\frac{FEV_1}{FVC}|0.77|
+|TLC (% predicted)|76%|
+|$\frac{MIP}{MEP}$ (% predicted)|100% |
+|DLCO (% predicted)|81% |
 
-## Treatment, Surgery Specifics   
-Of the surgically treated patients with pulmonary-localized disease:
+**2D Echocardiography**
 
-|treatment|n (%)|
-|---|---|
-|lobectomy|22 (61.1%)|
-|pneumonectomy|4 (11.1%)|
-|wedge resection|3 (8.3%)|
-|unspecified|7 (19.4%)|
+- Normal LV size and function, normal left-sided valves
+- No LVH or signs of diastolic dysfunction
+- RV normal size and function, IVC collapsing, PASP 25 
 
-## Treatment, Surgery
-- Meta-anlysis of 92 pulmonary mucor cases [@feng_characteristics_2018]
+## stuff
+A recent chest radiograph revealed mild pleural thickening on the side of his prior empyema but was otherwise normal.
 
-**Correlates of Survival**
+# Question 1
 
-|Treatment|OR [95% CI]|
-|---|---|
-|Medication vs not|53.9 \[3.1-945.6\]|
-|Surgery vs not|5.983 [1.5-23.9]|
+In general, what mechanisms of exercise limitation might be considered in a post-ICU patient? Based on the information provided, what could account for exercise limitation in this particular patient?
 
-# Conclusions
+## Question 2
 
-- **Medications**
-  - Yes. amphotericin + azole (isavuconazole or posaconazole)
-- **Surgery**
-  - Likely yes, preferably early.
+What do we know generally about the incidence of exercise limitation after an episode of pulmonary embolism? What mechanisms could be implicated?
 
-  
-# References
-:::{refs}
-:::
+## Question 3
+State the Fick equation.
+
+### Fick Equation
+
+$VO_2=CO \cdot \frac{CO}{C_aO_2 - C_vO_2}$
+
+## Question 4
+
+What pathophysiological processes are “packaged” within in the Arterial-Venous O2 content difference ($AVO_2D$) term?
+
+## Question 5
+
+What does the $\frac{V_E}{VCO_2}$ represent conceptually?
+
+## Question 6
+
+What CPET parameters suggest a primary cardiac limitation?
+
+## Question 7
+
+Which parameters suggest a pulmonary vascular limitation to exercise?
+
+## Question 8
+
+Which pattern of exercise limitation is present in this patient?
+
+## Question 9
+
+Interpret the hemodynamics. Does he have CTEPH?
+
+## Question 10
+
+Describe the normal hemodynamic response to exercise and contrast it to this patient.
+
+## Question 11
+
+Will a heart transplant improve this patient’s exercise tolerance?
