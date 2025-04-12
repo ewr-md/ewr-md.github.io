@@ -6,6 +6,7 @@ format:
     theme: dracula 
     slide-number: c/t
     transition: fade
+    chalkboard: true
 ---
 
 ```{r, echo=FALSE}
@@ -110,7 +111,7 @@ Size of residual perfusion defect or RV dysfunction don't correlate well with $\
 
 ## Limitations after pulmonary embolism, CTED
 
-![](references/cped.png)
+![](references/cped.png){fig-align="center"}
 
 # Question 3
 State the Fick equation.
@@ -119,7 +120,7 @@ State the Fick equation.
 
 **Fick Equation**
 
-$CO = \frac{\dot{V}O_2}{(C_aO_2 - C_VO_2)}$
+$CO = \frac{\dot{V}O_2}{C_aO_2 - C_VO_2}$
 
 $\dot{V}O_2=CO \cdot (C_aO_2 - C_VO_2)$
 
@@ -133,9 +134,9 @@ In the Fick Equation, what pathophysiological processes are "packaged" within in
 
 Explain the "$C_{a}O_{2} - C_{v}O_{2}$" part of the Fick equation
 
-## Equation and $AVO_2$ Content
+## $AVO_2$ Content Difference
 
-$C_{a}O_{2} - C_{v}O_{2} = AVO_2$ content 
+$C_{a}O_{2} - C_{v}O_{2} = AVO_2$ content difference 
 
 $C_{a}O_{2} - C_{v}O_{2} = (S_{a}O_{2} - M_VO_2) \cdot Hgb \cdot 1.34$
 
@@ -205,30 +206,151 @@ Which parameters suggest a pulmonary vascular limitation to exercise?
 Which pattern of exercise limitation is present in this patient?
 
 ## Interpreting the CPET
-![](references/cpet_01.png)
+![](references/cpet_01.png){fig-align="center"}
 
 ## Interpreting the CPET
 
-![](references/cpet_02.png)
+![](references/cpet_02.png){fig-align="center"}
 
 ## Interpreting the CPET
 
-![](references/cpet_03.png)
+![](references/cpet_03.png){fig-align="center"}
 
 ## Interpreting the CPET, Takeaways
 
 - low peak $\dot{V}O_2$ (59%, <70% predicted)
-- $\uparrow frac{V_E}{VCO_2}$
+- $\uparrow \frac{V_E}{VCO_2}$
 - elevated $\frac{V_d}{V_t}$ at peak exercise (0.4 vs predicted <0.25)
 
+. . .
+
+**Thus**
+
+$\implies$ cardiac, with limitation from ?PVD
+
+## Further Testing
+
+Patient undergoes VQ and CTA scans
+
+- complete occlusion of bilateral lower lobe pulmonary artery branches
+- thereafter undergoes RHC
 
 # Question 9
 
 Interpret the hemodynamics. Does he have CTEPH?
 
+## RHC Data, at rest
+
+| Chamber | Measure |
+|---|---|
+|RA (mmHg)| 2|
+|PA (mmHg)|27/8 (17)|
+|PCWP (mmHg)|4|
+|tCO (L/min)|6.2|
+|PVR (WU)|2|
+
+. . .
+
+**Conclusion**
+
+No. But his mPAP gets a lot higher -- does he have something else?
+
+## RHC Data, with exercise
+
+
+| Chamber | Measure |
+|---|---|
+|RA (mmHg)| 12|
+|PA (mmHg)|100/25 (56)|
+|PCWP (mmHg)|17|
+|tCO (L/min)|15|
+|PVR (WU)|2.6|
+|TPR |3.7|
+|lactate |0.7 at rest, 1.9 at peak|
+
 # Question 10
 
-Describe the normal hemodynamic response to exercise and contrast it to this patient.
+Describe the normal hemodynamic response (i.e., RHC numbers) to exercise and contrast it to this patient.
+
+## Normal Reponse to Exercise
+
+:::: {.columns}
+
+::: {.column width="50%"}
+**Normal**
+
+| Chamber | Change |
+|---|---|
+|RA | -|
+|PA | $\uparrow$|
+|PCWP | $\uparrow$|
+|tCO | $\uparrow$|
+|PVR | $\downarrow$|
+|TPR | $\downarrow$|
+:::
+
+::: {.column width="50%"}
+
+**Our patient:**
+
+| Chamber | Change |
+|---|---|
+|RA | -|
+|PA | $\uparrow \uparrow$|
+|PCWP | $\uparrow$|
+|tCO | $\uparrow$|
+|PVR | $\uparrow$|
+|TPR | $\uparrow$|
+:::
+
+::::
+
+## His mPAP gets a lot higher – does he have something else?
+
+**Exercise PH**
+
+ - Definition: $\frac{mPAP}{CO} > 3$ mmHg/L/min
+
+. . . 
+
+- Our patient: $\frac{mPAP}{CO} = \frac{56}{15} = 3.73$
+
+. . .
+
+- what about $PCWP = 17$? 
+
+. . .
+
+-
+  - $PCWP \leq 20$ normal
+
+## Clinical Update
+
+Given the functional limitations, CPET findings, and complete obstruction of blood flow to his bilateral lower lobe pulmonary arteries, he was referred for multidisciplinary discussion in consideration of pulmonary thromboendarterectomy.
+
+## Clinical Update
+
+Scant evidence to guide this decision.
+
+In overt *CTEPH*, a prospective observational study (DOI: [10.1161/CIRCULATIONAHA.115.016522](https://doi.org/10.1161/CIRCULATIONAHA.115.016522) suggested better survival in PTE candidates vs non-op.
+
+He was deemed to be a good candidate and is slated for surgery in the near future.
+
+## Scenario 2
+
+65-year-old man with HFrEF (EF 15%) from ischemic cardiomyopathy is referred for CPET.
+
+Severly limited in exercise capacity.
+
+*His goals:* optimize his HF management to maximize quality of life.
+
+## Scenario 2, Data
+
+![](references/cpet_icm.png){fig-align="center"}
+
+## Scenario 2, Data
+
+![](references/cpet_pft.png){fig-align="center"}
 
 # Question 11
 
@@ -236,7 +358,7 @@ Will a heart transplant improve this patient’s exercise tolerance?
 
 . . .
 
-### Yes, but it won't resolve them.
+Yes, but it won't resolve everything.
 
 ## Considerations
 
@@ -248,7 +370,18 @@ Will a heart transplant improve this patient’s exercise tolerance?
 
 - also has previously undiagnosed COPD
   - obstruction on spirometry ($\frac{FEV_1}{FVC} = 0.48$)
+
+## Considerations
+
 - dynamic hyperinflation with escalating exercise
   - at end-exercise, such trapping he cannot increase $TV$
   - predicted $MVV = 40 \cdot FEV_1 = 1.4 \cdot 40 = 56$ L
     - peak MV was >70% of MVV, suggesting approaching ventilatory ceiling
+
+## Considerations
+
+![](references/cpet_icm.png){fig-align="center"}
+
+## Link to Reference PDF
+
+![](references/qr.png){fig-align="center"}
