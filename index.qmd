@@ -1,0 +1,8 @@
+---
+title: "ATS 2025 Poster"
+---
+```{r, echo=FALSE}
+library(here)
+```
+
+[Poster](here::here(resources/ats_poster_2025.pdf)
