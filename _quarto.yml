@@ -1,0 +1,21 @@
+project:
+  type: website
+
+execute:
+  echo: false
+  warning: false
+
+website:
+  title: "Myositis ILD"
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Overview"
+        contents:
+          - index.qmd
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
