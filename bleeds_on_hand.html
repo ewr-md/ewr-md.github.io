@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Homepage – Myositis ILD</title>
+<title>bleeds_on_hand – Myositis ILD</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li><li class="breadcrumb-item"><a href="./index.html">Homepage</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li><li class="breadcrumb-item"><a href="./bleeds_on_hand.html">bleeds_on_hand</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -116,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homepage</span></a>
   </div>
 </li>
@@ -134,7 +134,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./bleeds_on_hand.html" class="sidebar-item-text sidebar-link">
+  <a href="./bleeds_on_hand.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">bleeds_on_hand</span></a>
   </div>
 </li>
@@ -168,16 +168,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#bleeds-on-hand" id="toc-bleeds-on-hand" class="nav-link active" data-scroll-target="#bleeds-on-hand">Bleeds on Hand</a>
+  <ul class="collapse">
+  <li><a href="#current-data" id="toc-current-data" class="nav-link" data-scroll-target="#current-data">Current Data</a></li>
+  <li><a href="#filling-in-missing-bleed-dates" id="toc-filling-in-missing-bleed-dates" class="nav-link" data-scroll-target="#filling-in-missing-bleed-dates">Filling in Missing Bleed Dates</a></li>
+  </ul></li>
+  <li><a href="#proposed-longitudinal-bleed-data" id="toc-proposed-longitudinal-bleed-data" class="nav-link" data-scroll-target="#proposed-longitudinal-bleed-data">Proposed Longitudinal Bleed Data</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li><li class="breadcrumb-item"><a href="./index.html">Homepage</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li><li class="breadcrumb-item"><a href="./bleeds_on_hand.html">bleeds_on_hand</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Homepage</h1>
+<h1 class="title">bleeds_on_hand</h1>
 </div>
 
 
@@ -194,10 +199,33 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This website provides a searchable document for learning about the Suffredini Lab’s myositis ILD project.</p>
-<p>It also includes specific high-yield information, such as a data dictionary, explanations of the code used to clean and analyze data, as well as a description for how to build or rebuild analyses.</p>
+<section id="bleeds-on-hand" class="level1">
+<h1>Bleeds on Hand</h1>
+<section id="current-data" class="level2">
+<h2 class="anchored" data-anchor-id="current-data">Current Data</h2>
+<p>The current list of on-hand bleeds (numbers as by number of bleed dates, stratified by antibody) is as follows:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> antibody Freq
+       EJ    9
+      JO1  140
+     MDA5   40
+     PL12   32
+      PL7   26
+    Total  247</code></pre>
+</div>
+</div>
+</section>
+<section id="filling-in-missing-bleed-dates" class="level2">
+<h2 class="anchored" data-anchor-id="filling-in-missing-bleed-dates">Filling in Missing Bleed Dates</h2>
+<p>All missing bleed_date above can be assumed to actually consistent of the <em>earliest</em> available blood sample we have on record for a given patient (i.e., a given id_sample).</p>
+<p>Typically, the Euroimmun date is, by definition, the earliest bleed date avialable for any given patient.</p>
+</section>
+</section>
+<section id="proposed-longitudinal-bleed-data" class="level1">
+<h1>Proposed Longitudinal Bleed Data</h1>
+<p>We already have the following subset of our longitundinal bleeds of interest (e.g., to correlate medication administrations, as seen in <a href="./longitudinal_report.html">longitudinal_report</a>) <em>ON HAND</em> at the NIH:</p>
+<p>We should request the following sample bleed dates from JHH:</p>
 
 
 </section>

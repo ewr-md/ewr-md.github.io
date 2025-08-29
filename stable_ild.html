@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.55">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>stable_ild – Myositis ILD</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="site_libs/tabwid-1.1.3/tabwid.css" rel="stylesheet">
+<script src="site_libs/tabwid-1.1.3/tabwid.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li><li class="breadcrumb-item"><a href="./stable_ild.html">stable_ild</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Myositis ILD</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Overview</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Homepage</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./longitudinal_report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">longitudinal_report</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./stable_ild.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">stable_ild</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bleeds_on_hand.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">bleeds_on_hand</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./who_has_pfts.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">who_has_pfts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./clinical_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">clinical_data</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./undefined_antibody.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">undefined_antibody</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#total-patients-with-formal-asys-antibody-diagnoses" id="toc-total-patients-with-formal-asys-antibody-diagnoses" class="nav-link active" data-scroll-target="#total-patients-with-formal-asys-antibody-diagnoses">Total Patients with Formal ASyS Antibody Diagnoses</a>
+  <ul class="collapse">
+  <li><a href="#all-asys-patients" id="toc-all-asys-patients" class="nav-link" data-scroll-target="#all-asys-patients">All ASyS Patients</a></li>
+  <li><a href="#all-asys-patients-with-bleed-data" id="toc-all-asys-patients-with-bleed-data" class="nav-link" data-scroll-target="#all-asys-patients-with-bleed-data">All ASyS Patients with Bleed Data</a></li>
+  </ul></li>
+  <li><a href="#selection-soma" id="toc-selection-soma" class="nav-link" data-scroll-target="#selection-soma">Selection, SOMA</a>
+  <ul class="collapse">
+  <li><a href="#adding-days-720" id="toc-adding-days-720" class="nav-link" data-scroll-target="#adding-days-720">Adding Days 720</a></li>
+  <li><a href="#adding-extra-pl12-pl7-patients" id="toc-adding-extra-pl12-pl7-patients" class="nav-link" data-scroll-target="#adding-extra-pl12-pl7-patients">Adding Extra PL12 / PL7 patients</a></li>
+  <li><a href="#adding-day-0-720-results-for-oj-pl7-pl12" id="toc-adding-day-0-720-results-for-oj-pl7-pl12" class="nav-link" data-scroll-target="#adding-day-0-720-results-for-oj-pl7-pl12">Adding Day 0, 720 results for OJ, PL7, PL12</a></li>
+  <li><a href="#summary-of-hand-added-results" id="toc-summary-of-hand-added-results" class="nav-link" data-scroll-target="#summary-of-hand-added-results">Summary of Hand-Added Results</a></li>
+  <li><a href="#exporting-the-result" id="toc-exporting-the-result" class="nav-link" data-scroll-target="#exporting-the-result">Exporting the Result</a></li>
+  </ul></li>
+  <li><a href="#selection-olink" id="toc-selection-olink" class="nav-link" data-scroll-target="#selection-olink">Selection, Olink</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li><li class="breadcrumb-item"><a href="./stable_ild.html">stable_ild</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">stable_ild</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="total-patients-with-formal-asys-antibody-diagnoses" class="level1">
+<h1>Total Patients with Formal ASyS Antibody Diagnoses</h1>
+<p>There are substantial numbers of patients with unclear but suggestive diagnoses; for those, see <a href="./undefined_antibody.html">Patients with Undefined Antibodies</a></p>
+<p>Below are data from patients with <em>formal</em> antibody diagnoses. These data do not specify that patients have bleed dates or med starts – these are <em>all</em> patients in the database.</p>
+<section id="all-asys-patients" class="level2">
+<h2 class="anchored" data-anchor-id="all-asys-patients">All ASyS Patients</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="tabwid tabwid_left"><style>.cl-6420dcec{}.cl-64147e3e{font-family:'DejaVu Sans';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-64193fdc{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-64193ff0{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-641970ce{width:0.956in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-641970d8{width:0.577in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-641970e2{width:0.874in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-641970e3{width:0.956in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-641970ec{width:0.577in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-641970f6{width:0.874in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-641970f7{width:0.956in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-641970f8{width:0.577in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-64197100{width:0.874in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-64197101{width:0.956in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-64197102{width:0.577in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-6419710a{width:0.874in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-6419710b{width:0.956in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-64197114{width:0.577in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-6419711e{width:0.874in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-6420dcec"><thead><tr style="overflow-wrap:break-word;"><th class="cl-641970ce"><p class="cl-64193fdc"><span class="cl-64147e3e">antibody</span></p></th><th class="cl-641970d8"><p class="cl-64193ff0"><span class="cl-64147e3e">n</span></p></th><th class="cl-641970e2"><p class="cl-64193fdc"><span class="cl-64147e3e">percent</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-641970e3"><p class="cl-64193fdc"><span class="cl-64147e3e">EJ</span></p></td><td class="cl-641970ec"><p class="cl-64193ff0"><span class="cl-64147e3e">14</span></p></td><td class="cl-641970f6"><p class="cl-64193fdc"><span class="cl-64147e3e">2.7%</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-641970f7"><p class="cl-64193fdc"><span class="cl-64147e3e">JO1</span></p></td><td class="cl-641970f8"><p class="cl-64193ff0"><span class="cl-64147e3e">231</span></p></td><td class="cl-64197100"><p class="cl-64193fdc"><span class="cl-64147e3e">44.8%</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-64197101"><p class="cl-64193fdc"><span class="cl-64147e3e">MDA5</span></p></td><td class="cl-64197102"><p class="cl-64193ff0"><span class="cl-64147e3e">91</span></p></td><td class="cl-6419710a"><p class="cl-64193fdc"><span class="cl-64147e3e">17.6%</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-641970f7"><p class="cl-64193fdc"><span class="cl-64147e3e">OJ</span></p></td><td class="cl-641970f8"><p class="cl-64193ff0"><span class="cl-64147e3e">21</span></p></td><td class="cl-64197100"><p class="cl-64193fdc"><span class="cl-64147e3e">4.1%</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-64197101"><p class="cl-64193fdc"><span class="cl-64147e3e">PL12</span></p></td><td class="cl-64197102"><p class="cl-64193ff0"><span class="cl-64147e3e">68</span></p></td><td class="cl-6419710a"><p class="cl-64193fdc"><span class="cl-64147e3e">13.2%</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-64197101"><p class="cl-64193fdc"><span class="cl-64147e3e">PL7</span></p></td><td class="cl-64197102"><p class="cl-64193ff0"><span class="cl-64147e3e">91</span></p></td><td class="cl-6419710a"><p class="cl-64193fdc"><span class="cl-64147e3e">17.6%</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-6419710b"><p class="cl-64193fdc"><span class="cl-64147e3e">Total</span></p></td><td class="cl-64197114"><p class="cl-64193ff0"><span class="cl-64147e3e">516</span></p></td><td class="cl-6419711e"><p class="cl-64193fdc"><span class="cl-64147e3e">100.0%</span></p></td></tr></tbody></table></div>
+</div>
+</div>
+</section>
+<section id="all-asys-patients-with-bleed-data" class="level2">
+<h2 class="anchored" data-anchor-id="all-asys-patients-with-bleed-data">All ASyS Patients with Bleed Data</h2>
+<p>These are results for ASyS patients with ANY follow-up bleeds.</p>
+<p>There are no restraints to search parameters except they MUST have &gt;=2 bleeds on record (these bleeds might be 10 days apart, or 10 years; as stated, no restraints have been added to these results).</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>N = 356 unique patients
+N = 1301 total bleeds
+
+n = 157 / 356 JO1 patients
+n = 16 / 356 OJ patients
+n = 64 / 356 PL7 patients
+n = 48 / 356 PL12 patients
+n = 60 / 356 MDA5 patients
+n = 11 / 356 EJ patients</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="selection-soma" class="level1">
+<h1>Selection, SOMA</h1>
+<p>The following is based on:</p>
+<ul>
+<li>startdate is earliest blood sample on record</li>
+<li>has at least 1 follow up bleed within specifications</li>
+<li>farthest follow-up is 24 months (2 years)</li>
+<li>interval between bleed dates is 12 months</li>
+<li>buffer time between bleed dates (i.e., X months post-follow up <span class="math inline">\(\pm\)</span> buffer) is 3 months</li>
+</ul>
+<p>Looking at the distribution of follow-up days, we see the following distribution:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>N = 134 unique patients
+N = 309 total bleeds
+
+n = 30 / 134 PL7 patients
+n = 56 / 134 JO1 patients
+n = 9 / 134 OJ patients
+n = 14 / 134 PL12 patients
+n = 21 / 134 MDA5 patients
+n = 4 / 134 EJ patients</code></pre>
+</div>
+</div>
+<p>As an exploratory exercise, if we limit ourselves to patients:</p>
+<ul>
+<li>who have bleed dates at days 0, 720</li>
+<li>whose antibodies are NOT MDA5 or JO1</li>
+</ul>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>N = 13 unique patients
+N = 26 total bleeds
+
+n = 5 / 13 PL7 patients
+n = 4 / 13 OJ patients
+n = 4 / 13 PL12 patients</code></pre>
+</div>
+</div>
+<p>Next, if we then limit our gaze to patients meeting the following conditions:</p>
+<pre><code>-   antibody is MDA5 or JO1
+-   antibody is PL12 with a titer &gt;=50
+-   all patients chart-verified to have same clinical diagnosis as our bleed results</code></pre>
+<p>We get:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>N = 29 unique patients
+N = 58 total bleeds
+
+n = 20 / 29 JO1 patients
+n = 9 / 29 MDA5 patients</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="tabwid tabwid_left"><style>.cl-671a7854{}.cl-670ee11a{font-family:'DejaVu Sans';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-67142350{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-671453ca{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-671453d4{width:1.133in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-671453de{width:1.23in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-671453df{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-671453e8{width:1.133in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-671453e9{width:1.23in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-671453f2{width:1.287in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-671453f3{width:1.133in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-671453fc{width:1.23in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-671a7854"><thead><tr style="overflow-wrap:break-word;"><th class="cl-671453ca"><p class="cl-67142350"><span class="cl-670ee11a">followup_day</span></p></th><th class="cl-671453d4"><p class="cl-67142350"><span class="cl-670ee11a">JO1</span></p></th><th class="cl-671453d4"><p class="cl-67142350"><span class="cl-670ee11a">MDA5</span></p></th><th class="cl-671453de"><p class="cl-67142350"><span class="cl-670ee11a">Total</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-671453df"><p class="cl-67142350"><span class="cl-670ee11a">0</span></p></td><td class="cl-671453e8"><p class="cl-67142350"><span class="cl-670ee11a">20 (69.0%)</span></p></td><td class="cl-671453e8"><p class="cl-67142350"><span class="cl-670ee11a">9 (31.0%)</span></p></td><td class="cl-671453e9"><p class="cl-67142350"><span class="cl-670ee11a">29 (100.0%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-671453df"><p class="cl-67142350"><span class="cl-670ee11a">360</span></p></td><td class="cl-671453e8"><p class="cl-67142350"><span class="cl-670ee11a">20 (69.0%)</span></p></td><td class="cl-671453e8"><p class="cl-67142350"><span class="cl-670ee11a">9 (31.0%)</span></p></td><td class="cl-671453e9"><p class="cl-67142350"><span class="cl-670ee11a">29 (100.0%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-671453f2"><p class="cl-67142350"><span class="cl-670ee11a">Total</span></p></td><td class="cl-671453f3"><p class="cl-67142350"><span class="cl-670ee11a">40 (69.0%)</span></p></td><td class="cl-671453f3"><p class="cl-67142350"><span class="cl-670ee11a">18 (31.0%)</span></p></td><td class="cl-671453fc"><p class="cl-67142350"><span class="cl-670ee11a">58 (100.0%)</span></p></td></tr></tbody></table></div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="stable_ild_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="adding-days-720" class="level2">
+<h2 class="anchored" data-anchor-id="adding-days-720">Adding Days 720</h2>
+<p>However, we would also like to include MDA5 and JO1 patients who had data from days 0, 360, AND 720.</p>
+<p>So, adding those back in, we get the following new samples:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>N = 7 unique patients
+N = 7 total bleeds
+
+n = 4 / 7 JO1 patients
+n = 3 / 7 MDA5 patients</code></pre>
+</div>
+</div>
+<p>And thus, our total dataset would look like this:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>N = 29 unique patients
+N = 65 total bleeds
+
+n = 20 / 29 JO1 patients
+n = 9 / 29 MDA5 patients</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="stable_ild_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="adding-extra-pl12-pl7-patients" class="level2">
+<h2 class="anchored" data-anchor-id="adding-extra-pl12-pl7-patients">Adding Extra PL12 / PL7 patients</h2>
+<p>To round out our result, we want to add in some PL12 and PL7 patients with appropriate day 0 and 360 results.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>N = 39 unique patients
+N = 85 total bleeds
+
+n = 20 / 39 JO1 patients
+n = 9 / 39 MDA5 patients
+n = 5 / 39 PL7 patients
+n = 5 / 39 PL12 patients</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="stable_ild_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="adding-day-0-720-results-for-oj-pl7-pl12" class="level2">
+<h2 class="anchored" data-anchor-id="adding-day-0-720-results-for-oj-pl7-pl12">Adding Day 0, 720 results for OJ, PL7, PL12</h2>
+<p>If we add bleeds with:</p>
+<ul>
+<li>day 0 and 720 results only, who</li>
+<li>are anti-OJ, PL7, or PL12</li>
+</ul>
+<p>We get:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>N = 3 unique patients
+N = 6 total bleeds
+
+n = 1 / 3 OJ patients
+n = 1 / 3 PL12 patients
+n = 1 / 3 PL7 patients</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="stable_ild_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This makes our total cumulative result:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>N = 42 unique patients
+N = 91 total bleeds
+
+n = 20 / 42 JO1 patients
+n = 9 / 42 MDA5 patients
+n = 6 / 42 PL7 patients
+n = 6 / 42 PL12 patients
+n = 1 / 42 OJ patients</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="stable_ild_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="summary-of-hand-added-results" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-hand-added-results">Summary of Hand-Added Results</h2>
+<p>Thus, we have added the following items to “round out” our intial results, which had been based on MDA5 and JO1 patients.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>N = 20 unique patients
+N = 33 total bleeds
+
+n = 4 / 20 JO1 patients
+n = 3 / 20 MDA5 patients
+n = 6 / 20 PL7 patients
+n = 6 / 20 PL12 patients
+n = 1 / 20 OJ patients</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="stable_ild_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="exporting-the-result" class="level2">
+<h2 class="anchored" data-anchor-id="exporting-the-result">Exporting the Result</h2>
+<p><strong>For the total dataset</strong>, here are the results of bleeds we have on-hand at the NIH:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>We already have n = 28 / 91 bleeds on hand.
+Of that:
+    - n = 9 / 28 are from SOMA testing
+    - n = 19 / 28 are from other non-SOMA testing at the NIH
+
+Thus, we need to request n = 63 / 91 samples</code></pre>
+</div>
+</div>
+<p><strong>For the hand-added results</strong>, here are the results of bleeds we have on-hand at the NIH:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>We already have n = 10 / 33 bleeds on hand.
+Of that:
+    - n = 3 / 10 are from SOMA testing
+    - n = 7 / 10 are from other non-SOMA testing at the NIH
+
+Thus, we need to request n = 23 / 33 samples</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="tabwid tabwid_left"><style>.cl-6b4f12fe{}.cl-6b44c1b4{font-family:'DejaVu Sans';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-6b493488{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-6b4965f2{width:0.956in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-6b4965fc{width:1.133in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-6b496606{width:1.23in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-6b496607{width:0.956in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-6b496610{width:1.133in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-6b496611{width:1.23in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-6b49661a{width:0.956in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-6b49661b{width:1.133in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-6b496624{width:1.23in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-6b496625{width:0.956in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-6b49662e{width:1.133in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-6b49662f{width:1.23in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table data-quarto-disable-processing="true" class="cl-6b4f12fe"><thead><tr style="overflow-wrap:break-word;"><th class="cl-6b4965f2"><p class="cl-6b493488"><span class="cl-6b44c1b4">antibody</span></p></th><th class="cl-6b4965fc"><p class="cl-6b493488"><span class="cl-6b44c1b4">0</span></p></th><th class="cl-6b4965fc"><p class="cl-6b493488"><span class="cl-6b44c1b4">360</span></p></th><th class="cl-6b4965fc"><p class="cl-6b493488"><span class="cl-6b44c1b4">720</span></p></th><th class="cl-6b496606"><p class="cl-6b493488"><span class="cl-6b44c1b4">Total</span></p></th></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-6b496607"><p class="cl-6b493488"><span class="cl-6b44c1b4">JO1</span></p></td><td class="cl-6b496610"><p class="cl-6b493488"><span class="cl-6b44c1b4">8 (12.7%)</span></p></td><td class="cl-6b496610"><p class="cl-6b493488"><span class="cl-6b44c1b4">20 (31.7%)</span></p></td><td class="cl-6b496610"><p class="cl-6b493488"><span class="cl-6b44c1b4">4  (6.3%)</span></p></td><td class="cl-6b496611"><p class="cl-6b493488"><span class="cl-6b44c1b4">32  (50.8%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-6b49661a"><p class="cl-6b493488"><span class="cl-6b44c1b4">MDA5</span></p></td><td class="cl-6b49661b"><p class="cl-6b493488"><span class="cl-6b44c1b4">3  (4.8%)</span></p></td><td class="cl-6b49661b"><p class="cl-6b493488"><span class="cl-6b44c1b4">9 (14.3%)</span></p></td><td class="cl-6b49661b"><p class="cl-6b493488"><span class="cl-6b44c1b4">3  (4.8%)</span></p></td><td class="cl-6b496624"><p class="cl-6b493488"><span class="cl-6b44c1b4">15  (23.8%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-6b496607"><p class="cl-6b493488"><span class="cl-6b44c1b4">OJ</span></p></td><td class="cl-6b496610"><p class="cl-6b493488"><span class="cl-6b44c1b4">1  (1.6%)</span></p></td><td class="cl-6b496610"><p class="cl-6b493488"><span class="cl-6b44c1b4">0  (0.0%)</span></p></td><td class="cl-6b496610"><p class="cl-6b493488"><span class="cl-6b44c1b4">1  (1.6%)</span></p></td><td class="cl-6b496611"><p class="cl-6b493488"><span class="cl-6b44c1b4">2   (3.2%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-6b49661a"><p class="cl-6b493488"><span class="cl-6b44c1b4">PL12</span></p></td><td class="cl-6b49661b"><p class="cl-6b493488"><span class="cl-6b44c1b4">1  (1.6%)</span></p></td><td class="cl-6b49661b"><p class="cl-6b493488"><span class="cl-6b44c1b4">5  (7.9%)</span></p></td><td class="cl-6b49661b"><p class="cl-6b493488"><span class="cl-6b44c1b4">1  (1.6%)</span></p></td><td class="cl-6b496624"><p class="cl-6b493488"><span class="cl-6b44c1b4">7  (11.1%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-6b49661a"><p class="cl-6b493488"><span class="cl-6b44c1b4">PL7</span></p></td><td class="cl-6b49661b"><p class="cl-6b493488"><span class="cl-6b44c1b4">1  (1.6%)</span></p></td><td class="cl-6b49661b"><p class="cl-6b493488"><span class="cl-6b44c1b4">5  (7.9%)</span></p></td><td class="cl-6b49661b"><p class="cl-6b493488"><span class="cl-6b44c1b4">1  (1.6%)</span></p></td><td class="cl-6b496624"><p class="cl-6b493488"><span class="cl-6b44c1b4">7  (11.1%)</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-6b496625"><p class="cl-6b493488"><span class="cl-6b44c1b4">Total</span></p></td><td class="cl-6b49662e"><p class="cl-6b493488"><span class="cl-6b44c1b4">14 (22.2%)</span></p></td><td class="cl-6b49662e"><p class="cl-6b493488"><span class="cl-6b44c1b4">39 (61.9%)</span></p></td><td class="cl-6b49662e"><p class="cl-6b493488"><span class="cl-6b44c1b4">10 (15.9%)</span></p></td><td class="cl-6b49662f"><p class="cl-6b493488"><span class="cl-6b44c1b4">63 (100.0%)</span></p></td></tr></tbody></table></div>
+</div>
+</div>
+</section>
+</section>
+<section id="selection-olink" class="level1">
+<h1>Selection, Olink</h1>
+<p>Let’s explore our options for Olink.</p>
+<p>The following is based on:</p>
+<ul>
+<li>No patients in the longitudinal SOMA or med-start datasets
+<ul>
+<li>we are ALLOWING old SOMA patients (not longitudinal SOMA patients) who were in SOMA kits 1, 2, or 3; these old SOMA patients in kits 1-3 are excluded if they were subsequently used in the longitudinal SOMA list or the med-start list</li>
+<li>accordingly, we would be excluding patients started on a medication who then stabilized; however these means we only lose n = 19 unique patients</li>
+</ul></li>
+<li>startdate is earliest blood sample on record</li>
+<li>has at least 1 follow up bleed within specifications</li>
+<li>farthest follow-up is 120 months (10 years)</li>
+<li>interval between bleed dates is 12 months</li>
+<li>buffer time between bleed dates (i.e., X months post-follow up <span class="math inline">\(\pm\)</span> buffer) is 3 months</li>
+</ul>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>N = 155 unique patients
+N = 413 total bleeds
+
+n = 34 / 155 PL7 patients
+n = 64 / 155 JO1 patients
+n = 20 / 155 PL12 patients
+n = 6 / 155 EJ patients
+n = 20 / 155 MDA5 patients
+n = 11 / 155 OJ patients</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>These numbers represent unique patients
+with ANY kind of follow-up bleed dates.
+
+That may be a day 0 plus one of:
+    12m 24m 36m 48m 60m 72m 84m 96m 108m 120m
+
+Or day 0 plus two or more follow-ups matching:
+    12m 24m 36m 48m 60m 72m 84m 96m 108m 120m
+
+Accordingly, the numbers above don't have uniform bleed intervals.
+For that, see below.</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+==================================
+If these follow-ups are required:
+0m 12m
+==================================
+
+There are:
+N = 16 unique patients
+N = 32 total bleeds
+
+n = 3 / 16 PL12 patients
+n = 8 / 16 PL7 patients
+n = 1 / 16 OJ patients
+n = 1 / 16 EJ patients
+n = 1 / 16 MDA5 patients
+n = 2 / 16 JO1 patients
+
+==================================
+If these follow-ups are required:
+0m 24m
+==================================
+
+There are:
+N = 31 unique patients
+N = 62 total bleeds
+
+n = 4 / 31 PL7 patients
+n = 18 / 31 JO1 patients
+n = 3 / 31 MDA5 patients
+n = 3 / 31 OJ patients
+n = 3 / 31 PL12 patients
+
+==================================
+If these follow-ups are required:
+0m 36m
+==================================
+
+There are:
+N = 20 unique patients
+N = 40 total bleeds
+
+n = 10 / 20 JO1 patients
+n = 6 / 20 PL12 patients
+n = 2 / 20 MDA5 patients
+n = 2 / 20 PL7 patients
+
+==================================
+If these follow-ups are required:
+0m 48m
+==================================
+
+There are:
+N = 20 unique patients
+N = 40 total bleeds
+
+n = 13 / 20 JO1 patients
+n = 1 / 20 OJ patients
+n = 4 / 20 PL12 patients
+n = 1 / 20 MDA5 patients
+n = 1 / 20 PL7 patients
+
+==================================
+If these follow-ups are required:
+0m 60m
+==================================
+
+There are:
+N = 18 unique patients
+N = 36 total bleeds
+
+n = 11 / 18 JO1 patients
+n = 3 / 18 MDA5 patients
+n = 2 / 18 OJ patients
+n = 1 / 18 PL7 patients
+n = 1 / 18 PL12 patients
+
+==================================
+If these follow-ups are required:
+0m 72m
+==================================
+
+There are:
+N = 14 unique patients
+N = 28 total bleeds
+
+n = 8 / 14 JO1 patients
+n = 3 / 14 PL7 patients
+n = 2 / 14 PL12 patients
+n = 1 / 14 MDA5 patients
+
+==================================
+If these follow-ups are required:
+0m 84m
+==================================
+
+There are:
+N = 13 unique patients
+N = 26 total bleeds
+
+n = 2 / 13 PL7 patients
+n = 1 / 13 EJ patients
+n = 3 / 13 MDA5 patients
+n = 5 / 13 JO1 patients
+n = 2 / 13 PL12 patients
+
+==================================
+If these follow-ups are required:
+0m 96m
+==================================
+
+There are:
+N = 13 unique patients
+N = 26 total bleeds
+
+n = 3 / 13 PL7 patients
+n = 2 / 13 MDA5 patients
+n = 4 / 13 PL12 patients
+n = 2 / 13 OJ patients
+n = 1 / 13 JO1 patients
+n = 1 / 13 EJ patients
+
+==================================
+If these follow-ups are required:
+0m 108m
+==================================
+
+There are:
+N = 13 unique patients
+N = 26 total bleeds
+
+n = 5 / 13 JO1 patients
+n = 3 / 13 MDA5 patients
+n = 4 / 13 PL12 patients
+n = 1 / 13 PL7 patients
+
+==================================
+If these follow-ups are required:
+0m 120m
+==================================
+
+There are:
+N = 9 unique patients
+N = 18 total bleeds
+
+n = 1 / 9 EJ patients
+n = 5 / 9 JO1 patients
+n = 2 / 9 PL12 patients
+n = 1 / 9 PL7 patients
+
+==================================
+If these follow-ups are required:
+0m 12m 24m
+==================================
+
+There are:
+N = 3 unique patients
+N = 9 total bleeds
+
+n = 1 / 3 PL7 patients
+n = 1 / 3 PL12 patients
+n = 1 / 3 JO1 patients
+
+==================================
+If these follow-ups are required:
+0m 12m 24m 36m
+==================================
+
+There are:
+N = 1 unique patients
+N = 4 total bleeds
+
+n = 1 / 1 PL12 patients
+
+==================================
+If these follow-ups are required:
+0m 12m 24m 36m 48m
+==================================
+
+There are:
+N = 0 unique patients
+N = 0 total bleeds
+
+n = 0 / 0 NA patients
+
+==================================
+If these follow-ups are required:
+0m 12m 24m 36m 48m 60m
+==================================
+
+There are:
+N = 0 unique patients
+N = 0 total bleeds
+
+n = 0 / 0 NA patients
+
+==================================
+If these follow-ups are required:
+0m 12m 24m 36m 48m 60m 72m
+==================================
+
+There are:
+N = 0 unique patients
+N = 0 total bleeds
+
+n = 0 / 0 NA patients
+
+==================================
+If these follow-ups are required:
+0m 12m 24m 36m 48m 60m 72m 84m
+==================================
+
+There are:
+N = 0 unique patients
+N = 0 total bleeds
+
+n = 0 / 0 NA patients
+
+==================================
+If these follow-ups are required:
+0m 12m 24m 36m 48m 60m 72m 84m 96m
+==================================
+
+There are:
+N = 0 unique patients
+N = 0 total bleeds
+
+n = 0 / 0 NA patients
+
+==================================
+If these follow-ups are required:
+0m 12m 24m 36m 48m 60m 72m 84m 96m 108m
+==================================
+
+There are:
+N = 0 unique patients
+N = 0 total bleeds
+
+n = 0 / 0 NA patients
+
+==================================
+If these follow-ups are required:
+0m 12m 24m 36m 48m 60m 72m 84m 96m 108m 120m
+==================================
+
+There are:
+N = 0 unique patients
+N = 0 total bleeds
+
+n = 0 / 0 NA patients</code></pre>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

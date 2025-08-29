@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Homepage – Myositis ILD</title>
+<title>who_has_pfts – Myositis ILD</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li><li class="breadcrumb-item"><a href="./index.html">Homepage</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li><li class="breadcrumb-item"><a href="./who_has_pfts.html">who_has_pfts</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -116,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homepage</span></a>
   </div>
 </li>
@@ -140,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./who_has_pfts.html" class="sidebar-item-text sidebar-link">
+  <a href="./who_has_pfts.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">who_has_pfts</span></a>
   </div>
 </li>
@@ -169,15 +169,21 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#longitudinal-medication-data" id="toc-longitudinal-medication-data" class="nav-link" data-scroll-target="#longitudinal-medication-data">Longitudinal Medication Data</a>
+  <ul class="collapse">
+  <li><a href="#have-pfts" id="toc-have-pfts" class="nav-link" data-scroll-target="#have-pfts">Have PFTs</a></li>
+  <li><a href="#do-not-have-pfts" id="toc-do-not-have-pfts" class="nav-link" data-scroll-target="#do-not-have-pfts">Do NOT Have PFTs</a></li>
+  </ul></li>
+  <li><a href="#stable-ild-data" id="toc-stable-ild-data" class="nav-link" data-scroll-target="#stable-ild-data">Stable ILD Data</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li><li class="breadcrumb-item"><a href="./index.html">Homepage</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li><li class="breadcrumb-item"><a href="./who_has_pfts.html">who_has_pfts</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Homepage</h1>
+<h1 class="title">who_has_pfts</h1>
 </div>
 
 
@@ -194,10 +200,65 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This website provides a searchable document for learning about the Suffredini Lab’s myositis ILD project.</p>
-<p>It also includes specific high-yield information, such as a data dictionary, explanations of the code used to clean and analyze data, as well as a description for how to build or rebuild analyses.</p>
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p>All results below are for people with the following antibodies:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>- EJ
+- OJ
+- JO1
+- PL7
+- PL12
+- KS
+- HA
+- YRS
+- ZO
+- MDA5</code></pre>
+</div>
+</div>
+<p>There are N = 2046 PFT results:</p>
+<ul>
+<li>n = 308 unique patients</li>
+<li>n = 212 have two or more PFTs on record</li>
+</ul>
+</section>
+<section id="longitudinal-medication-data" class="level1">
+<h1>Longitudinal Medication Data</h1>
+<p>Based on the list vetted for SOMA proteomics seen at <a href="./longitudinal_report.html">longitudinal_report</a>, “Candidates for Proteomics”.</p>
+<p>Of the N = 37 patients <strong>with vetted, SOMA-appropriate</strong> longitudinal med admin data (i.e., had a medication start date in close proximity to a bleed date, and thereafter have follow up bleed dates):</p>
+<section id="have-pfts" class="level3">
+<h3 class="anchored" data-anchor-id="have-pfts">Have PFTs</h3>
+<p>Out of the N = 90 total sample:bleed_date:date_pfts triplets combos:</p>
+<ul>
+<li>n = 40/90 combos have PFTs within a 3 month proximity to a bleed date</li>
+<li>n = 0/90 triplet combos are missing MRN data (n = 0 unique patients)</li>
+</ul>
+</section>
+<section id="do-not-have-pfts" class="level3">
+<h3 class="anchored" data-anchor-id="do-not-have-pfts">Do NOT Have PFTs</h3>
+<p>Out of the N = 90 total sample:bleed_date:date_pfts triplets combos:</p>
+<ul>
+<li>n = 50/90 combos <strong>DO NOT</strong> have PFTs within a 3 month proximity to a bleed date</li>
+<li>n = 0/90 triplet combos are missing MRN data (n = 0 unique patients)</li>
+</ul>
+</section>
+</section>
+<section id="stable-ild-data" class="level1">
+<h1>Stable ILD Data</h1>
+<p>Based on the vetted list seen at <a href="./stable_ild.html">stable_ild</a>.</p>
+<p>Of the N = 42 patients with longitudinal data (not specifically tied to a medication start):</p>
+<ul>
+<li>n = 29/42 patients have PFTs
+<ul>
+<li>of those, 26/29 have at least 2 dates</li>
+</ul></li>
+<li>n = 13/42 patients do NOT have PFTs
+<ul>
+<li>n = 13/13 are missing MRN data</li>
+</ul></li>
+<li>n = 0/42 of the long med patients do NOT show up in the PFT dataset</li>
+</ul>
 
 
 </section>

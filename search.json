@@ -1,24 +1,328 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "questions",
+    "objectID": "stable_ild.html",
+    "href": "stable_ild.html",
+    "title": "stable_ild",
     "section": "",
-    "text": "What are next steps for Duke tuition payment?\n\n\n\n\n\nSince I’m done with all clinical rotations, can I take CCM boards prior to PULM?\n\n\n\n\n\nIs staying guaranteed? If no, when would I find that out?\n\n\n\n\n\nStaying: If I stay, do I need the list of “no negative issues” are every location I’ve ever rotated at?\nWould a letter from my med school + residency program + fellowship suffice?\n\nif not and this had to be individual, this list would include over a DOZEN hospital sites\n\n\n\n\n\n\nPossible either this year or next to do rotation there?",
+    "text": "There are substantial numbers of patients with unclear but suggestive diagnoses; for those, see Patients with Undefined Antibodies\nBelow are data from patients with formal antibody diagnoses. These data do not specify that patients have bleed dates or med starts – these are all patients in the database.\n\n\n\n\nantibodynpercentEJ142.7%JO123144.8%MDA59117.6%OJ214.1%PL126813.2%PL79117.6%Total516100.0%\n\n\n\n\n\nThese are results for ASyS patients with ANY follow-up bleeds.\nThere are no restraints to search parameters except they MUST have &gt;=2 bleeds on record (these bleeds might be 10 days apart, or 10 years; as stated, no restraints have been added to these results).\n\n\nN = 356 unique patients\nN = 1301 total bleeds\n\nn = 157 / 356 JO1 patients\nn = 16 / 356 OJ patients\nn = 64 / 356 PL7 patients\nn = 48 / 356 PL12 patients\nn = 60 / 356 MDA5 patients\nn = 11 / 356 EJ patients",
     "crumbs": [
       "Overview",
-      "questions"
+      "stable_ild"
     ]
   },
   {
-    "objectID": "index.html#questions",
-    "href": "index.html#questions",
-    "title": "questions",
+    "objectID": "stable_ild.html#all-asys-patients",
+    "href": "stable_ild.html#all-asys-patients",
+    "title": "stable_ild",
     "section": "",
-    "text": "What are next steps for Duke tuition payment?\n\n\n\n\n\nSince I’m done with all clinical rotations, can I take CCM boards prior to PULM?\n\n\n\n\n\nIs staying guaranteed? If no, when would I find that out?\n\n\n\n\n\nStaying: If I stay, do I need the list of “no negative issues” are every location I’ve ever rotated at?\nWould a letter from my med school + residency program + fellowship suffice?\n\nif not and this had to be individual, this list would include over a DOZEN hospital sites\n\n\n\n\n\n\nPossible either this year or next to do rotation there?",
+    "text": "antibodynpercentEJ142.7%JO123144.8%MDA59117.6%OJ214.1%PL126813.2%PL79117.6%Total516100.0%",
     "crumbs": [
       "Overview",
-      "questions"
+      "stable_ild"
+    ]
+  },
+  {
+    "objectID": "stable_ild.html#all-asys-patients-with-bleed-data",
+    "href": "stable_ild.html#all-asys-patients-with-bleed-data",
+    "title": "stable_ild",
+    "section": "",
+    "text": "These are results for ASyS patients with ANY follow-up bleeds.\nThere are no restraints to search parameters except they MUST have &gt;=2 bleeds on record (these bleeds might be 10 days apart, or 10 years; as stated, no restraints have been added to these results).\n\n\nN = 356 unique patients\nN = 1301 total bleeds\n\nn = 157 / 356 JO1 patients\nn = 16 / 356 OJ patients\nn = 64 / 356 PL7 patients\nn = 48 / 356 PL12 patients\nn = 60 / 356 MDA5 patients\nn = 11 / 356 EJ patients",
+    "crumbs": [
+      "Overview",
+      "stable_ild"
+    ]
+  },
+  {
+    "objectID": "stable_ild.html#adding-days-720",
+    "href": "stable_ild.html#adding-days-720",
+    "title": "stable_ild",
+    "section": "Adding Days 720",
+    "text": "Adding Days 720\nHowever, we would also like to include MDA5 and JO1 patients who had data from days 0, 360, AND 720.\nSo, adding those back in, we get the following new samples:\n\n\nN = 7 unique patients\nN = 7 total bleeds\n\nn = 4 / 7 JO1 patients\nn = 3 / 7 MDA5 patients\n\n\nAnd thus, our total dataset would look like this:\n\n\nN = 29 unique patients\nN = 65 total bleeds\n\nn = 20 / 29 JO1 patients\nn = 9 / 29 MDA5 patients",
+    "crumbs": [
+      "Overview",
+      "stable_ild"
+    ]
+  },
+  {
+    "objectID": "stable_ild.html#adding-extra-pl12-pl7-patients",
+    "href": "stable_ild.html#adding-extra-pl12-pl7-patients",
+    "title": "stable_ild",
+    "section": "Adding Extra PL12 / PL7 patients",
+    "text": "Adding Extra PL12 / PL7 patients\nTo round out our result, we want to add in some PL12 and PL7 patients with appropriate day 0 and 360 results.\n\n\nN = 39 unique patients\nN = 85 total bleeds\n\nn = 20 / 39 JO1 patients\nn = 9 / 39 MDA5 patients\nn = 5 / 39 PL7 patients\nn = 5 / 39 PL12 patients",
+    "crumbs": [
+      "Overview",
+      "stable_ild"
+    ]
+  },
+  {
+    "objectID": "stable_ild.html#adding-day-0-720-results-for-oj-pl7-pl12",
+    "href": "stable_ild.html#adding-day-0-720-results-for-oj-pl7-pl12",
+    "title": "stable_ild",
+    "section": "Adding Day 0, 720 results for OJ, PL7, PL12",
+    "text": "Adding Day 0, 720 results for OJ, PL7, PL12\nIf we add bleeds with:\n\nday 0 and 720 results only, who\nare anti-OJ, PL7, or PL12\n\nWe get:\n\n\nN = 3 unique patients\nN = 6 total bleeds\n\nn = 1 / 3 OJ patients\nn = 1 / 3 PL12 patients\nn = 1 / 3 PL7 patients\n\n\n\n\n\n\n\n\n\nThis makes our total cumulative result:\n\n\nN = 42 unique patients\nN = 91 total bleeds\n\nn = 20 / 42 JO1 patients\nn = 9 / 42 MDA5 patients\nn = 6 / 42 PL7 patients\nn = 6 / 42 PL12 patients\nn = 1 / 42 OJ patients",
+    "crumbs": [
+      "Overview",
+      "stable_ild"
+    ]
+  },
+  {
+    "objectID": "stable_ild.html#summary-of-hand-added-results",
+    "href": "stable_ild.html#summary-of-hand-added-results",
+    "title": "stable_ild",
+    "section": "Summary of Hand-Added Results",
+    "text": "Summary of Hand-Added Results\nThus, we have added the following items to “round out” our intial results, which had been based on MDA5 and JO1 patients.\n\n\nN = 20 unique patients\nN = 33 total bleeds\n\nn = 4 / 20 JO1 patients\nn = 3 / 20 MDA5 patients\nn = 6 / 20 PL7 patients\nn = 6 / 20 PL12 patients\nn = 1 / 20 OJ patients",
+    "crumbs": [
+      "Overview",
+      "stable_ild"
+    ]
+  },
+  {
+    "objectID": "stable_ild.html#exporting-the-result",
+    "href": "stable_ild.html#exporting-the-result",
+    "title": "stable_ild",
+    "section": "Exporting the Result",
+    "text": "Exporting the Result\nFor the total dataset, here are the results of bleeds we have on-hand at the NIH:\n\n\nWe already have n = 28 / 91 bleeds on hand.\nOf that:\n    - n = 9 / 28 are from SOMA testing\n    - n = 19 / 28 are from other non-SOMA testing at the NIH\n\nThus, we need to request n = 63 / 91 samples\n\n\nFor the hand-added results, here are the results of bleeds we have on-hand at the NIH:\n\n\nWe already have n = 10 / 33 bleeds on hand.\nOf that:\n    - n = 3 / 10 are from SOMA testing\n    - n = 7 / 10 are from other non-SOMA testing at the NIH\n\nThus, we need to request n = 23 / 33 samples\n\n\n\n\nantibody0360720TotalJO18 (12.7%)20 (31.7%)4  (6.3%)32  (50.8%)MDA53  (4.8%)9 (14.3%)3  (4.8%)15  (23.8%)OJ1  (1.6%)0  (0.0%)1  (1.6%)2   (3.2%)PL121  (1.6%)5  (7.9%)1  (1.6%)7  (11.1%)PL71  (1.6%)5  (7.9%)1  (1.6%)7  (11.1%)Total14 (22.2%)39 (61.9%)10 (15.9%)63 (100.0%)",
+    "crumbs": [
+      "Overview",
+      "stable_ild"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Homepage",
+    "section": "",
+    "text": "This website provides a searchable document for learning about the Suffredini Lab’s myositis ILD project.\nIt also includes specific high-yield information, such as a data dictionary, explanations of the code used to clean and analyze data, as well as a description for how to build or rebuild analyses.",
+    "crumbs": [
+      "Overview",
+      "Homepage"
+    ]
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "Homepage",
+    "section": "",
+    "text": "This website provides a searchable document for learning about the Suffredini Lab’s myositis ILD project.\nIt also includes specific high-yield information, such as a data dictionary, explanations of the code used to clean and analyze data, as well as a description for how to build or rebuild analyses.",
+    "crumbs": [
+      "Overview",
+      "Homepage"
+    ]
+  },
+  {
+    "objectID": "undefined_antibody.html",
+    "href": "undefined_antibody.html",
+    "title": "undefined_antibody",
+    "section": "",
+    "text": "Vetted Antibody Diagnoses\n\n\nantibodyFreqab_neg24   (6.1%)DM12   (3.0%)EJ14   (3.5%)HMGCR4   (1.0%)IBM14   (3.5%)JO1183  (46.2%)KU1   (0.3%)MDA551  (12.9%)MI2B1   (0.3%)NT5C1A1   (0.3%)NXP23   (0.8%)OJ2   (0.5%)PL1236   (9.1%)PL727   (6.8%)PM3   (0.8%)PM-SCL1   (0.3%)PM/SCL2   (0.5%)RO523   (0.8%)SRP6   (1.5%)TIF1G7   (1.8%)U3RNP1   (0.3%)Total396 (100.0%)\n\n\n\n\nUnvetted Antibody Diagnoses\nDiagnoses listed here have NOT been manually verified with a chart check.\nThey may originate from a clinical diagnosis given in an old database spreadsheet (i.e., the sheets that are used to create the database) or were algorithmically designated using a serum titer of &gt;15 as a diagnostic cutoff.\n\n\nantibodyFreqJO148  (23.6%)MDA540  (19.7%)OJ19   (9.4%)PL1232  (15.8%)PL764  (31.5%)Total203 (100.0%)",
+    "crumbs": [
+      "Overview",
+      "undefined_antibody"
+    ]
+  },
+  {
+    "objectID": "longitudinal_report.html",
+    "href": "longitudinal_report.html",
+    "title": "longitudinal_report",
+    "section": "",
+    "text": "Longitudinal days are based on a bleed date, relative to a new medication start, within the following parameters:\n\nBleed date between 0 to -180 days (-6 months) BEFORE a med start\nFarthest longitudinal follow-up date of 540 days (18 months) AFTER a med start\n\nLongitudinal bleed data exists for the following antibodies:\n\n\nantibodyFreqnumber_of_bleedsEJ311JO142119MDA51545OJ25PL121125PL7616Total79221",
+    "crumbs": [
+      "Overview",
+      "longitudinal_report"
+    ]
+  },
+  {
+    "objectID": "longitudinal_report.html#medication-details",
+    "href": "longitudinal_report.html#medication-details",
+    "title": "longitudinal_report",
+    "section": "Medication Details",
+    "text": "Medication Details\nBelow are the numbers, by antibody, for patients on a background med (TRUE) or not (FALSE):\n\n\n      \n       FALSE TRUE\n  EJ       0    2\n  JO1     13   17\n  MDA5     4    6\n  OJ       1    0\n  PL12     3    5\n  PL7      3    2\n\n\n\n\n\n\n\n\n\nLooking at the individual medications of this cohort, you get:\n\n\n\n\n\n\n\n\n\nLooking at medication breakdowns, we see:\n\n\n\n\n\n\n\n\n\n\nT cell Medications\nIn total, 44 unique patients received T cell effector medications, with good longitudinal data.\n\n\n   antibody              drugdesc long_date_index number\n1        EJ          AZATHIOPRINE               0      1\n2        EJ          AZATHIOPRINE             180      1\n3        EJ          AZATHIOPRINE             540      1\n4        EJ          METHOTREXATE               0      2\n5        EJ          METHOTREXATE             180      2\n6        EJ          METHOTREXATE             540      2\n7        EJ            PREDNISONE               0      3\n8        EJ            PREDNISONE             180      1\n9        EJ            PREDNISONE             360      2\n10       EJ            PREDNISONE             540      1\n11      JO1          AZATHIOPRINE               0     10\n12      JO1          AZATHIOPRINE             180      7\n13      JO1          AZATHIOPRINE             360      4\n14      JO1          AZATHIOPRINE             540      1\n15      JO1          METHOTREXATE               0      8\n16      JO1          METHOTREXATE             180      7\n17      JO1          METHOTREXATE             360      3\n18      JO1          METHOTREXATE             540      1\n19      JO1 MYCOPHENOLATE MOFETIL               0      6\n20      JO1 MYCOPHENOLATE MOFETIL             180      4\n21      JO1 MYCOPHENOLATE MOFETIL             360      2\n22      JO1            PREDNISONE               0      2\n23      JO1            PREDNISONE             180      1\n24      JO1            PREDNISONE             360      1\n25     MDA5          AZATHIOPRINE               0      4\n26     MDA5          AZATHIOPRINE             180      3\n27     MDA5          AZATHIOPRINE             540      3\n28     MDA5          METHOTREXATE               0      1\n29     MDA5          METHOTREXATE             540      1\n30     MDA5    METHYLPREDNISOLONE               0      1\n31     MDA5    METHYLPREDNISOLONE             360      1\n32     MDA5 MYCOPHENOLATE MOFETIL               0      5\n33     MDA5 MYCOPHENOLATE MOFETIL             180      4\n34     MDA5 MYCOPHENOLATE MOFETIL             360      3\n35     PL12          AZATHIOPRINE               0      2\n36     PL12          AZATHIOPRINE             180      2\n37     PL12          AZATHIOPRINE             360      1\n38     PL12 MYCOPHENOLATE MOFETIL               0      2\n39     PL12 MYCOPHENOLATE MOFETIL             180      1\n40     PL12 MYCOPHENOLATE MOFETIL             360      1\n41     PL12            PREDNISONE               0      2\n42     PL12            PREDNISONE             360      2\n43      PL7 MYCOPHENOLATE MOFETIL               0      1\n44      PL7 MYCOPHENOLATE MOFETIL             540      1\n\n\n\n\n\n\n\n\n\n\n\nB Cell Medications / Other\nIn total, 26 unique patients received B cell effector medications, with good longitudinal data.\n\n\n   antibody               drugdesc long_date_index number\n1        EJ HUMAN IMMUNOGLOBULIN G               0      2\n2        EJ HUMAN IMMUNOGLOBULIN G             180      2\n3        EJ HUMAN IMMUNOGLOBULIN G             540      1\n7       JO1 HUMAN IMMUNOGLOBULIN G               0      7\n8       JO1 HUMAN IMMUNOGLOBULIN G             180      4\n9       JO1 HUMAN IMMUNOGLOBULIN G             360      4\n17      JO1              RITUXIMAB               0      3\n18      JO1              RITUXIMAB             180      1\n19      JO1              RITUXIMAB             360      1\n20      JO1              RITUXIMAB             540      1\n25     MDA5 HUMAN IMMUNOGLOBULIN G               0      3\n26     MDA5 HUMAN IMMUNOGLOBULIN G             180      2\n27     MDA5 HUMAN IMMUNOGLOBULIN G             360      1\n28     MDA5              RITUXIMAB               0      2\n29     MDA5              RITUXIMAB             360      2\n35       OJ HUMAN IMMUNOGLOBULIN G               0      1\n36       OJ HUMAN IMMUNOGLOBULIN G             360      1\n40     PL12              RITUXIMAB               0      1\n41     PL12              RITUXIMAB             180      1\n42     PL12              RITUXIMAB             540      1\n45      PL7 HUMAN IMMUNOGLOBULIN G               0      1\n46      PL7 HUMAN IMMUNOGLOBULIN G             180      1\n47      PL7              RITUXIMAB               0      4\n48      PL7              RITUXIMAB             180      3\n49      PL7              RITUXIMAB             360      1\n50      PL7              RITUXIMAB             540      2",
+    "crumbs": [
+      "Overview",
+      "longitudinal_report"
+    ]
+  },
+  {
+    "objectID": "longitudinal_report.html#sec-othermeds",
+    "href": "longitudinal_report.html#sec-othermeds",
+    "title": "longitudinal_report",
+    "section": "Other Medications",
+    "text": "Other Medications\n\n\n   antibody                   drugdesc long_date_index number\n1       JO1                 ETANERCEPT               0      1\n2       JO1                 ETANERCEPT             180      1\n3       JO1                 ETANERCEPT             360      1\n4       JO1 HYDROXYCHLOROQUINE SULFATE               0      1\n5       JO1 HYDROXYCHLOROQUINE SULFATE             360      1\n6       JO1                 INFLIXIMAB               0      2\n7       JO1                 INFLIXIMAB             180      1\n8       JO1                 INFLIXIMAB             360      1\n9       JO1                      OTHER               0      1\n10      JO1                      OTHER             180      1\n11      JO1              SULFASALAZINE               0      1\n12      JO1              SULFASALAZINE             180      1\n13      JO1        TOFACITINIB CITRATE               0      1\n14      JO1        TOFACITINIB CITRATE             180      1\n15     MDA5                 TACROLIMUS               0      2\n16     MDA5                 TACROLIMUS             180      1\n17     MDA5                 TACROLIMUS             360      1\n18     MDA5        TOFACITINIB CITRATE               0      1\n19     MDA5        TOFACITINIB CITRATE             540      1\n20     PL12 HYDROXYCHLOROQUINE SULFATE               0      2\n21     PL12 HYDROXYCHLOROQUINE SULFATE             180      1\n22     PL12 HYDROXYCHLOROQUINE SULFATE             360      2\n23     PL12                TOCILIZUMAB               0      1\n24     PL12                TOCILIZUMAB             180      1",
+    "crumbs": [
+      "Overview",
+      "longitudinal_report"
+    ]
+  },
+  {
+    "objectID": "longitudinal_report.html#combined-b-and-t-cell-meds",
+    "href": "longitudinal_report.html#combined-b-and-t-cell-meds",
+    "title": "longitudinal_report",
+    "section": "Combined B and T Cell Meds",
+    "text": "Combined B and T Cell Meds\n\n\nantibodyFreqnumber_of_bleedsEJ28JO12664MDA51026OJ12PL12614PL7512Total50126",
+    "crumbs": [
+      "Overview",
+      "longitudinal_report"
+    ]
+  },
+  {
+    "objectID": "longitudinal_report.html#t-cell-meds-only",
+    "href": "longitudinal_report.html#t-cell-meds-only",
+    "title": "longitudinal_report",
+    "section": "T Cell Meds Only",
+    "text": "T Cell Meds Only\n\n\nantibodyFreqnumber_of_bleedsEJ27JO12251MDA5820PL12511PL712Total3891",
+    "crumbs": [
+      "Overview",
+      "longitudinal_report"
+    ]
+  },
+  {
+    "objectID": "longitudinal_report.html#b-cell-meds-only",
+    "href": "longitudinal_report.html#b-cell-meds-only",
+    "title": "longitudinal_report",
+    "section": "B Cell Meds Only",
+    "text": "B Cell Meds Only\n\n\nantibodyFreqnumber_of_bleedsEJ13JO1717MDA548OJ12PL1213PL7410Total1843",
+    "crumbs": [
+      "Overview",
+      "longitudinal_report"
+    ]
+  },
+  {
+    "objectID": "longitudinal_report.html#t-cell-medications-1",
+    "href": "longitudinal_report.html#t-cell-medications-1",
+    "title": "longitudinal_report",
+    "section": "T Cell Medications",
+    "text": "T Cell Medications\n\n\n   antibody     drugdesc long_date_index number\n1        EJ AZATHIOPRINE               0      1\n2        EJ AZATHIOPRINE             180      1\n3        EJ AZATHIOPRINE             540      1\n4        EJ METHOTREXATE               0      2\n5        EJ METHOTREXATE             180      2\n6        EJ METHOTREXATE             540      2\n7        EJ   PREDNISONE               0      3\n8        EJ   PREDNISONE             180      1\n9        EJ   PREDNISONE             360      2\n10       EJ   PREDNISONE             540      1\n\n\n\n\n\n\n\n\n\n   antibody              drugdesc long_date_index number\n1       JO1          AZATHIOPRINE               0     10\n2       JO1          AZATHIOPRINE             180      7\n3       JO1          AZATHIOPRINE             360      4\n4       JO1          AZATHIOPRINE             540      1\n5       JO1          METHOTREXATE               0      8\n6       JO1          METHOTREXATE             180      7\n7       JO1          METHOTREXATE             360      3\n8       JO1          METHOTREXATE             540      1\n9       JO1 MYCOPHENOLATE MOFETIL               0      6\n10      JO1 MYCOPHENOLATE MOFETIL             180      4\n11      JO1 MYCOPHENOLATE MOFETIL             360      2\n12      JO1            PREDNISONE               0      2\n13      JO1            PREDNISONE             180      1\n14      JO1            PREDNISONE             360      1\n\n\n\n\n\n\n\n\n\n  antibody              drugdesc long_date_index number\n1      PL7 MYCOPHENOLATE MOFETIL               0      1\n2      PL7 MYCOPHENOLATE MOFETIL             540      1\n\n\n\n\n\n\n\n\n\n  antibody              drugdesc long_date_index number\n1     PL12          AZATHIOPRINE               0      2\n2     PL12          AZATHIOPRINE             180      2\n3     PL12          AZATHIOPRINE             360      1\n4     PL12 MYCOPHENOLATE MOFETIL               0      2\n5     PL12 MYCOPHENOLATE MOFETIL             180      1\n6     PL12 MYCOPHENOLATE MOFETIL             360      1\n7     PL12            PREDNISONE               0      2\n8     PL12            PREDNISONE             360      2\n\n\n\n\n\n\n\n\n\n   antibody              drugdesc long_date_index number\n1      MDA5          AZATHIOPRINE               0      4\n2      MDA5          AZATHIOPRINE             180      3\n3      MDA5          AZATHIOPRINE             540      3\n4      MDA5          METHOTREXATE               0      1\n5      MDA5          METHOTREXATE             540      1\n6      MDA5    METHYLPREDNISOLONE               0      1\n7      MDA5    METHYLPREDNISOLONE             360      1\n8      MDA5 MYCOPHENOLATE MOFETIL               0      5\n9      MDA5 MYCOPHENOLATE MOFETIL             180      4\n10     MDA5 MYCOPHENOLATE MOFETIL             360      3",
+    "crumbs": [
+      "Overview",
+      "longitudinal_report"
+    ]
+  },
+  {
+    "objectID": "longitudinal_report.html#b-cell-medications",
+    "href": "longitudinal_report.html#b-cell-medications",
+    "title": "longitudinal_report",
+    "section": "B Cell Medications",
+    "text": "B Cell Medications\n\n\n  antibody               drugdesc long_date_index number\n1       EJ HUMAN IMMUNOGLOBULIN G               0      2\n2       EJ HUMAN IMMUNOGLOBULIN G             180      2\n3       EJ HUMAN IMMUNOGLOBULIN G             540      1\n\n\n\n\n\n\n\n\n\n  antibody               drugdesc long_date_index number\n1       OJ HUMAN IMMUNOGLOBULIN G               0      1\n2       OJ HUMAN IMMUNOGLOBULIN G             360      1\n\n\n\n\n\n\n\n\n\n  antibody               drugdesc long_date_index number\n1      JO1 HUMAN IMMUNOGLOBULIN G               0      7\n2      JO1 HUMAN IMMUNOGLOBULIN G             180      4\n3      JO1 HUMAN IMMUNOGLOBULIN G             360      4\n4      JO1              RITUXIMAB               0      3\n5      JO1              RITUXIMAB             180      1\n6      JO1              RITUXIMAB             360      1\n7      JO1              RITUXIMAB             540      1\n\n\n\n\n\n\n\n\n\n  antibody               drugdesc long_date_index number\n1      PL7 HUMAN IMMUNOGLOBULIN G               0      1\n2      PL7 HUMAN IMMUNOGLOBULIN G             180      1\n3      PL7              RITUXIMAB               0      4\n4      PL7              RITUXIMAB             180      3\n5      PL7              RITUXIMAB             360      1\n6      PL7              RITUXIMAB             540      2\n\n\n\n\n\n\n\n\n\n  antibody  drugdesc long_date_index number\n1     PL12 RITUXIMAB               0      1\n2     PL12 RITUXIMAB             180      1\n3     PL12 RITUXIMAB             540      1\n\n\n\n\n\n\n\n\n\n  antibody               drugdesc long_date_index number\n1     MDA5 HUMAN IMMUNOGLOBULIN G               0      3\n2     MDA5 HUMAN IMMUNOGLOBULIN G             180      2\n3     MDA5 HUMAN IMMUNOGLOBULIN G             360      1\n4     MDA5              RITUXIMAB               0      2\n5     MDA5              RITUXIMAB             360      2",
+    "crumbs": [
+      "Overview",
+      "longitudinal_report"
+    ]
+  },
+  {
+    "objectID": "longitudinal_report.html#other-medications",
+    "href": "longitudinal_report.html#other-medications",
+    "title": "longitudinal_report",
+    "section": "Other Medications",
+    "text": "Other Medications\n\n\n   antibody                   drugdesc long_date_index number\n1       JO1                 ETANERCEPT               0      1\n2       JO1                 ETANERCEPT             180      1\n3       JO1                 ETANERCEPT             360      1\n4       JO1 HYDROXYCHLOROQUINE SULFATE               0      1\n5       JO1 HYDROXYCHLOROQUINE SULFATE             360      1\n6       JO1                 INFLIXIMAB               0      2\n7       JO1                 INFLIXIMAB             180      1\n8       JO1                 INFLIXIMAB             360      1\n9       JO1                      OTHER               0      1\n10      JO1                      OTHER             180      1\n11      JO1              SULFASALAZINE               0      1\n12      JO1              SULFASALAZINE             180      1\n13      JO1        TOFACITINIB CITRATE               0      1\n14      JO1        TOFACITINIB CITRATE             180      1\n\n\n\n\n\n\n\n\n\n  antibody                   drugdesc long_date_index number\n1     PL12 HYDROXYCHLOROQUINE SULFATE               0      2\n2     PL12 HYDROXYCHLOROQUINE SULFATE             180      1\n3     PL12 HYDROXYCHLOROQUINE SULFATE             360      2\n4     PL12                TOCILIZUMAB               0      1\n5     PL12                TOCILIZUMAB             180      1\n\n\n\n\n\n\n\n\n\n  antibody            drugdesc long_date_index number\n1     MDA5          TACROLIMUS               0      2\n2     MDA5          TACROLIMUS             180      1\n3     MDA5          TACROLIMUS             360      1\n4     MDA5 TOFACITINIB CITRATE               0      1\n5     MDA5 TOFACITINIB CITRATE             540      1",
+    "crumbs": [
+      "Overview",
+      "longitudinal_report"
+    ]
+  },
+  {
+    "objectID": "longitudinal_report.html#b-cell-meds",
+    "href": "longitudinal_report.html#b-cell-meds",
+    "title": "longitudinal_report",
+    "section": "B Cell Meds",
+    "text": "B Cell Meds\n\nFor IVIG\nBleed numbers by specific antibodies are also low here.\n\nOJ patients: n = 1\n\nSo if excluding OJ, we get:\n\n\nantibody0180360540TotalEJ2 (40.0%)2 (40.0%)0  (0.0%)1 (20.0%)5 (100.0%)JO17 (46.7%)4 (26.7%)4 (26.7%)0  (0.0%)15 (100.0%)MDA53 (50.0%)2 (33.3%)1 (16.7%)0  (0.0%)6 (100.0%)PL71 (50.0%)1 (50.0%)0  (0.0%)0  (0.0%)2 (100.0%)Total13 (46.4%)9 (32.1%)5 (17.9%)1  (3.6%)28 (100.0%)\n\n\n\n\nFor Rituximab\nThese is some complexity to the rituximab data.\n\nPL12 patients: n = 1\n\nI propose keeping all samples, since the PL12 patient above has n = 3 total bleeds.\n\n\nantibody0180360540TotalJO13 (13.0%)1  (4.3%)1  (4.3%)1  (4.3%)6  (26.1%)MDA52  (8.7%)0  (0.0%)2  (8.7%)0  (0.0%)4  (17.4%)PL121  (4.3%)1  (4.3%)0  (0.0%)1  (4.3%)3  (13.0%)PL74 (17.4%)3 (13.0%)1  (4.3%)2  (8.7%)10  (43.5%)Total10 (43.5%)5 (21.7%)4 (17.4%)4 (17.4%)23 (100.0%)",
+    "crumbs": [
+      "Overview",
+      "longitudinal_report"
+    ]
+  },
+  {
+    "objectID": "longitudinal_report.html#hand-vetted-exclusions",
+    "href": "longitudinal_report.html#hand-vetted-exclusions",
+    "title": "longitudinal_report",
+    "section": "Hand-Vetted Exclusions",
+    "text": "Hand-Vetted Exclusions\nAfter looking up the ILD statuses in EPIC of the patients above, a small group showed inconsistencies with their titer-based antibody diagnoses (what we are using here) and what their clinical diagnosis in the chart holds.\nThus, we propose excluding the following patients:\n\n\nantibodyMYCOPHENOLATE MOFETILRITUXIMABTotalMDA5202PL12235Total437\n\n\nantibody0180540TotalMDA51102PL122215Total3317",
+    "crumbs": [
+      "Overview",
+      "longitudinal_report"
+    ]
+  },
+  {
+    "objectID": "longitudinal_report.html#overall-proposed-proteomics-dataset",
+    "href": "longitudinal_report.html#overall-proposed-proteomics-dataset",
+    "title": "longitudinal_report",
+    "section": "Overall Proposed Proteomics Dataset",
+    "text": "Overall Proposed Proteomics Dataset\n\n\nN = 37 unique patients\nN = 90 total bleeds\n\nn = 2 / 37 EJ patients\nn = 20 / 37 JO1 patients\nn = 8 / 37 MDA5 patients\nn = 3 / 37 PL12 patients\nn = 4 / 37 PL7 patients\n\n\nantibodyFreqnumber_of_bleedsEJ2   (5.4%)6   (6.7%)JO120  (54.1%)46  (51.1%)MDA58  (21.6%)21  (23.3%)PL123   (8.1%)7   (7.8%)PL74  (10.8%)10  (11.1%)Total37 (100.0%)90 (100.0%)\n\n\nantibodyAZATHIOPRINEHUMAN IMMUNOGLOBULIN GMYCOPHENOLATE MOFETILRITUXIMABTotalEJ3  (2.7%)5  (4.5%)0  (0.0%)0  (0.0%)8   (7.1%)JO122 (19.6%)15 (13.4%)12 (10.7%)6  (5.4%)55  (49.1%)MDA510  (8.9%)6  (5.4%)10  (8.9%)4  (3.6%)30  (26.8%)PL125  (4.5%)0  (0.0%)2  (1.8%)0  (0.0%)7   (6.2%)PL70  (0.0%)2  (1.8%)0  (0.0%)10  (8.9%)12  (10.7%)Total40 (35.7%)28 (25.0%)24 (21.4%)20 (17.9%)112 (100.0%)",
+    "crumbs": [
+      "Overview",
+      "longitudinal_report"
+    ]
+  },
+  {
+    "objectID": "longitudinal_report.html#filter-out-by-samples-on-hand-at-nih",
+    "href": "longitudinal_report.html#filter-out-by-samples-on-hand-at-nih",
+    "title": "longitudinal_report",
+    "section": "Filter Out by Samples on hand at NIH",
+    "text": "Filter Out by Samples on hand at NIH\n\n\nWe already have n = 19 / 90 bleeds on hand.\nOf that:\n    - n = 1 / 19 are from SOMA testing\n    - n = 18 / 19 are from other non-SOMA testing at the NIH\n\nThus, we need to request n = 71 / 90 samples\n\n\n\n\nantibodyFreqnumber_of_bleedsEJ26JO12034MDA5818PL1235PL748Total3771",
+    "crumbs": [
+      "Overview",
+      "longitudinal_report"
+    ]
+  },
+  {
+    "objectID": "mortality_data.html",
+    "href": "mortality_data.html",
+    "title": "mortality_data",
+    "section": "",
+    "text": "Overview\nAll results below are for people with the following antibodies:\n\n\n- EJ\n- OJ\n- JO1\n- PL7\n- PL12\n- KS\n- HA\n- YRS\n- ZO\n- MDA5\n\n\n\nn = 423 unique patients\nn = 35 / 423 (8.27%) who ARE deceased\nn = 246 / 423 (58.16%) who are NOT deceased\nn = 142 / 423 (33.57%) patients with MISSING mortality data\n\n\n\n antibody           no        yes          NA_\n   ab_neg  72.2%  (13) 11.1%  (2)  16.7%   (3)\n       DM  80.0%   (8)  0.0%  (0)  20.0%   (2)\n       EJ  50.0%   (5) 20.0%  (2)  30.0%   (3)\n    HMGCR  25.0%   (1)  0.0%  (0)  75.0%   (3)\n      IBM  55.6%   (5)  0.0%  (0)  44.4%   (4)\n      JO1  59.4%  (98)  7.3% (12)  33.3%  (55)\n       KU 100.0%   (1)  0.0%  (0)   0.0%   (0)\n     MDA5  50.0%  (29)  6.9%  (4)  43.1%  (25)\n   NT5C1A   0.0%   (0)  0.0%  (0) 100.0%   (1)\n     NXP2  66.7%   (2)  0.0%  (0)  33.3%   (1)\n       OJ  57.1%   (8)  0.0%  (0)  42.9%   (6)\n     PL12  47.9%  (23) 16.7%  (8)  35.4%  (17)\n      PL7  73.0%  (46)  9.5%  (6)  17.5%  (11)\n       PM  66.7%   (2) 33.3%  (1)   0.0%   (0)\n   PM-SCL 100.0%   (1)  0.0%  (0)   0.0%   (0)\n   PM/SCL 100.0%   (1)  0.0%  (0)   0.0%   (0)\n     RO52   0.0%   (0)  0.0%  (0) 100.0%   (2)\n      SRP  33.3%   (2)  0.0%  (0)  66.7%   (4)\n    TIF1G  20.0%   (1)  0.0%  (0)  80.0%   (4)\n    U3RNP   0.0%   (0)  0.0%  (0) 100.0%   (1)\n    Total  58.2% (246)  8.3% (35)  33.6% (142)"
+  },
+  {
+    "objectID": "who_has_pfts.html",
+    "href": "who_has_pfts.html",
+    "title": "who_has_pfts",
+    "section": "",
+    "text": "Overview\nAll results below are for people with the following antibodies:\n\n\n- EJ\n- OJ\n- JO1\n- PL7\n- PL12\n- KS\n- HA\n- YRS\n- ZO\n- MDA5\n\n\nThere are N = 2046 PFT results:\n\nn = 308 unique patients\nn = 212 have two or more PFTs on record\n\n\n\nLongitudinal Medication Data\nBased on the list vetted for SOMA proteomics seen at longitudinal_report, “Candidates for Proteomics”.\nOf the N = 37 patients with vetted, SOMA-appropriate longitudinal med admin data (i.e., had a medication start date in close proximity to a bleed date, and thereafter have follow up bleed dates):\n\nHave PFTs\nOut of the N = 90 total sample:bleed_date:date_pfts triplets combos:\n\nn = 40/90 combos have PFTs within a 3 month proximity to a bleed date\nn = 0/90 triplet combos are missing MRN data (n = 0 unique patients)\n\n\n\nDo NOT Have PFTs\nOut of the N = 90 total sample:bleed_date:date_pfts triplets combos:\n\nn = 50/90 combos DO NOT have PFTs within a 3 month proximity to a bleed date\nn = 0/90 triplet combos are missing MRN data (n = 0 unique patients)\n\n\n\n\nStable ILD Data\nBased on the vetted list seen at stable_ild.\nOf the N = 42 patients with longitudinal data (not specifically tied to a medication start):\n\nn = 29/42 patients have PFTs\n\nof those, 26/29 have at least 2 dates\n\nn = 13/42 patients do NOT have PFTs\n\nn = 13/13 are missing MRN data\n\nn = 0/42 of the long med patients do NOT show up in the PFT dataset",
+    "crumbs": [
+      "Overview",
+      "who_has_pfts"
+    ]
+  },
+  {
+    "objectID": "bleeds_on_hand.html",
+    "href": "bleeds_on_hand.html",
+    "title": "bleeds_on_hand",
+    "section": "",
+    "text": "The current list of on-hand bleeds (numbers as by number of bleed dates, stratified by antibody) is as follows:\n\n\n antibody Freq\n       EJ    9\n      JO1  140\n     MDA5   40\n     PL12   32\n      PL7   26\n    Total  247\n\n\n\n\n\nAll missing bleed_date above can be assumed to actually consistent of the earliest available blood sample we have on record for a given patient (i.e., a given id_sample).\nTypically, the Euroimmun date is, by definition, the earliest bleed date avialable for any given patient.",
+    "crumbs": [
+      "Overview",
+      "bleeds_on_hand"
+    ]
+  },
+  {
+    "objectID": "bleeds_on_hand.html#current-data",
+    "href": "bleeds_on_hand.html#current-data",
+    "title": "bleeds_on_hand",
+    "section": "",
+    "text": "The current list of on-hand bleeds (numbers as by number of bleed dates, stratified by antibody) is as follows:\n\n\n antibody Freq\n       EJ    9\n      JO1  140\n     MDA5   40\n     PL12   32\n      PL7   26\n    Total  247",
+    "crumbs": [
+      "Overview",
+      "bleeds_on_hand"
+    ]
+  },
+  {
+    "objectID": "bleeds_on_hand.html#filling-in-missing-bleed-dates",
+    "href": "bleeds_on_hand.html#filling-in-missing-bleed-dates",
+    "title": "bleeds_on_hand",
+    "section": "",
+    "text": "All missing bleed_date above can be assumed to actually consistent of the earliest available blood sample we have on record for a given patient (i.e., a given id_sample).\nTypically, the Euroimmun date is, by definition, the earliest bleed date avialable for any given patient.",
+    "crumbs": [
+      "Overview",
+      "bleeds_on_hand"
+    ]
+  },
+  {
+    "objectID": "clinical_data.html",
+    "href": "clinical_data.html",
+    "title": "clinical_data",
+    "section": "",
+    "text": "Age at Diagnosis\n\n\nantibodypatients (n)age at dx, mean (SD)age at intake, mean (SD)EJ1450.6 (9.7)57 (8.5)JO118349.4 (12.1)51.3 (12.5)MDA55148.3 (8.2)51.9 (10.9)OJ2NaN (NA)65.5 (8.5)PL123645.8 (13.9)50.1 (12.3)PL72749.3 (11.7)53.7 (13.2)",
+    "crumbs": [
+      "Overview",
+      "clinical_data"
     ]
   }
 ]

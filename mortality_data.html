@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Homepage – Myositis ILD</title>
+<title>mortality_data – Myositis ILD</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,9 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li><li class="breadcrumb-item"><a href="./index.html">Homepage</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Myositis ILD
+      </li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -116,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Homepage</span></a>
   </div>
 </li>
@@ -175,9 +177,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Overview</a></li><li class="breadcrumb-item"><a href="./index.html">Homepage</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Homepage</h1>
+<h1 class="title">mortality_data</h1>
 </div>
 
 
@@ -194,10 +196,55 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>This website provides a searchable document for learning about the Suffredini Lab’s myositis ILD project.</p>
-<p>It also includes specific high-yield information, such as a data dictionary, explanations of the code used to clean and analyze data, as well as a description for how to build or rebuild analyses.</p>
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p>All results below are for people with the following antibodies:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>- EJ
+- OJ
+- JO1
+- PL7
+- PL12
+- KS
+- HA
+- YRS
+- ZO
+- MDA5</code></pre>
+</div>
+</div>
+<ul>
+<li>n = 423 unique patients</li>
+<li>n = 35 / 423 (8.27%) who ARE deceased</li>
+<li>n = 246 / 423 (58.16%) who are NOT deceased</li>
+<li>n = 142 / 423 (33.57%) patients with MISSING mortality data</li>
+</ul>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code> antibody           no        yes          NA_
+   ab_neg  72.2%  (13) 11.1%  (2)  16.7%   (3)
+       DM  80.0%   (8)  0.0%  (0)  20.0%   (2)
+       EJ  50.0%   (5) 20.0%  (2)  30.0%   (3)
+    HMGCR  25.0%   (1)  0.0%  (0)  75.0%   (3)
+      IBM  55.6%   (5)  0.0%  (0)  44.4%   (4)
+      JO1  59.4%  (98)  7.3% (12)  33.3%  (55)
+       KU 100.0%   (1)  0.0%  (0)   0.0%   (0)
+     MDA5  50.0%  (29)  6.9%  (4)  43.1%  (25)
+   NT5C1A   0.0%   (0)  0.0%  (0) 100.0%   (1)
+     NXP2  66.7%   (2)  0.0%  (0)  33.3%   (1)
+       OJ  57.1%   (8)  0.0%  (0)  42.9%   (6)
+     PL12  47.9%  (23) 16.7%  (8)  35.4%  (17)
+      PL7  73.0%  (46)  9.5%  (6)  17.5%  (11)
+       PM  66.7%   (2) 33.3%  (1)   0.0%   (0)
+   PM-SCL 100.0%   (1)  0.0%  (0)   0.0%   (0)
+   PM/SCL 100.0%   (1)  0.0%  (0)   0.0%   (0)
+     RO52   0.0%   (0)  0.0%  (0) 100.0%   (2)
+      SRP  33.3%   (2)  0.0%  (0)  66.7%   (4)
+    TIF1G  20.0%   (1)  0.0%  (0)  80.0%   (4)
+    U3RNP   0.0%   (0)  0.0%  (0) 100.0%   (1)
+    Total  58.2% (246)  8.3% (35)  33.6% (142)</code></pre>
+</div>
+</div>
 
 
 </section>

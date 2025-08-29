@@ -15,8 +15,8 @@ website:
         contents:
           - index.qmd
           - longitudinal_report.qmd
-          - undefined_antibody.qmd
           - stable_ild.qmd
+          - bleeds_on_hand.qmd
 
 format:
   html:
