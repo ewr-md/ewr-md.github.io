@@ -1,90 +1,13 @@
 [
   {
-    "objectID": "stable_ild.html",
-    "href": "stable_ild.html",
-    "title": "stable_ild",
+    "objectID": "who_has_pfts.html",
+    "href": "who_has_pfts.html",
+    "title": "who_has_pfts",
     "section": "",
-    "text": "There are substantial numbers of patients with unclear but suggestive diagnoses; for those, see Patients with Undefined Antibodies\nBelow are data from patients with formal antibody diagnoses. These data do not specify that patients have bleed dates or med starts – these are all patients in the database.\n\n\n\n\nantibodynpercentEJ142.7%JO123144.3%MDA59818.8%OJ214.0%PL126612.7%PL79117.5%Total521100.0%\n\n\n\n\n\nThese are results for ASyS patients with ANY follow-up bleeds.\nThere are no restraints to search parameters except they MUST have &gt;=2 bleeds on record (these bleeds might be 10 days apart, or 10 years; as stated, no restraints have been added to these results).\n\n\nN = 359 unique patients\nN = 1314 total bleeds\n\nn = 156 / 359 JO1 patients\nn = 16 / 359 OJ patients\nn = 64 / 359 MDA5 patients\nn = 64 / 359 PL7 patients\nn = 48 / 359 PL12 patients\nn = 11 / 359 EJ patients",
+    "text": "Overview\nAll results below are for people with the following antibodies:\n\n\n- EJ\n- OJ\n- JO1\n- PL7\n- PL12\n- KS\n- HA\n- YRS\n- ZO\n- MDA5\n\n\nThere are N = 2046 PFT results:\n\nn = 308 unique patients\nn = 212 have two or more PFTs on record\n\n\n\nLongitudinal Medication Data\nBased on the list vetted for SOMA proteomics seen at longitudinal_report, “Candidates for Proteomics”.\nOf the N = 37 patients with vetted, SOMA-appropriate longitudinal med admin data (i.e., had a medication start date in close proximity to a bleed date, and thereafter have follow up bleed dates):\n\nHave PFTs\nOut of the N = 90 total sample:bleed_date:date_pfts triplets combos:\n\nn = 40/90 combos have PFTs within a 3 month proximity to a bleed date\nn = 0/90 triplet combos are missing MRN data (n = 0 unique patients)\n\n\n\nDo NOT Have PFTs\nOut of the N = 90 total sample:bleed_date:date_pfts triplets combos:\n\nn = 50/90 combos DO NOT have PFTs within a 3 month proximity to a bleed date\nn = 0/90 triplet combos are missing MRN data (n = 0 unique patients)\n\n\n\n\nStable ILD Data\nBased on the vetted list seen at stable_ild.\nOf the N = 42 patients with longitudinal data (not specifically tied to a medication start):\n\nn = 29/42 patients have PFTs\n\nof those, 26/29 have at least 2 dates\n\nn = 13/42 patients do NOT have PFTs\n\nn = 13/13 are missing MRN data\n\nn = 0/42 of the long med patients do NOT show up in the PFT dataset",
     "crumbs": [
       "Overview",
-      "stable_ild"
-    ]
-  },
-  {
-    "objectID": "stable_ild.html#all-asys-patients",
-    "href": "stable_ild.html#all-asys-patients",
-    "title": "stable_ild",
-    "section": "",
-    "text": "antibodynpercentEJ142.7%JO123144.3%MDA59818.8%OJ214.0%PL126612.7%PL79117.5%Total521100.0%",
-    "crumbs": [
-      "Overview",
-      "stable_ild"
-    ]
-  },
-  {
-    "objectID": "stable_ild.html#all-asys-patients-with-bleed-data",
-    "href": "stable_ild.html#all-asys-patients-with-bleed-data",
-    "title": "stable_ild",
-    "section": "",
-    "text": "These are results for ASyS patients with ANY follow-up bleeds.\nThere are no restraints to search parameters except they MUST have &gt;=2 bleeds on record (these bleeds might be 10 days apart, or 10 years; as stated, no restraints have been added to these results).\n\n\nN = 359 unique patients\nN = 1314 total bleeds\n\nn = 156 / 359 JO1 patients\nn = 16 / 359 OJ patients\nn = 64 / 359 MDA5 patients\nn = 64 / 359 PL7 patients\nn = 48 / 359 PL12 patients\nn = 11 / 359 EJ patients",
-    "crumbs": [
-      "Overview",
-      "stable_ild"
-    ]
-  },
-  {
-    "objectID": "stable_ild.html#adding-days-720",
-    "href": "stable_ild.html#adding-days-720",
-    "title": "stable_ild",
-    "section": "Adding Days 720",
-    "text": "Adding Days 720\nHowever, we would also like to include MDA5 and JO1 patients who had data from days 0, 360, AND 720.\nSo, adding those back in, we get the following new samples:\n\n\nN = 7 unique patients\nN = 7 total bleeds\n\nn = 4 / 7 JO1 patients\nn = 3 / 7 MDA5 patients\n\n\nAnd thus, our total dataset would look like this:\n\n\nN = 29 unique patients\nN = 65 total bleeds\n\nn = 20 / 29 JO1 patients\nn = 9 / 29 MDA5 patients",
-    "crumbs": [
-      "Overview",
-      "stable_ild"
-    ]
-  },
-  {
-    "objectID": "stable_ild.html#adding-extra-pl12-pl7-patients",
-    "href": "stable_ild.html#adding-extra-pl12-pl7-patients",
-    "title": "stable_ild",
-    "section": "Adding Extra PL12 / PL7 patients",
-    "text": "Adding Extra PL12 / PL7 patients\nTo round out our result, we want to add in some PL12 and PL7 patients with appropriate day 0 and 360 results.\n\n\nN = 39 unique patients\nN = 85 total bleeds\n\nn = 20 / 39 JO1 patients\nn = 9 / 39 MDA5 patients\nn = 5 / 39 PL7 patients\nn = 5 / 39 PL12 patients",
-    "crumbs": [
-      "Overview",
-      "stable_ild"
-    ]
-  },
-  {
-    "objectID": "stable_ild.html#adding-day-0-720-results-for-oj-pl7-pl12",
-    "href": "stable_ild.html#adding-day-0-720-results-for-oj-pl7-pl12",
-    "title": "stable_ild",
-    "section": "Adding Day 0, 720 results for OJ, PL7, PL12",
-    "text": "Adding Day 0, 720 results for OJ, PL7, PL12\nIf we add bleeds with:\n\nday 0 and 720 results only, who\nare anti-OJ, PL7, or PL12\n\nWe get:\n\n\nN = 3 unique patients\nN = 6 total bleeds\n\nn = 1 / 3 OJ patients\nn = 1 / 3 PL12 patients\nn = 1 / 3 PL7 patients\n\n\n\n\n\n\n\n\n\nThis makes our total cumulative result:\n\n\nN = 42 unique patients\nN = 91 total bleeds\n\nn = 20 / 42 JO1 patients\nn = 9 / 42 MDA5 patients\nn = 6 / 42 PL7 patients\nn = 6 / 42 PL12 patients\nn = 1 / 42 OJ patients",
-    "crumbs": [
-      "Overview",
-      "stable_ild"
-    ]
-  },
-  {
-    "objectID": "stable_ild.html#summary-of-hand-added-results",
-    "href": "stable_ild.html#summary-of-hand-added-results",
-    "title": "stable_ild",
-    "section": "Summary of Hand-Added Results",
-    "text": "Summary of Hand-Added Results\nThus, we have added the following items to “round out” our initial results, which had been based on MDA5 and JO1 patients.\n\n\nN = 20 unique patients\nN = 33 total bleeds\n\nn = 4 / 20 JO1 patients\nn = 3 / 20 MDA5 patients\nn = 6 / 20 PL7 patients\nn = 6 / 20 PL12 patients\nn = 1 / 20 OJ patients",
-    "crumbs": [
-      "Overview",
-      "stable_ild"
-    ]
-  },
-  {
-    "objectID": "stable_ild.html#exporting-the-result",
-    "href": "stable_ild.html#exporting-the-result",
-    "title": "stable_ild",
-    "section": "Exporting the Result",
-    "text": "Exporting the Result\nFor the total dataset, here are the results of bleeds we have on-hand at the NIH:\n\n\nWe already have n = 28 / 91 bleeds on hand.\nOf that:\n    - n = 9 / 28 are from SOMA testing\n    - n = 19 / 28 are from other non-SOMA testing at the NIH\n\nThus, we need to request n = 63 / 91 samples\n\n\nFor the hand-added results, here are the results of bleeds we have on-hand at the NIH:\n\n\nWe already have n = 10 / 33 bleeds on hand.\nOf that:\n    - n = 3 / 10 are from SOMA testing\n    - n = 7 / 10 are from other non-SOMA testing at the NIH\n\nThus, we need to request n = 23 / 33 samples\n\n\n\n\nantibody0360720TotalJO18 (12.7%)20 (31.7%)4  (6.3%)32  (50.8%)MDA53  (4.8%)9 (14.3%)3  (4.8%)15  (23.8%)OJ1  (1.6%)0  (0.0%)1  (1.6%)2   (3.2%)PL121  (1.6%)5  (7.9%)1  (1.6%)7  (11.1%)PL71  (1.6%)5  (7.9%)1  (1.6%)7  (11.1%)Total14 (22.2%)39 (61.9%)10 (15.9%)63 (100.0%)",
-    "crumbs": [
-      "Overview",
-      "stable_ild"
+      "who_has_pfts"
     ]
   },
   {
@@ -108,6 +31,57 @@
       "Overview",
       "Homepage"
     ]
+  },
+  {
+    "objectID": "clinical_data.html",
+    "href": "clinical_data.html",
+    "title": "clinical_data",
+    "section": "",
+    "text": "Overview\n\n\n\n\n\n\nTable 1. Demographics of the Study Population\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nN\nOverall\nN = 2171\nEJ\nN = 81\nJO1\nN = 1251\nMDA5\nN = 401\nOJ\nN = 21\nPL12\nN = 231\nPL7\nN = 191\n\n\n\n\ngender\n217\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    Female\n\n\n157 / 217 (72%)\n4 / 8 (50%)\n92 / 125 (74%)\n29 / 40 (73%)\n0 / 2 (0%)\n20 / 23 (87%)\n12 / 19 (63%)\n\n\n    Male\n\n\n60 / 217 (28%)\n4 / 8 (50%)\n33 / 125 (26%)\n11 / 40 (28%)\n2 / 2 (100%)\n3 / 23 (13%)\n7 / 19 (37%)\n\n\n    Missing\n\n\n0 / 217\n0 / 8\n0 / 125\n0 / 40\n0 / 2\n0 / 23\n0 / 19\n\n\nage_today\n188\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    Median (Q1, Q3)\n\n\n64.21 (55.01, 71.52)\n69.62 (65.04, 77.84)\n65.18 (55.23, 71.90)\n60.84 (54.24, 69.78)\n75.30 (66.99, 83.60)\n60.05 (46.76, 75.07)\n63.96 (59.01, 71.05)\n\n\n    Mean (Min, Max)\n\n\n63.25 (29.74, 100.07)\n72.79 (59.06, 98.28)\n63.39 (29.74, 100.07)\n60.98 (39.47, 80.75)\n75.30 (66.99, 83.60)\n59.35 (39.70, 80.30)\n64.78 (44.99, 87.15)\n\n\n    Missing\n\n\n29 / 217\n0 / 8\n14 / 125\n4 / 40\n0 / 2\n8 / 23\n3 / 19\n\n\nage_at_diagnosis\n109\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    Median (Q1, Q3)\n\n\n47.39 (38.42, 54.30)\n54.50 (53.75, 55.24)\n48.98 (38.36, 57.43)\n49.50 (40.08, 53.48)\nNA (NA, NA)\n40.82 (35.91, 42.03)\n40.15 (38.96, 47.39)\n\n\n    Mean (Min, Max)\n\n\n46.41 (19.78, 84.44)\n54.50 (53.75, 55.24)\n47.25 (19.78, 84.44)\n47.06 (26.39, 67.58)\nNA (Inf, -Inf)\n38.32 (24.62, 44.40)\n41.03 (26.78, 51.87)\n\n\n    Missing\n\n\n108 / 217\n6 / 8\n47 / 125\n24 / 40\n2 / 2\n15 / 23\n14 / 19\n\n\nage_at_symptom_onset\n166\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    Median (Q1, Q3)\n\n\n47.78 (37.90, 53.74)\n50.24 (49.72, 50.82)\n47.78 (37.83, 53.92)\n48.46 (39.38, 54.00)\n67.84 (67.84, 67.84)\n40.03 (31.20, 44.40)\n45.99 (38.78, 52.74)\n\n\n    Mean (Min, Max)\n\n\n46.22 (17.73, 84.06)\n52.12 (48.70, 61.14)\n46.19 (17.73, 84.06)\n46.22 (22.16, 66.54)\n67.84 (67.84, 67.84)\n41.36 (23.78, 67.54)\n47.47 (25.78, 73.56)\n\n\n    Missing\n\n\n51 / 217\n3 / 8\n21 / 125\n10 / 40\n1 / 2\n10 / 23\n6 / 19\n\n\nrace_group_self_reported\n217\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    Asian\n\n\n4 / 217 (2%)\n1 / 8 (13%)\n1 / 125 (1%)\n1 / 40 (3%)\n0 / 2 (0%)\n0 / 23 (0%)\n1 / 19 (5%)\n\n\n    Black\n\n\n68 / 217 (31%)\n3 / 8 (38%)\n28 / 125 (22%)\n10 / 40 (25%)\n0 / 2 (0%)\n15 / 23 (65%)\n12 / 19 (63%)\n\n\n    NotDisclose\n\n\n2 / 217 (1%)\n0 / 8 (0%)\n0 / 125 (0%)\n2 / 40 (5%)\n0 / 2 (0%)\n0 / 23 (0%)\n0 / 19 (0%)\n\n\n    Other\n\n\n13 / 217 (6%)\n0 / 8 (0%)\n6 / 125 (5%)\n6 / 40 (15%)\n0 / 2 (0%)\n1 / 23 (4%)\n0 / 19 (0%)\n\n\n    Other Asian\n\n\n1 / 217 (0%)\n0 / 8 (0%)\n1 / 125 (1%)\n0 / 40 (0%)\n0 / 2 (0%)\n0 / 23 (0%)\n0 / 19 (0%)\n\n\n    Unknown\n\n\n2 / 217 (1%)\n0 / 8 (0%)\n0 / 125 (0%)\n2 / 40 (5%)\n0 / 2 (0%)\n0 / 23 (0%)\n0 / 19 (0%)\n\n\n    Vietnamese\n\n\n1 / 217 (0%)\n0 / 8 (0%)\n1 / 125 (1%)\n0 / 40 (0%)\n0 / 2 (0%)\n0 / 23 (0%)\n0 / 19 (0%)\n\n\n    White\n\n\n126 / 217 (58%)\n4 / 8 (50%)\n88 / 125 (70%)\n19 / 40 (48%)\n2 / 2 (100%)\n7 / 23 (30%)\n6 / 19 (32%)\n\n\n    Missing\n\n\n0 / 217\n0 / 8\n0 / 125\n0 / 40\n0 / 2\n0 / 23\n0 / 19\n\n\nstatus_mortality\n217\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    Alive\n\n\n181 / 217 (83%)\n5 / 8 (63%)\n104 / 125 (83%)\n37 / 40 (93%)\n2 / 2 (100%)\n21 / 23 (91%)\n12 / 19 (63%)\n\n\n    Deceased\n\n\n36 / 217 (17%)\n3 / 8 (38%)\n21 / 125 (17%)\n3 / 40 (8%)\n0 / 2 (0%)\n2 / 23 (9%)\n7 / 19 (37%)\n\n\n    Missing\n\n\n0 / 217\n0 / 8\n0 / 125\n0 / 40\n0 / 2\n0 / 23\n0 / 19\n\n\nild_present\n217\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n27 / 217 (12%)\n1 / 8 (13%)\n14 / 125 (11%)\n5 / 40 (13%)\n0 / 2 (0%)\n6 / 23 (26%)\n1 / 19 (5%)\n\n\n    FALSE\n\n\n16 / 217 (7%)\n1 / 8 (13%)\n7 / 125 (6%)\n6 / 40 (15%)\n1 / 2 (50%)\n1 / 23 (4%)\n0 / 19 (0%)\n\n\n    ILD\n\n\n1 / 217 (0%)\n0 / 8 (0%)\n0 / 125 (0%)\n0 / 40 (0%)\n0 / 2 (0%)\n0 / 23 (0%)\n1 / 19 (5%)\n\n\n    TRUE\n\n\n173 / 217 (80%)\n6 / 8 (75%)\n104 / 125 (83%)\n29 / 40 (73%)\n1 / 2 (50%)\n16 / 23 (70%)\n17 / 19 (89%)\n\n\n    Missing\n\n\n0 / 217\n0 / 8\n0 / 125\n0 / 40\n0 / 2\n0 / 23\n0 / 19\n\n\nild_type\n217\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n74 / 217 (34%)\n3 / 8 (38%)\n41 / 125 (33%)\n18 / 40 (45%)\n1 / 2 (50%)\n8 / 23 (35%)\n3 / 19 (16%)\n\n\n    fibrotic NSIP\n\n\n12 / 217 (6%)\n1 / 8 (13%)\n7 / 125 (6%)\n2 / 40 (5%)\n0 / 2 (0%)\n1 / 23 (4%)\n1 / 19 (5%)\n\n\n    GGO\n\n\n20 / 217 (9%)\n0 / 8 (0%)\n15 / 125 (12%)\n3 / 40 (8%)\n0 / 2 (0%)\n0 / 23 (0%)\n2 / 19 (11%)\n\n\n    NSIP\n\n\n57 / 217 (26%)\n2 / 8 (25%)\n32 / 125 (26%)\n10 / 40 (25%)\n0 / 2 (0%)\n6 / 23 (26%)\n7 / 19 (37%)\n\n\n    NSIP-OP\n\n\n6 / 217 (3%)\n0 / 8 (0%)\n2 / 125 (2%)\n3 / 40 (8%)\n0 / 2 (0%)\n1 / 23 (4%)\n0 / 19 (0%)\n\n\n    OP\n\n\n2 / 217 (1%)\n0 / 8 (0%)\n1 / 125 (1%)\n0 / 40 (0%)\n0 / 2 (0%)\n1 / 23 (4%)\n0 / 19 (0%)\n\n\n    subpleural fibrosis\n\n\n20 / 217 (9%)\n1 / 8 (13%)\n12 / 125 (10%)\n3 / 40 (8%)\n1 / 2 (50%)\n2 / 23 (9%)\n1 / 19 (5%)\n\n\n    UIP\n\n\n26 / 217 (12%)\n1 / 8 (13%)\n15 / 125 (12%)\n1 / 40 (3%)\n0 / 2 (0%)\n4 / 23 (17%)\n5 / 19 (26%)\n\n\n    Missing\n\n\n0 / 217\n0 / 8\n0 / 125\n0 / 40\n0 / 2\n0 / 23\n0 / 19\n\n\nrads_severity\n217\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n96 / 217 (44%)\n3 / 8 (38%)\n57 / 125 (46%)\n19 / 40 (48%)\n1 / 2 (50%)\n9 / 23 (39%)\n7 / 19 (37%)\n\n\n    MILD\n\n\n67 / 217 (31%)\n2 / 8 (25%)\n46 / 125 (37%)\n11 / 40 (28%)\n1 / 2 (50%)\n5 / 23 (22%)\n2 / 19 (11%)\n\n\n    MODERATE\n\n\n31 / 217 (14%)\n0 / 8 (0%)\n13 / 125 (10%)\n5 / 40 (13%)\n0 / 2 (0%)\n6 / 23 (26%)\n7 / 19 (37%)\n\n\n    SEVERE\n\n\n23 / 217 (11%)\n3 / 8 (38%)\n9 / 125 (7%)\n5 / 40 (13%)\n0 / 2 (0%)\n3 / 23 (13%)\n3 / 19 (16%)\n\n\n    Missing\n\n\n0 / 217\n0 / 8\n0 / 125\n0 / 40\n0 / 2\n0 / 23\n0 / 19\n\n\nPulmonary hypertension\n217\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    ABSENT\n\n\n178 / 217 (82%)\n5 / 8 (63%)\n110 / 125 (88%)\n37 / 40 (93%)\n1 / 2 (50%)\n15 / 23 (65%)\n10 / 19 (53%)\n\n\n    PRESENT\n\n\n39 / 217 (18%)\n3 / 8 (38%)\n15 / 125 (12%)\n3 / 40 (8%)\n1 / 2 (50%)\n8 / 23 (35%)\n9 / 19 (47%)\n\n\n    Missing\n\n\n0 / 217\n0 / 8\n0 / 125\n0 / 40\n0 / 2\n0 / 23\n0 / 19\n\n\n\n1 n / N (%)",
+    "crumbs": [
+      "Overview",
+      "clinical_data"
+    ]
+  },
+  {
+    "objectID": "bleeds_on_hand.html",
+    "href": "bleeds_on_hand.html",
+    "title": "bleeds_on_hand",
+    "section": "",
+    "text": "The current list of on-hand bleeds (numbers as by number of bleed dates, stratified by antibody) is as follows:\n\n\n antibody Freq\n       EJ    9\n      JO1  140\n     MDA5   40\n     PL12   32\n      PL7   26\n    Total  247\n\n\n\n\n\nAll missing bleed_date above can be assumed to actually consistent of the earliest available blood sample we have on record for a given patient (i.e., a given id_sample).\nTypically, the Euroimmun date is, by definition, the earliest bleed date avialable for any given patient.",
+    "crumbs": [
+      "Overview",
+      "bleeds_on_hand"
+    ]
+  },
+  {
+    "objectID": "bleeds_on_hand.html#current-data",
+    "href": "bleeds_on_hand.html#current-data",
+    "title": "bleeds_on_hand",
+    "section": "",
+    "text": "The current list of on-hand bleeds (numbers as by number of bleed dates, stratified by antibody) is as follows:\n\n\n antibody Freq\n       EJ    9\n      JO1  140\n     MDA5   40\n     PL12   32\n      PL7   26\n    Total  247",
+    "crumbs": [
+      "Overview",
+      "bleeds_on_hand"
+    ]
+  },
+  {
+    "objectID": "bleeds_on_hand.html#filling-in-missing-bleed-dates",
+    "href": "bleeds_on_hand.html#filling-in-missing-bleed-dates",
+    "title": "bleeds_on_hand",
+    "section": "",
+    "text": "All missing bleed_date above can be assumed to actually consistent of the earliest available blood sample we have on record for a given patient (i.e., a given id_sample).\nTypically, the Euroimmun date is, by definition, the earliest bleed date avialable for any given patient.",
+    "crumbs": [
+      "Overview",
+      "bleeds_on_hand"
+    ]
+  },
+  {
+    "objectID": "mortality_data.html",
+    "href": "mortality_data.html",
+    "title": "mortality_data",
+    "section": "",
+    "text": "Overview\nAll results below are for people with the following antibodies:\n\n\n- EJ\n- OJ\n- JO1\n- PL7\n- PL12\n- KS\n- HA\n- YRS\n- ZO\n- MDA5\n\n\n\nn = 423 unique patients\nn = 35 / 423 (8.27%) who ARE deceased\nn = 246 / 423 (58.16%) who are NOT deceased\nn = 142 / 423 (33.57%) patients with MISSING mortality data\n\n\n\n antibody           no        yes          NA_\n   ab_neg  70.6%  (12) 11.8%  (2)  17.6%   (3)\n       DM  77.8%   (7)  0.0%  (0)  22.2%   (2)\n       EJ  50.0%   (5) 20.0%  (2)  30.0%   (3)\n    HMGCR  25.0%   (1)  0.0%  (0)  75.0%   (3)\n      IBM  55.6%   (5)  0.0%  (0)  44.4%   (4)\n      JO1  58.8%  (97)  7.9% (13)  33.3%  (55)\n       KU 100.0%   (1)  0.0%  (0)   0.0%   (0)\n     MDA5  52.3%  (34)  6.2%  (4)  41.5%  (27)\n   NT5C1A   0.0%   (0)  0.0%  (0) 100.0%   (1)\n       OJ  57.1%   (8)  0.0%  (0)  42.9%   (6)\n     PL12  50.0%  (23) 15.2%  (7)  34.8%  (16)\n      PL7  73.0%  (46)  9.5%  (6)  17.5%  (11)\n       PM  66.7%   (2) 33.3%  (1)   0.0%   (0)\n   PM-SCL 100.0%   (1)  0.0%  (0)   0.0%   (0)\n   PM/SCL 100.0%   (1)  0.0%  (0)   0.0%   (0)\n     RO52   0.0%   (0)  0.0%  (0) 100.0%   (2)\n      SRP  33.3%   (2)  0.0%  (0)  66.7%   (4)\n    TIF1G  20.0%   (1)  0.0%  (0)  80.0%   (4)\n    U3RNP   0.0%   (0)  0.0%  (0) 100.0%   (1)\n    Total  58.2% (246)  8.3% (35)  33.6% (142)"
   },
   {
     "objectID": "undefined_antibody.html",
@@ -264,65 +238,91 @@
     ]
   },
   {
-    "objectID": "mortality_data.html",
-    "href": "mortality_data.html",
-    "title": "mortality_data",
+    "objectID": "stable_ild.html",
+    "href": "stable_ild.html",
+    "title": "stable_ild",
     "section": "",
-    "text": "Overview\nAll results below are for people with the following antibodies:\n\n\n- EJ\n- OJ\n- JO1\n- PL7\n- PL12\n- KS\n- HA\n- YRS\n- ZO\n- MDA5\n\n\n\nn = 423 unique patients\nn = 35 / 423 (8.27%) who ARE deceased\nn = 246 / 423 (58.16%) who are NOT deceased\nn = 142 / 423 (33.57%) patients with MISSING mortality data\n\n\n\n antibody           no        yes          NA_\n   ab_neg  70.6%  (12) 11.8%  (2)  17.6%   (3)\n       DM  77.8%   (7)  0.0%  (0)  22.2%   (2)\n       EJ  50.0%   (5) 20.0%  (2)  30.0%   (3)\n    HMGCR  25.0%   (1)  0.0%  (0)  75.0%   (3)\n      IBM  55.6%   (5)  0.0%  (0)  44.4%   (4)\n      JO1  58.8%  (97)  7.9% (13)  33.3%  (55)\n       KU 100.0%   (1)  0.0%  (0)   0.0%   (0)\n     MDA5  52.3%  (34)  6.2%  (4)  41.5%  (27)\n   NT5C1A   0.0%   (0)  0.0%  (0) 100.0%   (1)\n       OJ  57.1%   (8)  0.0%  (0)  42.9%   (6)\n     PL12  50.0%  (23) 15.2%  (7)  34.8%  (16)\n      PL7  73.0%  (46)  9.5%  (6)  17.5%  (11)\n       PM  66.7%   (2) 33.3%  (1)   0.0%   (0)\n   PM-SCL 100.0%   (1)  0.0%  (0)   0.0%   (0)\n   PM/SCL 100.0%   (1)  0.0%  (0)   0.0%   (0)\n     RO52   0.0%   (0)  0.0%  (0) 100.0%   (2)\n      SRP  33.3%   (2)  0.0%  (0)  66.7%   (4)\n    TIF1G  20.0%   (1)  0.0%  (0)  80.0%   (4)\n    U3RNP   0.0%   (0)  0.0%  (0) 100.0%   (1)\n    Total  58.2% (246)  8.3% (35)  33.6% (142)"
-  },
-  {
-    "objectID": "who_has_pfts.html",
-    "href": "who_has_pfts.html",
-    "title": "who_has_pfts",
-    "section": "",
-    "text": "Overview\nAll results below are for people with the following antibodies:\n\n\n- EJ\n- OJ\n- JO1\n- PL7\n- PL12\n- KS\n- HA\n- YRS\n- ZO\n- MDA5\n\n\nThere are N = 2046 PFT results:\n\nn = 308 unique patients\nn = 212 have two or more PFTs on record\n\n\n\nLongitudinal Medication Data\nBased on the list vetted for SOMA proteomics seen at longitudinal_report, “Candidates for Proteomics”.\nOf the N = 37 patients with vetted, SOMA-appropriate longitudinal med admin data (i.e., had a medication start date in close proximity to a bleed date, and thereafter have follow up bleed dates):\n\nHave PFTs\nOut of the N = 90 total sample:bleed_date:date_pfts triplets combos:\n\nn = 40/90 combos have PFTs within a 3 month proximity to a bleed date\nn = 0/90 triplet combos are missing MRN data (n = 0 unique patients)\n\n\n\nDo NOT Have PFTs\nOut of the N = 90 total sample:bleed_date:date_pfts triplets combos:\n\nn = 50/90 combos DO NOT have PFTs within a 3 month proximity to a bleed date\nn = 0/90 triplet combos are missing MRN data (n = 0 unique patients)\n\n\n\n\nStable ILD Data\nBased on the vetted list seen at stable_ild.\nOf the N = 42 patients with longitudinal data (not specifically tied to a medication start):\n\nn = 29/42 patients have PFTs\n\nof those, 26/29 have at least 2 dates\n\nn = 13/42 patients do NOT have PFTs\n\nn = 13/13 are missing MRN data\n\nn = 0/42 of the long med patients do NOT show up in the PFT dataset",
+    "text": "There are substantial numbers of patients with unclear but suggestive diagnoses; for those, see Patients with Undefined Antibodies\nBelow are data from patients with formal antibody diagnoses. These data do not specify that patients have bleed dates or med starts – these are all patients in the database.\n\n\n\n\nantibodynpercentEJ142.7%JO123144.3%MDA59818.8%OJ214.0%PL126612.7%PL79117.5%Total521100.0%\n\n\n\n\n\nThese are results for ASyS patients with ANY follow-up bleeds.\nThere are no restraints to search parameters except they MUST have &gt;=2 bleeds on record (these bleeds might be 10 days apart, or 10 years; as stated, no restraints have been added to these results).\n\n\nN = 359 unique patients\nN = 1314 total bleeds\n\nn = 156 / 359 JO1 patients\nn = 16 / 359 OJ patients\nn = 64 / 359 MDA5 patients\nn = 64 / 359 PL7 patients\nn = 48 / 359 PL12 patients\nn = 11 / 359 EJ patients",
     "crumbs": [
       "Overview",
-      "who_has_pfts"
+      "stable_ild"
     ]
   },
   {
-    "objectID": "bleeds_on_hand.html",
-    "href": "bleeds_on_hand.html",
-    "title": "bleeds_on_hand",
+    "objectID": "stable_ild.html#all-asys-patients",
+    "href": "stable_ild.html#all-asys-patients",
+    "title": "stable_ild",
     "section": "",
-    "text": "The current list of on-hand bleeds (numbers as by number of bleed dates, stratified by antibody) is as follows:\n\n\n antibody Freq\n       EJ    9\n      JO1  140\n     MDA5   40\n     PL12   32\n      PL7   26\n    Total  247\n\n\n\n\n\nAll missing bleed_date above can be assumed to actually consistent of the earliest available blood sample we have on record for a given patient (i.e., a given id_sample).\nTypically, the Euroimmun date is, by definition, the earliest bleed date avialable for any given patient.",
+    "text": "antibodynpercentEJ142.7%JO123144.3%MDA59818.8%OJ214.0%PL126612.7%PL79117.5%Total521100.0%",
     "crumbs": [
       "Overview",
-      "bleeds_on_hand"
+      "stable_ild"
     ]
   },
   {
-    "objectID": "bleeds_on_hand.html#current-data",
-    "href": "bleeds_on_hand.html#current-data",
-    "title": "bleeds_on_hand",
+    "objectID": "stable_ild.html#all-asys-patients-with-bleed-data",
+    "href": "stable_ild.html#all-asys-patients-with-bleed-data",
+    "title": "stable_ild",
     "section": "",
-    "text": "The current list of on-hand bleeds (numbers as by number of bleed dates, stratified by antibody) is as follows:\n\n\n antibody Freq\n       EJ    9\n      JO1  140\n     MDA5   40\n     PL12   32\n      PL7   26\n    Total  247",
+    "text": "These are results for ASyS patients with ANY follow-up bleeds.\nThere are no restraints to search parameters except they MUST have &gt;=2 bleeds on record (these bleeds might be 10 days apart, or 10 years; as stated, no restraints have been added to these results).\n\n\nN = 359 unique patients\nN = 1314 total bleeds\n\nn = 156 / 359 JO1 patients\nn = 16 / 359 OJ patients\nn = 64 / 359 MDA5 patients\nn = 64 / 359 PL7 patients\nn = 48 / 359 PL12 patients\nn = 11 / 359 EJ patients",
     "crumbs": [
       "Overview",
-      "bleeds_on_hand"
+      "stable_ild"
     ]
   },
   {
-    "objectID": "bleeds_on_hand.html#filling-in-missing-bleed-dates",
-    "href": "bleeds_on_hand.html#filling-in-missing-bleed-dates",
-    "title": "bleeds_on_hand",
-    "section": "",
-    "text": "All missing bleed_date above can be assumed to actually consistent of the earliest available blood sample we have on record for a given patient (i.e., a given id_sample).\nTypically, the Euroimmun date is, by definition, the earliest bleed date avialable for any given patient.",
+    "objectID": "stable_ild.html#adding-days-720",
+    "href": "stable_ild.html#adding-days-720",
+    "title": "stable_ild",
+    "section": "Adding Days 720",
+    "text": "Adding Days 720\nHowever, we would also like to include MDA5 and JO1 patients who had data from days 0, 360, AND 720.\nSo, adding those back in, we get the following new samples:\n\n\nN = 7 unique patients\nN = 7 total bleeds\n\nn = 4 / 7 JO1 patients\nn = 3 / 7 MDA5 patients\n\n\nAnd thus, our total dataset would look like this:\n\n\nN = 29 unique patients\nN = 65 total bleeds\n\nn = 20 / 29 JO1 patients\nn = 9 / 29 MDA5 patients",
     "crumbs": [
       "Overview",
-      "bleeds_on_hand"
+      "stable_ild"
     ]
   },
   {
-    "objectID": "clinical_data.html",
-    "href": "clinical_data.html",
-    "title": "clinical_data",
-    "section": "",
-    "text": "Overview\n\n\n\n\n\n\nTable 1. Demographics of the Study Population\n\n\n\n\n\n\n\n\n\n\n\n\n\nCharacteristic\nN\nOverall\nN = 2171\nEJ\nN = 81\nJO1\nN = 1251\nMDA5\nN = 401\nOJ\nN = 21\nPL12\nN = 231\nPL7\nN = 191\n\n\n\n\ngender\n217\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    Female\n\n\n157 / 217 (72%)\n4 / 8 (50%)\n92 / 125 (74%)\n29 / 40 (73%)\n0 / 2 (0%)\n20 / 23 (87%)\n12 / 19 (63%)\n\n\n    Male\n\n\n60 / 217 (28%)\n4 / 8 (50%)\n33 / 125 (26%)\n11 / 40 (28%)\n2 / 2 (100%)\n3 / 23 (13%)\n7 / 19 (37%)\n\n\nage_today\n188\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    N Non-missing\n\n\n188.00\n8.00\n111.00\n36.00\n2.00\n15.00\n16.00\n\n\n    Median (Q1, Q3)\n\n\n64.17 (54.97, 71.49)\n69.58 (65.01, 77.81)\n65.14 (55.19, 71.86)\n60.80 (54.20, 69.75)\n75.26 (66.96, 83.56)\n60.01 (46.73, 75.03)\n63.92 (58.98, 71.01)\n\n\n    Mean (Min, Max)\n\n\n63.22 (29.71, 100.03)\n72.76 (59.02, 98.24)\n63.36 (29.71, 100.03)\n60.94 (39.44, 80.71)\n75.26 (66.96, 83.56)\n59.31 (39.67, 80.26)\n64.74 (44.96, 87.11)\n\n\n    Missing\n\n\n29\n0\n14\n4\n0\n8\n3\n\n\nage_at_diagnosis\n109\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    N Non-missing\n\n\n109.00\n2.00\n78.00\n16.00\n0.00\n8.00\n5.00\n\n\n    Median (Q1, Q3)\n\n\n47.39 (38.42, 54.30)\n54.50 (53.75, 55.24)\n48.98 (38.36, 57.43)\n49.50 (40.08, 53.48)\nNA (NA, NA)\n40.82 (35.91, 42.03)\n40.15 (38.96, 47.39)\n\n\n    Mean (Min, Max)\n\n\n46.41 (19.78, 84.44)\n54.50 (53.75, 55.24)\n47.25 (19.78, 84.44)\n47.06 (26.39, 67.58)\nNA (Inf, -Inf)\n38.32 (24.62, 44.40)\n41.03 (26.78, 51.87)\n\n\n    Missing\n\n\n108\n6\n47\n24\n2\n15\n14\n\n\nage_at_symptom_onset\n166\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    N Non-missing\n\n\n166.00\n5.00\n104.00\n30.00\n1.00\n13.00\n13.00\n\n\n    Median (Q1, Q3)\n\n\n47.78 (37.90, 53.74)\n50.24 (49.72, 50.82)\n47.78 (37.83, 53.92)\n48.46 (39.38, 54.00)\n67.84 (67.84, 67.84)\n40.03 (31.20, 44.40)\n45.99 (38.78, 52.74)\n\n\n    Mean (Min, Max)\n\n\n46.22 (17.73, 84.06)\n52.12 (48.70, 61.14)\n46.19 (17.73, 84.06)\n46.22 (22.16, 66.54)\n67.84 (67.84, 67.84)\n41.36 (23.78, 67.54)\n47.47 (25.78, 73.56)\n\n\n    Missing\n\n\n51\n3\n21\n10\n1\n10\n6\n\n\nrace_group_self_reported\n217\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    Asian\n\n\n4 / 217 (2%)\n1 / 8 (13%)\n1 / 125 (1%)\n1 / 40 (3%)\n0 / 2 (0%)\n0 / 23 (0%)\n1 / 19 (5%)\n\n\n    Black\n\n\n68 / 217 (31%)\n3 / 8 (38%)\n28 / 125 (22%)\n10 / 40 (25%)\n0 / 2 (0%)\n15 / 23 (65%)\n12 / 19 (63%)\n\n\n    NotDisclose\n\n\n2 / 217 (1%)\n0 / 8 (0%)\n0 / 125 (0%)\n2 / 40 (5%)\n0 / 2 (0%)\n0 / 23 (0%)\n0 / 19 (0%)\n\n\n    Other\n\n\n13 / 217 (6%)\n0 / 8 (0%)\n6 / 125 (5%)\n6 / 40 (15%)\n0 / 2 (0%)\n1 / 23 (4%)\n0 / 19 (0%)\n\n\n    Other Asian\n\n\n1 / 217 (0%)\n0 / 8 (0%)\n1 / 125 (1%)\n0 / 40 (0%)\n0 / 2 (0%)\n0 / 23 (0%)\n0 / 19 (0%)\n\n\n    Unknown\n\n\n2 / 217 (1%)\n0 / 8 (0%)\n0 / 125 (0%)\n2 / 40 (5%)\n0 / 2 (0%)\n0 / 23 (0%)\n0 / 19 (0%)\n\n\n    Vietnamese\n\n\n1 / 217 (0%)\n0 / 8 (0%)\n1 / 125 (1%)\n0 / 40 (0%)\n0 / 2 (0%)\n0 / 23 (0%)\n0 / 19 (0%)\n\n\n    White\n\n\n126 / 217 (58%)\n4 / 8 (50%)\n88 / 125 (70%)\n19 / 40 (48%)\n2 / 2 (100%)\n7 / 23 (30%)\n6 / 19 (32%)\n\n\nstatus_mortality\n217\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    Alive\n\n\n181 / 217 (83%)\n5 / 8 (63%)\n104 / 125 (83%)\n37 / 40 (93%)\n2 / 2 (100%)\n21 / 23 (91%)\n12 / 19 (63%)\n\n\n    Deceased\n\n\n36 / 217 (17%)\n3 / 8 (38%)\n21 / 125 (17%)\n3 / 40 (8%)\n0 / 2 (0%)\n2 / 23 (9%)\n7 / 19 (37%)\n\n\nild_present\n217\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n27 / 217 (12%)\n1 / 8 (13%)\n14 / 125 (11%)\n5 / 40 (13%)\n0 / 2 (0%)\n6 / 23 (26%)\n1 / 19 (5%)\n\n\n    FALSE\n\n\n16 / 217 (7%)\n1 / 8 (13%)\n7 / 125 (6%)\n6 / 40 (15%)\n1 / 2 (50%)\n1 / 23 (4%)\n0 / 19 (0%)\n\n\n    ILD\n\n\n1 / 217 (0%)\n0 / 8 (0%)\n0 / 125 (0%)\n0 / 40 (0%)\n0 / 2 (0%)\n0 / 23 (0%)\n1 / 19 (5%)\n\n\n    TRUE\n\n\n173 / 217 (80%)\n6 / 8 (75%)\n104 / 125 (83%)\n29 / 40 (73%)\n1 / 2 (50%)\n16 / 23 (70%)\n17 / 19 (89%)\n\n\nild_type\n217\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n74 / 217 (34%)\n3 / 8 (38%)\n41 / 125 (33%)\n18 / 40 (45%)\n1 / 2 (50%)\n8 / 23 (35%)\n3 / 19 (16%)\n\n\n    fibrotic NSIP\n\n\n12 / 217 (6%)\n1 / 8 (13%)\n7 / 125 (6%)\n2 / 40 (5%)\n0 / 2 (0%)\n1 / 23 (4%)\n1 / 19 (5%)\n\n\n    GGO\n\n\n20 / 217 (9%)\n0 / 8 (0%)\n15 / 125 (12%)\n3 / 40 (8%)\n0 / 2 (0%)\n0 / 23 (0%)\n2 / 19 (11%)\n\n\n    NSIP\n\n\n57 / 217 (26%)\n2 / 8 (25%)\n32 / 125 (26%)\n10 / 40 (25%)\n0 / 2 (0%)\n6 / 23 (26%)\n7 / 19 (37%)\n\n\n    NSIP-OP\n\n\n6 / 217 (3%)\n0 / 8 (0%)\n2 / 125 (2%)\n3 / 40 (8%)\n0 / 2 (0%)\n1 / 23 (4%)\n0 / 19 (0%)\n\n\n    OP\n\n\n2 / 217 (1%)\n0 / 8 (0%)\n1 / 125 (1%)\n0 / 40 (0%)\n0 / 2 (0%)\n1 / 23 (4%)\n0 / 19 (0%)\n\n\n    subpleural fibrosis\n\n\n20 / 217 (9%)\n1 / 8 (13%)\n12 / 125 (10%)\n3 / 40 (8%)\n1 / 2 (50%)\n2 / 23 (9%)\n1 / 19 (5%)\n\n\n    UIP\n\n\n26 / 217 (12%)\n1 / 8 (13%)\n15 / 125 (12%)\n1 / 40 (3%)\n0 / 2 (0%)\n4 / 23 (17%)\n5 / 19 (26%)\n\n\nrads_severity\n217\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n96 / 217 (44%)\n3 / 8 (38%)\n57 / 125 (46%)\n19 / 40 (48%)\n1 / 2 (50%)\n9 / 23 (39%)\n7 / 19 (37%)\n\n\n    MILD\n\n\n67 / 217 (31%)\n2 / 8 (25%)\n46 / 125 (37%)\n11 / 40 (28%)\n1 / 2 (50%)\n5 / 23 (22%)\n2 / 19 (11%)\n\n\n    MODERATE\n\n\n31 / 217 (14%)\n0 / 8 (0%)\n13 / 125 (10%)\n5 / 40 (13%)\n0 / 2 (0%)\n6 / 23 (26%)\n7 / 19 (37%)\n\n\n    SEVERE\n\n\n23 / 217 (11%)\n3 / 8 (38%)\n9 / 125 (7%)\n5 / 40 (13%)\n0 / 2 (0%)\n3 / 23 (13%)\n3 / 19 (16%)\n\n\n\n1 n / N (%)",
+    "objectID": "stable_ild.html#adding-extra-pl12-pl7-patients",
+    "href": "stable_ild.html#adding-extra-pl12-pl7-patients",
+    "title": "stable_ild",
+    "section": "Adding Extra PL12 / PL7 patients",
+    "text": "Adding Extra PL12 / PL7 patients\nTo round out our result, we want to add in some PL12 and PL7 patients with appropriate day 0 and 360 results.\n\n\nN = 39 unique patients\nN = 85 total bleeds\n\nn = 20 / 39 JO1 patients\nn = 9 / 39 MDA5 patients\nn = 5 / 39 PL7 patients\nn = 5 / 39 PL12 patients",
     "crumbs": [
       "Overview",
-      "clinical_data"
+      "stable_ild"
+    ]
+  },
+  {
+    "objectID": "stable_ild.html#adding-day-0-720-results-for-oj-pl7-pl12",
+    "href": "stable_ild.html#adding-day-0-720-results-for-oj-pl7-pl12",
+    "title": "stable_ild",
+    "section": "Adding Day 0, 720 results for OJ, PL7, PL12",
+    "text": "Adding Day 0, 720 results for OJ, PL7, PL12\nIf we add bleeds with:\n\nday 0 and 720 results only, who\nare anti-OJ, PL7, or PL12\n\nWe get:\n\n\nN = 3 unique patients\nN = 6 total bleeds\n\nn = 1 / 3 OJ patients\nn = 1 / 3 PL12 patients\nn = 1 / 3 PL7 patients\n\n\n\n\n\n\n\n\n\nThis makes our total cumulative result:\n\n\nN = 42 unique patients\nN = 91 total bleeds\n\nn = 20 / 42 JO1 patients\nn = 9 / 42 MDA5 patients\nn = 6 / 42 PL7 patients\nn = 6 / 42 PL12 patients\nn = 1 / 42 OJ patients",
+    "crumbs": [
+      "Overview",
+      "stable_ild"
+    ]
+  },
+  {
+    "objectID": "stable_ild.html#summary-of-hand-added-results",
+    "href": "stable_ild.html#summary-of-hand-added-results",
+    "title": "stable_ild",
+    "section": "Summary of Hand-Added Results",
+    "text": "Summary of Hand-Added Results\nThus, we have added the following items to “round out” our initial results, which had been based on MDA5 and JO1 patients.\n\n\nN = 20 unique patients\nN = 33 total bleeds\n\nn = 4 / 20 JO1 patients\nn = 3 / 20 MDA5 patients\nn = 6 / 20 PL7 patients\nn = 6 / 20 PL12 patients\nn = 1 / 20 OJ patients",
+    "crumbs": [
+      "Overview",
+      "stable_ild"
+    ]
+  },
+  {
+    "objectID": "stable_ild.html#exporting-the-result",
+    "href": "stable_ild.html#exporting-the-result",
+    "title": "stable_ild",
+    "section": "Exporting the Result",
+    "text": "Exporting the Result\nFor the total dataset, here are the results of bleeds we have on-hand at the NIH:\n\n\nWe already have n = 28 / 91 bleeds on hand.\nOf that:\n    - n = 9 / 28 are from SOMA testing\n    - n = 19 / 28 are from other non-SOMA testing at the NIH\n\nThus, we need to request n = 63 / 91 samples\n\n\nFor the hand-added results, here are the results of bleeds we have on-hand at the NIH:\n\n\nWe already have n = 10 / 33 bleeds on hand.\nOf that:\n    - n = 3 / 10 are from SOMA testing\n    - n = 7 / 10 are from other non-SOMA testing at the NIH\n\nThus, we need to request n = 23 / 33 samples\n\n\n\n\nantibody0360720TotalJO18 (12.7%)20 (31.7%)4  (6.3%)32  (50.8%)MDA53  (4.8%)9 (14.3%)3  (4.8%)15  (23.8%)OJ1  (1.6%)0  (0.0%)1  (1.6%)2   (3.2%)PL121  (1.6%)5  (7.9%)1  (1.6%)7  (11.1%)PL71  (1.6%)5  (7.9%)1  (1.6%)7  (11.1%)Total14 (22.2%)39 (61.9%)10 (15.9%)63 (100.0%)",
+    "crumbs": [
+      "Overview",
+      "stable_ild"
     ]
   }
 ]
