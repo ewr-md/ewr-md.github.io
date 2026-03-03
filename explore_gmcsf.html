@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>explore_gmcsf</title>
+<title>GMCSF Antibody Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,35 +35,68 @@ ul.task-list li input[type="checkbox"] {
 <script src="explore_gmcsf_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="explore_gmcsf_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="explore_gmcsf_files/libs/bootstrap/bootstrap-9e3ffae467580fdb927a41352e75a2e0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="explore_gmcsf_files/libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="explore_gmcsf_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 
 
 </head>
 
 <body class="quarto-light">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
   <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#gmcsf-status-as-a-binary-predictor" id="toc-gmcsf-status-as-a-binary-predictor" class="nav-link active" data-scroll-target="#gmcsf-status-as-a-binary-predictor">GMCSF Status as a Binary Predictor</a>
+  <li><a href="#analysis-using-gmcsf-as-a-binary-result" id="toc-analysis-using-gmcsf-as-a-binary-result" class="nav-link active" data-scroll-target="#analysis-using-gmcsf-as-a-binary-result">Analysis, Using GMCSF as a Binary Result</a>
   <ul class="collapse">
-  <li><a href="#surival-analysis" id="toc-surival-analysis" class="nav-link" data-scroll-target="#surival-analysis">Surival Analysis</a></li>
-  <li><a href="#gmcsf-status-as-a-predictor-of-antibody-diagnosis" id="toc-gmcsf-status-as-a-predictor-of-antibody-diagnosis" class="nav-link" data-scroll-target="#gmcsf-status-as-a-predictor-of-antibody-diagnosis">GMCSF Status as a Predictor of Antibody Diagnosis</a></li>
-  <li><a href="#gmcsf-status-as-a-predictor-of-ro52-positivity" id="toc-gmcsf-status-as-a-predictor-of-ro52-positivity" class="nav-link" data-scroll-target="#gmcsf-status-as-a-predictor-of-ro52-positivity">GMCSF Status as a Predictor of RO52 Positivity</a></li>
-  <li><a href="#gmcsf-status-as-a-predictor-of-being-on-a-b-cell-medication" id="toc-gmcsf-status-as-a-predictor-of-being-on-a-b-cell-medication" class="nav-link" data-scroll-target="#gmcsf-status-as-a-predictor-of-being-on-a-b-cell-medication">GMCSF Status as a Predictor of being on a B Cell Medication</a></li>
-  <li><a href="#gmcsf-status-as-a-predictor-of-fvc-change-over-time" id="toc-gmcsf-status-as-a-predictor-of-fvc-change-over-time" class="nav-link" data-scroll-target="#gmcsf-status-as-a-predictor-of-fvc-change-over-time">GMCSF Status as a Predictor of FVC Change Over Time</a></li>
-  <li><a href="#gmcsf-status-as-a-predictor-of-radiologic-severity-of-ild" id="toc-gmcsf-status-as-a-predictor-of-radiologic-severity-of-ild" class="nav-link" data-scroll-target="#gmcsf-status-as-a-predictor-of-radiologic-severity-of-ild">GMCSF Status as a Predictor of Radiologic Severity of ILD</a></li>
+  <li><a href="#analysis-using-gmcsf-at-baseline" id="toc-analysis-using-gmcsf-at-baseline" class="nav-link" data-scroll-target="#analysis-using-gmcsf-at-baseline">Analysis, Using GMCSF at Baseline</a>
+  <ul class="collapse">
+  <li><a href="#table-1.-demographics-stratified-by-gmcsf-result" id="toc-table-1.-demographics-stratified-by-gmcsf-result" class="nav-link" data-scroll-target="#table-1.-demographics-stratified-by-gmcsf-result">Table 1. Demographics Stratified by GMCSF Result</a></li>
+  <li><a href="#survival-analysis" id="toc-survival-analysis" class="nav-link" data-scroll-target="#survival-analysis">Survival Analysis</a></li>
+  <li><a href="#cox-proportional-model-of-survival" id="toc-cox-proportional-model-of-survival" class="nav-link" data-scroll-target="#cox-proportional-model-of-survival">Cox Proportional Model of Survival</a></li>
+  <li><a href="#correlation-between-gmcsf-and-ro52-elisa-status" id="toc-correlation-between-gmcsf-and-ro52-elisa-status" class="nav-link" data-scroll-target="#correlation-between-gmcsf-and-ro52-elisa-status">Correlation between GMCSF and RO52 ELISA Status</a></li>
+  <li><a href="#correlation-between-gmcsf-and-antibody-diagnosis" id="toc-correlation-between-gmcsf-and-antibody-diagnosis" class="nav-link" data-scroll-target="#correlation-between-gmcsf-and-antibody-diagnosis">Correlation between GMCSF and Antibody Diagnosis</a></li>
   </ul></li>
+  <li><a href="#analysis-using-highest-gmcsf-on-record" id="toc-analysis-using-highest-gmcsf-on-record" class="nav-link" data-scroll-target="#analysis-using-highest-gmcsf-on-record">Analysis, Using highest-GMCSF on Record</a>
+  <ul class="collapse">
+  <li><a href="#table-1.-demographics-stratified-by-gmcsf-result-1" id="toc-table-1.-demographics-stratified-by-gmcsf-result-1" class="nav-link" data-scroll-target="#table-1.-demographics-stratified-by-gmcsf-result-1">Table 1. Demographics Stratified by GMCSF Result</a></li>
+  <li><a href="#survival-analysis-1" id="toc-survival-analysis-1" class="nav-link" data-scroll-target="#survival-analysis-1">Survival Analysis</a></li>
+  <li><a href="#cox-proportional-model-of-survival-1" id="toc-cox-proportional-model-of-survival-1" class="nav-link" data-scroll-target="#cox-proportional-model-of-survival-1">Cox Proportional Model of Survival</a></li>
+  <li><a href="#correlation-between-gmcsf-and-ro52-elisa-status-1" id="toc-correlation-between-gmcsf-and-ro52-elisa-status-1" class="nav-link" data-scroll-target="#correlation-between-gmcsf-and-ro52-elisa-status-1">Correlation between GMCSF and RO52 ELISA Status</a></li>
+  <li><a href="#correlation-between-gmcsf-and-antibody-diagnosis-1" id="toc-correlation-between-gmcsf-and-antibody-diagnosis-1" class="nav-link" data-scroll-target="#correlation-between-gmcsf-and-antibody-diagnosis-1">Correlation between GMCSF and Antibody Diagnosis</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#analysis-using-gmcsf-as-a-continuous-result" id="toc-analysis-using-gmcsf-as-a-continuous-result" class="nav-link" data-scroll-target="#analysis-using-gmcsf-as-a-continuous-result">Analysis, Using GMCSF as a Continuous Result</a>
+  <ul class="collapse">
+  <li><a href="#analysis-using-gmcsf-at-baseline-1" id="toc-analysis-using-gmcsf-at-baseline-1" class="nav-link" data-scroll-target="#analysis-using-gmcsf-at-baseline-1">Analysis, Using GMCSF at Baseline</a>
+  <ul class="collapse">
+  <li><a href="#cox-proportional-model-of-survival-2" id="toc-cox-proportional-model-of-survival-2" class="nav-link" data-scroll-target="#cox-proportional-model-of-survival-2">Cox Proportional Model of Survival</a></li>
+  <li><a href="#correlation-between-gmcsf-and-ro52" id="toc-correlation-between-gmcsf-and-ro52" class="nav-link" data-scroll-target="#correlation-between-gmcsf-and-ro52">Correlation between GMCSF and RO52</a></li>
+  <li><a href="#correlation-between-gmcsf-and-antibody-diagnosis-2" id="toc-correlation-between-gmcsf-and-antibody-diagnosis-2" class="nav-link" data-scroll-target="#correlation-between-gmcsf-and-antibody-diagnosis-2">Correlation between GMCSF and Antibody Diagnosis</a></li>
+  </ul></li>
+  <li><a href="#analysis-using-highest-gmcsf-on-record-1" id="toc-analysis-using-highest-gmcsf-on-record-1" class="nav-link" data-scroll-target="#analysis-using-highest-gmcsf-on-record-1">Analysis, Using highest-GMCSF on Record</a>
+  <ul class="collapse">
+  <li><a href="#cox-proportional-model-of-survival-3" id="toc-cox-proportional-model-of-survival-3" class="nav-link" data-scroll-target="#cox-proportional-model-of-survival-3">Cox Proportional Model of Survival</a></li>
+  <li><a href="#correlation-between-gmcsf-and-ro52-1" id="toc-correlation-between-gmcsf-and-ro52-1" class="nav-link" data-scroll-target="#correlation-between-gmcsf-and-ro52-1">Correlation between GMCSF and RO52</a></li>
+  <li><a href="#correlation-between-gmcsf-and-antibody-diagnosis-3" id="toc-correlation-between-gmcsf-and-antibody-diagnosis-3" class="nav-link" data-scroll-target="#correlation-between-gmcsf-and-antibody-diagnosis-3">Correlation between GMCSF and Antibody Diagnosis</a></li>
+  <li><a href="#correlation-between-ro52-and-antibody-diagnosis" id="toc-correlation-between-ro52-and-antibody-diagnosis" class="nav-link" data-scroll-target="#correlation-between-ro52-and-antibody-diagnosis">Correlation between RO52 and Antibody Diagnosis</a></li>
+  </ul></li>
+  <li><a href="#does-gmcsf-lips-measurement-correlate-with-fvc-change-over-time" id="toc-does-gmcsf-lips-measurement-correlate-with-fvc-change-over-time" class="nav-link" data-scroll-target="#does-gmcsf-lips-measurement-correlate-with-fvc-change-over-time">Does GMCSF LIPS Measurement Correlate with FVC Change Over Time?</a></li>
+  </ul></li>
+  <li><a href="#pca-clustering-using-gmcsf-ro52-lips-data" id="toc-pca-clustering-using-gmcsf-ro52-lips-data" class="nav-link" data-scroll-target="#pca-clustering-using-gmcsf-ro52-lips-data">PCA Clustering Using GMCSF + RO52 LIPS Data</a></li>
+  <li><a href="#pca-clustering-using-gmcsf-ro52-jo1-vs-nonjo1-status" id="toc-pca-clustering-using-gmcsf-ro52-jo1-vs-nonjo1-status" class="nav-link" data-scroll-target="#pca-clustering-using-gmcsf-ro52-jo1-vs-nonjo1-status">PCA Clustering Using GMCSF + RO52 + JO1-vs-nonJO1 Status</a></li>
   </ul>
 </nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">explore_gmcsf</h1>
+<h1 class="title">GMCSF Antibody Analysis</h1>
 </div>
 
 
@@ -80,122 +113,2624 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="gmcsf-status-as-a-binary-predictor" class="level1">
-<h1>GMCSF Status as a Binary Predictor</h1>
-<section id="surival-analysis" class="level2">
-<h2 class="anchored" data-anchor-id="surival-analysis">Surival Analysis</h2>
+<p>All of the below results are based on a follow-up period of days AFTER the bleed date tested.</p>
+<section id="analysis-using-gmcsf-as-a-binary-result" class="level1">
+<h1>Analysis, Using GMCSF as a Binary Result</h1>
+<section id="analysis-using-gmcsf-at-baseline" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-using-gmcsf-at-baseline">Analysis, Using GMCSF at Baseline</h2>
+<section id="table-1.-demographics-stratified-by-gmcsf-result" class="level3">
+<h3 class="anchored" data-anchor-id="table-1.-demographics-stratified-by-gmcsf-result">Table 1. Demographics Stratified by GMCSF Result</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+negative positive 
+     288       27 </code></pre>
+</div>
+</div>
+</section>
+<section id="survival-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="survival-analysis">Survival Analysis</h3>
 <div class="cell">
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p><strong>Conclusion</strong>: In an unadjusted log-rank test, survival <em>does NOT</em> significantly differ by GMC-CSF status.</p>
-<p>In a Cox proportional hazard model stratified by race and gender, and adjusted for age_at_bleed, survival does NOT significantly differ by GM-CSF status (p = 0.5522027).</p>
+<p>The statistical result above is derived from a log-rank test.</p>
 </section>
-<section id="gmcsf-status-as-a-predictor-of-antibody-diagnosis" class="level2">
-<h2 class="anchored" data-anchor-id="gmcsf-status-as-a-predictor-of-antibody-diagnosis">GMCSF Status as a Predictor of Antibody Diagnosis</h2>
+<section id="cox-proportional-model-of-survival" class="level3">
+<h3 class="anchored" data-anchor-id="cox-proportional-model-of-survival">Cox Proportional Model of Survival</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>Likelihood ratio tests of Multinomial Models
+<pre><code>                                    coef exp(coef)   se(coef)          z
+antibody_test_resultpositive -0.27116140 0.7624934 0.73959752 -0.3666337
+age_baseline                  0.02090814 1.0211282 0.01434208  1.4578179
+gendermale                   -0.38422591 0.6809776 0.38592053 -0.9956089
+racenot_white                 0.07790237 1.0810171 0.33734950  0.2309248
+                              Pr(&gt;|z|)
+antibody_test_resultpositive 0.7138922
+age_baseline                 0.1448907
+gendermale                   0.3194402
+racenot_white                0.8173732</code></pre>
+</div>
+</div>
+<p>The statistical result above is derived from a Cox proportional model, adjusted for age_baseline + gender + race.</p>
+</section>
+<section id="correlation-between-gmcsf-and-ro52-elisa-status" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-between-gmcsf-and-ro52-elisa-status">Correlation between GMCSF and RO52 ELISA Status</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>                                      Estimate Std. Error    z value
+(Intercept)                         0.38437803 0.77560182  0.4955868
+antibody_test_resultpositive        0.71258236 0.64616754  1.1027827
+racenot_white                       0.86142217 0.39199322  2.1975436
+gendermale                         -0.44184988 0.37481233 -1.1788563
+age_at_bleed                        0.02203537 0.01484975  1.4838884
+antibody_clinical_diagnosisnon_JO1 -1.76226922 0.36435682 -4.8366576
+                                       Pr(&gt;|z|)
+(Intercept)                        6.201860e-01
+antibody_test_resultpositive       2.701216e-01
+racenot_white                      2.798165e-02
+gendermale                         2.384554e-01
+age_at_bleed                       1.378385e-01
+antibody_clinical_diagnosisnon_JO1 1.320406e-06</code></pre>
+</div>
+</div>
+<p>The statistical result above is derived from a logistic regression, adjusted for age_baseline + gender + race.</p>
+</section>
+<section id="correlation-between-gmcsf-and-antibody-diagnosis" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-between-gmcsf-and-antibody-diagnosis">Correlation between GMCSF and Antibody Diagnosis</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>                                Estimate Std. Error    z value     Pr(&gt;|z|)
+(Intercept)                  -1.66765616  0.5557637 -3.0006567 2.693981e-03
+antibody_test_resultpositive  0.54492854  0.4195775  1.2987554 1.940279e-01
+racenot_white                 1.03453327  0.2521391  4.1030261 4.077812e-05
+gendermale                    0.08817228  0.2691761  0.3275635 7.432417e-01
+age_at_bleed                  0.01456859  0.0100224  1.4536032 1.460563e-01</code></pre>
+</div>
+</div>
+<p>The statistical result above is derived from a logistic regression, adjusted for age_baseline + gender + race.</p>
+</section>
+</section>
+<section id="analysis-using-highest-gmcsf-on-record" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-using-highest-gmcsf-on-record">Analysis, Using highest-GMCSF on Record</h2>
+<section id="table-1.-demographics-stratified-by-gmcsf-result-1" class="level3">
+<h3 class="anchored" data-anchor-id="table-1.-demographics-stratified-by-gmcsf-result-1">Table 1. Demographics Stratified by GMCSF Result</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+negative positive 
+     280       35 </code></pre>
+</div>
+</div>
+</section>
+<section id="survival-analysis-1" class="level3">
+<h3 class="anchored" data-anchor-id="survival-analysis-1">Survival Analysis</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The statistical result above is derived from a log-rank test.</p>
+</section>
+<section id="cox-proportional-model-of-survival-1" class="level3">
+<h3 class="anchored" data-anchor-id="cox-proportional-model-of-survival-1">Cox Proportional Model of Survival</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>                                    coef exp(coef)   se(coef)           z
+antibody_test_resultpositive -0.01882160 0.9813544 0.54038154 -0.03483021
+age_baseline                  0.02172475 1.0219625 0.01441842  1.50673621
+gendermale                   -0.37594466 0.6866403 0.38790557 -0.96916541
+racenot_white                 0.11783157 1.1250546 0.33558948  0.35111818
+                              Pr(&gt;|z|)
+antibody_test_resultpositive 0.9722151
+age_baseline                 0.1318783
+gendermale                   0.3324627
+racenot_white                0.7254997</code></pre>
+</div>
+</div>
+<p>The statistical result above is derived from a Cox proportional model, adjusted for age_baseline + gender + race.</p>
+</section>
+<section id="correlation-between-gmcsf-and-ro52-elisa-status-1" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-between-gmcsf-and-ro52-elisa-status-1">Correlation between GMCSF and RO52 ELISA Status</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>                                      Estimate Std. Error    z value
+(Intercept)                         0.39603350 0.77371192  0.5118617
+antibody_test_resultpositive        0.31378837 0.52535598  0.5972871
+racenot_white                       0.83362568 0.38814610  2.1477111
+gendermale                         -0.43476368 0.37400929 -1.1624408
+age_at_bleed                        0.02223615 0.01475952  1.5065634
+antibody_clinical_diagnosisnon_JO1 -1.76157873 0.36443813 -4.8336840
+                                       Pr(&gt;|z|)
+(Intercept)                        6.087478e-01
+antibody_test_resultpositive       5.503157e-01
+racenot_white                      3.173671e-02
+gendermale                         2.450564e-01
+age_at_bleed                       1.319226e-01
+antibody_clinical_diagnosisnon_JO1 1.340293e-06</code></pre>
+</div>
+</div>
+<p>The statistical result above is derived from a logistic regression, adjusted for age_baseline + gender + race.</p>
+</section>
+<section id="correlation-between-gmcsf-and-antibody-diagnosis-1" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-between-gmcsf-and-antibody-diagnosis-1">Correlation between GMCSF and Antibody Diagnosis</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>                                Estimate Std. Error    z value     Pr(&gt;|z|)
+(Intercept)                  -1.73820816 0.56134324 -3.0965157 1.958095e-03
+antibody_test_resultpositive  0.76624704 0.37474381  2.0447223 4.088224e-02
+racenot_white                 1.02599698 0.25221579  4.0679332 4.743198e-05
+gendermale                    0.09224871 0.27023029  0.3413707 7.328245e-01
+age_at_bleed                  0.01509744 0.01007369  1.4987001 1.339514e-01</code></pre>
+</div>
+</div>
+<p>The statistical result above is derived from a logistic regression, adjusted for age_baseline + gender + race.</p>
+</section>
+</section>
+</section>
+<section id="analysis-using-gmcsf-as-a-continuous-result" class="level1">
+<h1>Analysis, Using GMCSF as a Continuous Result</h1>
+<p>All results here have performed a log2() transformation on GMCSF measurements, due to the wide range in values.</p>
+<section id="analysis-using-gmcsf-at-baseline-1" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-using-gmcsf-at-baseline-1">Analysis, Using GMCSF at Baseline</h2>
+<section id="cox-proportional-model-of-survival-2" class="level3">
+<h3 class="anchored" data-anchor-id="cox-proportional-model-of-survival-2">Cox Proportional Model of Survival</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>                                 coef exp(coef)  se(coef)          z  Pr(&gt;|z|)
+log2(antibody_measurement) -0.1176884 0.8889730 0.1269261 -0.9272199 0.3538124
+age_baseline                0.0201993 1.0204047 0.0143535  1.4072734 0.1593463
+gendermale                 -0.3385833 0.7127794 0.3879381 -0.8727766 0.3827849
+racenot_white               0.1196327 1.1270828 0.3386192  0.3532956 0.7238669</code></pre>
+</div>
+</div>
+</section>
+<section id="correlation-between-gmcsf-and-ro52" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-between-gmcsf-and-ro52">Correlation between GMCSF and RO52</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = ro52_test_result ~ log2(antibody_measurement) + 
+    gender + race + age_at_bleed, family = binomial(link = "logit"), 
+    data = ro52.titer)
 
-Response: antibody
-                                        Model Resid. df Resid. Dev   Test    Df
-1                age_at_bleed + gender + race       480   238.1581             
-2 gmcsf_status + age_at_bleed + gender + race       475   209.7803 1 vs 2     5
-  LR stat.      Pr(Chi)
-1                      
-2 28.37779 3.070336e-05</code></pre>
+Coefficients:
+                           Estimate Std. Error z value Pr(&gt;|z|)
+(Intercept)                 0.44025    1.23824   0.356    0.722
+log2(antibody_measurement) -0.01177    0.08961  -0.131    0.895
+gendermale                 -0.41767    0.34441  -1.213    0.225
+racenot_white               0.35089    0.33992   1.032    0.302
+age_at_bleed                0.01258    0.01340   0.938    0.348
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 236.52  on 198  degrees of freedom
+Residual deviance: 233.61  on 194  degrees of freedom
+  (116 observations deleted due to missingness)
+AIC: 243.61
+
+Number of Fisher Scoring iterations: 4</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = RO52 ~ log2(antibody_measurement) + gender + race + 
+    age_at_bleed, family = gaussian(link = "identity"), data = ro52.titer)
+
+Coefficients:
+                           Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept)                 74.4473    35.7279   2.084   0.0385 *
+log2(antibody_measurement)  -1.4055     2.5785  -0.545   0.5863  
+gendermale                 -20.9121    10.0758  -2.075   0.0393 *
+racenot_white                4.6945     9.4814   0.495   0.6211  
+age_at_bleed                 0.5223     0.3795   1.376   0.1703  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for gaussian family taken to be 4049.077)
+
+    Null deviance: 810608  on 198  degrees of freedom
+Residual deviance: 785521  on 194  degrees of freedom
+  (116 observations deleted due to missingness)
+AIC: 2224.6
+
+Number of Fisher Scoring iterations: 2</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = RO52 ~ log2(antibody_measurement) + gender + race + 
+    age_at_bleed, family = gaussian(link = "identity"), data = ro52.lips)
+
+Coefficients:
+                            Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept)                1006173.0   483647.7   2.080   0.0384 *
+log2(antibody_measurement)    3681.7    36366.5   0.101   0.9194  
+gendermale                 -264589.5   137456.9  -1.925   0.0553 .
+racenot_white                59112.1   128260.2   0.461   0.6453  
+age_at_bleed                   628.1     5026.3   0.125   0.9006  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for gaussian family taken to be 1.046765e+12)
+
+    Null deviance: 2.9080e+14  on 278  degrees of freedom
+Residual deviance: 2.8681e+14  on 274  degrees of freedom
+  (36 observations deleted due to missingness)
+AIC: 8520.5
+
+Number of Fisher Scoring iterations: 2</code></pre>
 </div>
 </div>
-<p><strong>Conclusion:</strong> In a multinomial logistic regression for antibody diagnosis which was adjusted for gender, race, and age_at_bleed, the resultant likelihood ratio test for the entire antibody variable showed that GMCSF status DOES significantly affects the distribution of antibody status (p = 3.0703361^{-5}.</p>
+<p>The above tests are logistic and linear models, corrected for age_at_bleed + race + gender.</p>
 </section>
-<section id="gmcsf-status-as-a-predictor-of-ro52-positivity" class="level2">
-<h2 class="anchored" data-anchor-id="gmcsf-status-as-a-predictor-of-ro52-positivity">GMCSF Status as a Predictor of RO52 Positivity</h2>
+<section id="correlation-between-gmcsf-and-antibody-diagnosis-2" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-between-gmcsf-and-antibody-diagnosis-2">Correlation between GMCSF and Antibody Diagnosis</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>                        Estimate Std. Error    z value   Pr(&gt;|z|)
-(Intercept)           0.44727066 2.49426505  0.1793196 0.85768674
-gmcsf_statuspositive  2.12993215 0.84756756  2.5129939 0.01197114
-age_at_bleed         -0.01357418 0.04500315 -0.3016272 0.76293626
-gendermale           -0.98177974 0.84540244 -1.1613164 0.24551324
-racenot_white        -0.24363326 1.00804797 -0.2416882 0.80902180</code></pre>
+<pre><code>                                                  Estimate Std. Error
+(Intercept)                                    10.98759389 0.40187085
+substitute(antibody_clinical_diagnosis)non_JO1  1.20616612 0.19294464
+age_at_bleed                                   -0.01010460 0.00746004
+gendermale                                     -0.01112436 0.20529349
+racenot_white                                  -0.12917523 0.19683886
+                                                   t value     Pr(&gt;|t|)
+(Intercept)                                    27.34110722 1.109495e-83
+substitute(antibody_clinical_diagnosis)non_JO1  6.25135845 1.385054e-09
+age_at_bleed                                   -1.35449678 1.765904e-01
+gendermale                                     -0.05418759 9.568215e-01
+racenot_white                                  -0.65624861 5.121639e-01</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>                            OR      2.5 %     97.5 %
-(Intercept)          1.5640376 0.01382541 345.531445
-gmcsf_statuspositive 8.4142959 1.74433476  52.175075
-age_at_bleed         0.9865175 0.89479355   1.075347
-gendermale           0.3746437 0.06238788   1.885606
-racenot_white        0.7837750 0.10567270   6.135206</code></pre>
+<pre><code>
+    Kruskal-Wallis rank sum test
+
+data:  log2(antibody_measurement) by substitute(antibody_clinical_diagnosis)
+Kruskal-Wallis chi-squared = 147.56, df = 5, p-value &lt; 2.2e-16</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Fold_Change       2.5 %      97.5 % 
+      2.307       1.775       2.999 </code></pre>
 </div>
 </div>
-<p><em>Conclusion</em>: In a binary logistic regression model adjusted for gender, race, and age_at_bleed, GMCSF status DOES significantly predict RO52 status.</p>
-<p>When converting OR to RR, we get RR 2.3563327, or a positive GM-CSF results in RR 2.3563327 of having a positive RO52.</p>
+<p>The above test was first a linear regression adjusted for age_at_bleed + gender + race, to determine if MEAN values by antibody category (JO1, non_JO1) differed according to GMCSF levels.</p>
+<p>The next test result is the output of a Kruskal-Wallis rank sum test.</p>
+<p>Finally, the fold-change of the linear regression is shown, show what fold-change differences exist between the non-JO1 (the baseline) vs JO1 groups.</p>
 </section>
-<section id="gmcsf-status-as-a-predictor-of-being-on-a-b-cell-medication" class="level2">
-<h2 class="anchored" data-anchor-id="gmcsf-status-as-a-predictor-of-being-on-a-b-cell-medication">GMCSF Status as a Predictor of being on a B Cell Medication</h2>
+</section>
+<section id="analysis-using-highest-gmcsf-on-record-1" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-using-highest-gmcsf-on-record-1">Analysis, Using highest-GMCSF on Record</h2>
+<section id="cox-proportional-model-of-survival-3" class="level3">
+<h3 class="anchored" data-anchor-id="cox-proportional-model-of-survival-3">Cox Proportional Model of Survival</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>                        Estimate Std. Error    z value   Pr(&gt;|z|)
-(Intercept)          -1.85666226 1.35455549 -1.3706801 0.17047470
-gmcsf_statuspositive  1.23719677 0.49473575  2.5007224 0.01239403
-age_at_bleed          0.02526249 0.02262461  1.1165936 0.26416815
-gendermale           -0.15917424 0.46586935 -0.3416714 0.73259818
-racenot_white        -0.41100990 0.47118988 -0.8722808 0.38305519</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                            OR      2.5 %   97.5 %
-(Intercept)          0.1561931 0.01021761 2.210914
-gmcsf_statuspositive 3.4459401 1.33705315 9.419273
-age_at_bleed         1.0255843 0.98107929 1.073316
-gendermale           0.8528477 0.33826714 2.123149
-racenot_white        0.6629804 0.26046468 1.670121</code></pre>
+<pre><code>                                  coef exp(coef)   se(coef)          z
+log2(antibody_measurement) -0.09699280 0.9075625 0.11551865 -0.8396290
+age_baseline                0.02036926 1.0205781 0.01439412  1.4151092
+gendermale                 -0.30454184 0.7374612 0.39052265 -0.7798314
+racenot_white               0.14597488 1.1571671 0.33722386  0.4328723
+                            Pr(&gt;|z|)
+log2(antibody_measurement) 0.4011165
+age_baseline               0.1570365
+gendermale                 0.4354901
+racenot_white              0.6651075</code></pre>
 </div>
 </div>
-<p><em>Conclusion</em>: In a binary logistic regression model adjusted for gender, race, and age_at_bleed, GMCSF status DOES significantly predict RO52 status (p = 0.012394).</p>
-<p>When converting OR to RR, we get RR 1.8103448, or a positive GM-CSF results in RR 1.8103448 of having been on a B cell medication at the time of bleed draw.</p>
 </section>
-<section id="gmcsf-status-as-a-predictor-of-fvc-change-over-time" class="level2">
-<h2 class="anchored" data-anchor-id="gmcsf-status-as-a-predictor-of-fvc-change-over-time">GMCSF Status as a Predictor of FVC Change Over Time</h2>
+<section id="correlation-between-gmcsf-and-ro52-1" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-between-gmcsf-and-ro52-1">Correlation between GMCSF and RO52</h3>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>                         Estimate  Std. Error    t value    Pr(&gt;|t|)
-(Intercept)           0.284933305 0.089015322  3.2009467 0.002381572
-gmcsf_statuspositive  0.010273357 0.028381133  0.3619784 0.718893561
-age_at_bleed         -0.004564523 0.001438933 -3.1721578 0.002586482
-gendermale            0.055368333 0.031283397  1.7698951 0.082842167
-racenot_white        -0.054987488 0.031103292 -1.7678993 0.083179201</code></pre>
+<pre><code>
+Call:
+glm(formula = ro52_test_result ~ log2(antibody_measurement) + 
+    gender + race + age_at_bleed, family = binomial(link = "logit"), 
+    data = ro52.titer)
+
+Coefficients:
+                           Estimate Std. Error z value Pr(&gt;|z|)
+(Intercept)                 0.74188    1.19282   0.622    0.534
+log2(antibody_measurement) -0.04349    0.08380  -0.519    0.604
+gendermale                 -0.41578    0.34474  -1.206    0.228
+racenot_white               0.36020    0.33985   1.060    0.289
+age_at_bleed                0.01352    0.01343   1.007    0.314
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 236.52  on 198  degrees of freedom
+Residual deviance: 233.19  on 194  degrees of freedom
+  (116 observations deleted due to missingness)
+AIC: 243.19
+
+Number of Fisher Scoring iterations: 4</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = RO52 ~ log2(antibody_measurement) + gender + race + 
+    age_at_bleed, family = gaussian(link = "identity"), data = ro52.titer)
+
+Coefficients:
+                           Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept)                 77.8944    34.7809   2.240   0.0263 *
+log2(antibody_measurement)  -1.9025     2.4440  -0.778   0.4373  
+gendermale                 -20.7880    10.0582  -2.067   0.0401 *
+racenot_white                5.0237     9.4454   0.532   0.5954  
+age_at_bleed                 0.5631     0.3795   1.484   0.1395  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for gaussian family taken to be 4035.643)
+
+    Null deviance: 810608  on 198  degrees of freedom
+Residual deviance: 782915  on 194  degrees of freedom
+  (116 observations deleted due to missingness)
+AIC: 2224
+
+Number of Fisher Scoring iterations: 2</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = RO52 ~ log2(antibody_measurement) + gender + race + 
+    age_at_bleed, family = gaussian(link = "identity"), data = ro52.lips)
+
+Coefficients:
+                           Estimate Std. Error t value Pr(&gt;|t|)  
+(Intercept)                  930507     476268   1.954   0.0517 .
+log2(antibody_measurement)     9083      35021   0.259   0.7955  
+gendermale                  -265035     137364  -1.929   0.0547 .
+racenot_white                 58060     128313   0.452   0.6513  
+age_at_bleed                    922       5029   0.183   0.8547  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for gaussian family taken to be 1.046481e+12)
+
+    Null deviance: 2.9080e+14  on 278  degrees of freedom
+Residual deviance: 2.8674e+14  on 274  degrees of freedom
+  (36 observations deleted due to missingness)
+AIC: 8520.5
+
+Number of Fisher Scoring iterations: 2</code></pre>
+</div>
+</div>
+</section>
+<section id="correlation-between-gmcsf-and-antibody-diagnosis-3" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-between-gmcsf-and-antibody-diagnosis-3">Correlation between GMCSF and Antibody Diagnosis</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>                                                   Estimate Std. Error
+(Intercept)                                    11.100262673 0.42024938
+substitute(antibody_clinical_diagnosis)non_JO1  1.267944132 0.20069336
+age_at_bleed                                   -0.009805240 0.00776788
+gendermale                                     -0.004158578 0.21346062
+racenot_white                                  -0.019162026 0.20438876
+                                                   t value     Pr(&gt;|t|)
+(Intercept)                                    26.41351378 1.743867e-80
+substitute(antibody_clinical_diagnosis)non_JO1  6.31781809 9.488525e-10
+age_at_bleed                                   -1.26228012 2.078219e-01
+gendermale                                     -0.01948171 9.844697e-01
+racenot_white                                  -0.09375284 9.253677e-01</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Kruskal-Wallis rank sum test
+
+data:  log2(antibody_measurement) by substitute(antibody_clinical_diagnosis)
+Kruskal-Wallis chi-squared = 147.56, df = 5, p-value &lt; 2.2e-16</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Fold_Change       2.5 %      97.5 % 
+      2.408       1.833       3.163 </code></pre>
+</div>
+</div>
+<p>The above test was first a linear regression adjusted for age_at_bleed + gender + race, to determine if MEAN values by antibody category differed according to GMCSF levels.</p>
+<p>The next test result is the output of a Kruskal-Wallis rank sum test.</p>
+<p>Finally, the fold-change of the linear regression is shown, which displays what fold-change differences exist between the JO1 (the baseline) vs non-JO1 groups – implying that compared to JO1, non-JO1 patients have (on average and when holding the other variables constant) 2.408 times higher GMCSF levels.</p>
+</section>
+<section id="correlation-between-ro52-and-antibody-diagnosis" class="level3">
+<h3 class="anchored" data-anchor-id="correlation-between-ro52-and-antibody-diagnosis">Correlation between RO52 and Antibody Diagnosis</h3>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>                                                   Estimate Std. Error
+(Intercept)                                    18.500248431 0.80545772
+substitute(antibody_clinical_diagnosis)non_JO1 -1.544153505 0.37715932
+age_at_bleed                                    0.003095471 0.01493381
+gendermale                                     -0.767797796 0.40634515
+racenot_white                                   1.016140868 0.38893967
+                                                  t value     Pr(&gt;|t|)
+(Intercept)                                    22.9686152 8.044133e-66
+substitute(antibody_clinical_diagnosis)non_JO1 -4.0941677 5.580428e-05
+age_at_bleed                                    0.2072794 8.359457e-01
+gendermale                                     -1.8895213 5.987767e-02
+racenot_white                                   2.6125925 9.481831e-03</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Kruskal-Wallis rank sum test
+
+data:  log2(RO52) by substitute(antibody_clinical_diagnosis)
+Kruskal-Wallis chi-squared = 11.013, df = 1, p-value = 0.000905</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Fold_Change       2.5 %      97.5 % 
+      0.343       0.205       0.572 </code></pre>
+</div>
+</div>
+<p>The above test was first a linear regression adjusted for age_at_bleed + gender + race, to determine if MEAN values by antibody category differed according to RO52 levels.</p>
+<p>The next test result is the output of a Kruskal-Wallis rank sum test.</p>
+<p>Finally, the fold-change of the linear regression is shown, which displays what fold-change differences exist between the JO1 (the baseline) vs non-JO1 groups – implying that compared to JO1, non-JO1 patients have (on average and when holding the other variables constant) 0.343 times lower GMCSF levels (alternatively, JO1 patients have 2.9154519 higher RO52 levels compared to non-JO1).</p>
+</section>
+</section>
+<section id="does-gmcsf-lips-measurement-correlate-with-fvc-change-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="does-gmcsf-lips-measurement-correlate-with-fvc-change-over-time">Does GMCSF LIPS Measurement Correlate with FVC Change Over Time?</h2>
+<p>This compares FVC values closest to the bleed date with the FVC values closest to the patient’s last known alive date.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>                               Estimate   Std. Error   t value     Pr(&gt;|t|)
+(Intercept)                 0.188570624 0.1138330023  1.656555 0.1002439348
+log2(antibody_measurement)  0.011253509 0.0082387277  1.365928 0.1745375196
+FVC_initial                -0.237466070 0.0624782503 -3.800780 0.0002289066
+age_at_bleed               -0.001722731 0.0009525728 -1.808503 0.0730533583
+racenot_white              -0.062642467 0.0263572871 -2.376666 0.0190651474</code></pre>
 </div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-21-2.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-<p><strong>Conclusion:</strong> In an ANCOVA adjusted for initial FVC values, (as well as gender, race, and age_at_bleed), GMCSF status does NOT significantly predict change in FVC over time.</p>
-<p>In a Wilcoxon Rank-Sum test not adjusted for initial FVC values, GMCSF status does NOT significantly predict change in FVC over time (p = 0.305433915504474).</p>
 </section>
-<section id="gmcsf-status-as-a-predictor-of-radiologic-severity-of-ild" class="level2">
-<h2 class="anchored" data-anchor-id="gmcsf-status-as-a-predictor-of-radiologic-severity-of-ild">GMCSF Status as a Predictor of Radiologic Severity of ILD</h2>
+</section>
+<section id="pca-clustering-using-gmcsf-ro52-lips-data" class="level1">
+<h1>PCA Clustering Using GMCSF + RO52 LIPS Data</h1>
+<p>Below are data attempting to find PCA-based clusters, utilizing RO52 and GMCSF LIPS measurements.</p>
+<p>Given we know from above that GMCSF levels differ based on JO1 vs non-JO1 antibody status, we have included that variable as well in our clustering generator.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-22-2.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>---------------------------------------------------- 
+Gaussian finite mixture model fitted by EM algorithm 
+---------------------------------------------------- 
+
+Mclust VEI (diagonal, equal shape) model with 6 components: 
+
+ log-likelihood   n df       BIC       ICL
+      -863.1466 400 24 -1870.088 -1984.828
+
+Clustering table:
+ 1  2  3  4  5  6 
+91 62 65 48 83 51 </code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-22-3.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Characteristic</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">Overall<br>
+N = 400</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">1<br>
+N = 77</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">2<br>
+N = 137</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">3<br>
+N = 138</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">4<br>
+N = 48</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">age_at_bleed</span></td>
+<td style="text-align: center;">51 (42, 57)</td>
+<td style="text-align: center;">52 (39, 59)</td>
+<td style="text-align: center;">51 (42, 58)</td>
+<td style="text-align: center;">50 (40, 55)</td>
+<td style="text-align: center;">51 (46, 54)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">gender</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">female</td>
+<td style="text-align: center;">292 (73%)</td>
+<td style="text-align: center;">61 (79%)</td>
+<td style="text-align: center;">91 (66%)</td>
+<td style="text-align: center;">105 (76%)</td>
+<td style="text-align: center;">35 (73%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">male</td>
+<td style="text-align: center;">108 (27%)</td>
+<td style="text-align: center;">16 (21%)</td>
+<td style="text-align: center;">46 (34%)</td>
+<td style="text-align: center;">33 (24%)</td>
+<td style="text-align: center;">13 (27%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">race</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">white</td>
+<td style="text-align: center;">231 (58%)</td>
+<td style="text-align: center;">49 (64%)</td>
+<td style="text-align: center;">91 (66%)</td>
+<td style="text-align: center;">65 (47%)</td>
+<td style="text-align: center;">26 (54%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">not_white</td>
+<td style="text-align: center;">169 (42%)</td>
+<td style="text-align: center;">28 (36%)</td>
+<td style="text-align: center;">46 (34%)</td>
+<td style="text-align: center;">73 (53%)</td>
+<td style="text-align: center;">22 (46%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">vital_status</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">alive</td>
+<td style="text-align: center;">341 (85%)</td>
+<td style="text-align: center;">58 (75%)</td>
+<td style="text-align: center;">120 (88%)</td>
+<td style="text-align: center;">120 (87%)</td>
+<td style="text-align: center;">43 (90%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">deceased</td>
+<td style="text-align: center;">58 (15%)</td>
+<td style="text-align: center;">19 (25%)</td>
+<td style="text-align: center;">16 (12%)</td>
+<td style="text-align: center;">18 (13%)</td>
+<td style="text-align: center;">5 (10%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">GMCSF</span></td>
+<td style="text-align: center;">1,715 (974, 3,167)</td>
+<td style="text-align: center;">863 (753, 972)</td>
+<td style="text-align: center;">1,446 (923, 2,049)</td>
+<td style="text-align: center;">2,244 (1,624, 3,519)</td>
+<td style="text-align: center;">26,619 (17,075, 63,480)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">RO52</span></td>
+<td style="text-align: center;">532,986 (26,564, 1,569,116)</td>
+<td style="text-align: center;">1,479,992 (580,073, 2,246,981)</td>
+<td style="text-align: center;">12,988 (7,031, 31,242)</td>
+<td style="text-align: center;">1,187,081 (563,655, 1,945,000)</td>
+<td style="text-align: center;">747,159 (397,208, 1,518,177)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">ild_present</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">ILD absent</td>
+<td style="text-align: center;">39 (9.8%)</td>
+<td style="text-align: center;">3 (3.9%)</td>
+<td style="text-align: center;">19 (14%)</td>
+<td style="text-align: center;">13 (9.5%)</td>
+<td style="text-align: center;">4 (8.3%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">ILD present</td>
+<td style="text-align: center;">352 (88%)</td>
+<td style="text-align: center;">72 (94%)</td>
+<td style="text-align: center;">117 (85%)</td>
+<td style="text-align: center;">121 (88%)</td>
+<td style="text-align: center;">42 (88%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">unavailable</td>
+<td style="text-align: center;">8 (2.0%)</td>
+<td style="text-align: center;">2 (2.6%)</td>
+<td style="text-align: center;">1 (0.7%)</td>
+<td style="text-align: center;">3 (2.2%)</td>
+<td style="text-align: center;">2 (4.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">ild_type</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">fibrotic NSIP</td>
+<td style="text-align: center;">20 (5.8%)</td>
+<td style="text-align: center;">7 (9.6%)</td>
+<td style="text-align: center;">6 (5.3%)</td>
+<td style="text-align: center;">4 (3.5%)</td>
+<td style="text-align: center;">3 (7.1%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">GGO</td>
+<td style="text-align: center;">42 (12%)</td>
+<td style="text-align: center;">11 (15%)</td>
+<td style="text-align: center;">14 (12%)</td>
+<td style="text-align: center;">16 (14%)</td>
+<td style="text-align: center;">1 (2.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">nodules</td>
+<td style="text-align: center;">1 (0.3%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">1 (0.9%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">NSIP</td>
+<td style="text-align: center;">120 (35%)</td>
+<td style="text-align: center;">20 (27%)</td>
+<td style="text-align: center;">48 (42%)</td>
+<td style="text-align: center;">41 (36%)</td>
+<td style="text-align: center;">11 (26%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">NSIP-OP</td>
+<td style="text-align: center;">12 (3.5%)</td>
+<td style="text-align: center;">2 (2.7%)</td>
+<td style="text-align: center;">3 (2.6%)</td>
+<td style="text-align: center;">7 (6.2%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">OP</td>
+<td style="text-align: center;">8 (2.3%)</td>
+<td style="text-align: center;">3 (4.1%)</td>
+<td style="text-align: center;">3 (2.6%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">2 (4.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">OTHER</td>
+<td style="text-align: center;">3 (0.9%)</td>
+<td style="text-align: center;">2 (2.7%)</td>
+<td style="text-align: center;">1 (0.9%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">subpleural fibrosis</td>
+<td style="text-align: center;">61 (18%)</td>
+<td style="text-align: center;">9 (12%)</td>
+<td style="text-align: center;">23 (20%)</td>
+<td style="text-align: center;">16 (14%)</td>
+<td style="text-align: center;">13 (31%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">UIP</td>
+<td style="text-align: center;">40 (12%)</td>
+<td style="text-align: center;">10 (14%)</td>
+<td style="text-align: center;">10 (8.8%)</td>
+<td style="text-align: center;">13 (12%)</td>
+<td style="text-align: center;">7 (17%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">unavailable</td>
+<td style="text-align: center;">35 (10%)</td>
+<td style="text-align: center;">9 (12%)</td>
+<td style="text-align: center;">5 (4.4%)</td>
+<td style="text-align: center;">16 (14%)</td>
+<td style="text-align: center;">5 (12%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">58</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">rads_severity</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">mild</td>
+<td style="text-align: center;">166 (57%)</td>
+<td style="text-align: center;">39 (64%)</td>
+<td style="text-align: center;">65 (64%)</td>
+<td style="text-align: center;">43 (45%)</td>
+<td style="text-align: center;">19 (54%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">moderate</td>
+<td style="text-align: center;">86 (29%)</td>
+<td style="text-align: center;">17 (28%)</td>
+<td style="text-align: center;">23 (23%)</td>
+<td style="text-align: center;">33 (35%)</td>
+<td style="text-align: center;">13 (37%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">severe</td>
+<td style="text-align: center;">40 (14%)</td>
+<td style="text-align: center;">5 (8.2%)</td>
+<td style="text-align: center;">13 (13%)</td>
+<td style="text-align: center;">19 (20%)</td>
+<td style="text-align: center;">3 (8.6%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">108</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">36</td>
+<td style="text-align: center;">43</td>
+<td style="text-align: center;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">number_of_active_medications</span></td>
+<td style="text-align: center;">2.00 (2.00, 3.00)</td>
+<td style="text-align: center;">2.00 (2.00, 3.00)</td>
+<td style="text-align: center;">2.00 (2.00, 3.00)</td>
+<td style="text-align: center;">2.00 (1.00, 3.00)</td>
+<td style="text-align: center;">3.00 (2.00, 4.00)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">59</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">26</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_prednisone</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">67 (17%)</td>
+<td style="text-align: center;">8 (10%)</td>
+<td style="text-align: center;">13 (9.5%)</td>
+<td style="text-align: center;">32 (23%)</td>
+<td style="text-align: center;">14 (29%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">59 (15%)</td>
+<td style="text-align: center;">12 (16%)</td>
+<td style="text-align: center;">26 (19%)</td>
+<td style="text-align: center;">16 (12%)</td>
+<td style="text-align: center;">5 (10%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">274 (69%)</td>
+<td style="text-align: center;">57 (74%)</td>
+<td style="text-align: center;">98 (72%)</td>
+<td style="text-align: center;">90 (65%)</td>
+<td style="text-align: center;">29 (60%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_methotrexate</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">243 (61%)</td>
+<td style="text-align: center;">45 (58%)</td>
+<td style="text-align: center;">80 (58%)</td>
+<td style="text-align: center;">91 (66%)</td>
+<td style="text-align: center;">27 (56%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">59 (15%)</td>
+<td style="text-align: center;">12 (16%)</td>
+<td style="text-align: center;">26 (19%)</td>
+<td style="text-align: center;">16 (12%)</td>
+<td style="text-align: center;">5 (10%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">98 (25%)</td>
+<td style="text-align: center;">20 (26%)</td>
+<td style="text-align: center;">31 (23%)</td>
+<td style="text-align: center;">31 (22%)</td>
+<td style="text-align: center;">16 (33%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_azathioprine</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">199 (50%)</td>
+<td style="text-align: center;">34 (44%)</td>
+<td style="text-align: center;">75 (55%)</td>
+<td style="text-align: center;">64 (46%)</td>
+<td style="text-align: center;">26 (54%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">59 (15%)</td>
+<td style="text-align: center;">12 (16%)</td>
+<td style="text-align: center;">26 (19%)</td>
+<td style="text-align: center;">16 (12%)</td>
+<td style="text-align: center;">5 (10%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">142 (36%)</td>
+<td style="text-align: center;">31 (40%)</td>
+<td style="text-align: center;">36 (26%)</td>
+<td style="text-align: center;">58 (42%)</td>
+<td style="text-align: center;">17 (35%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_mycophenolate_mofetil</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">218 (55%)</td>
+<td style="text-align: center;">49 (64%)</td>
+<td style="text-align: center;">65 (47%)</td>
+<td style="text-align: center;">77 (56%)</td>
+<td style="text-align: center;">27 (56%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">59 (15%)</td>
+<td style="text-align: center;">12 (16%)</td>
+<td style="text-align: center;">26 (19%)</td>
+<td style="text-align: center;">16 (12%)</td>
+<td style="text-align: center;">5 (10%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">123 (31%)</td>
+<td style="text-align: center;">16 (21%)</td>
+<td style="text-align: center;">46 (34%)</td>
+<td style="text-align: center;">45 (33%)</td>
+<td style="text-align: center;">16 (33%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_rituximab</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">281 (70%)</td>
+<td style="text-align: center;">57 (74%)</td>
+<td style="text-align: center;">89 (65%)</td>
+<td style="text-align: center;">98 (71%)</td>
+<td style="text-align: center;">37 (77%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">59 (15%)</td>
+<td style="text-align: center;">12 (16%)</td>
+<td style="text-align: center;">26 (19%)</td>
+<td style="text-align: center;">16 (12%)</td>
+<td style="text-align: center;">5 (10%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">60 (15%)</td>
+<td style="text-align: center;">8 (10%)</td>
+<td style="text-align: center;">22 (16%)</td>
+<td style="text-align: center;">24 (17%)</td>
+<td style="text-align: center;">6 (13%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">clinical_myositis_diagnosis</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">amyopathic dermatomyositis</td>
+<td style="text-align: center;">10 (3.8%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">5 (5.9%)</td>
+<td style="text-align: center;">3 (3.7%)</td>
+<td style="text-align: center;">2 (5.7%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">dermatomyositis</td>
+<td style="text-align: center;">183 (69%)</td>
+<td style="text-align: center;">39 (61%)</td>
+<td style="text-align: center;">61 (72%)</td>
+<td style="text-align: center;">62 (76%)</td>
+<td style="text-align: center;">21 (60%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">inclusion body myositis</td>
+<td style="text-align: center;">2 (0.8%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">2 (2.4%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">polymyositis</td>
+<td style="text-align: center;">71 (27%)</td>
+<td style="text-align: center;">25 (39%)</td>
+<td style="text-align: center;">17 (20%)</td>
+<td style="text-align: center;">17 (21%)</td>
+<td style="text-align: center;">12 (34%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">134</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">56</td>
+<td style="text-align: center;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">proxweak</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">absent</td>
+<td style="text-align: center;">37 (13%)</td>
+<td style="text-align: center;">6 (8.8%)</td>
+<td style="text-align: center;">13 (16%)</td>
+<td style="text-align: center;">15 (17%)</td>
+<td style="text-align: center;">3 (8.3%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">present</td>
+<td style="text-align: center;">240 (87%)</td>
+<td style="text-align: center;">62 (91%)</td>
+<td style="text-align: center;">70 (84%)</td>
+<td style="text-align: center;">75 (83%)</td>
+<td style="text-align: center;">33 (92%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">123</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">54</td>
+<td style="text-align: center;">48</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">distalweak</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">absent</td>
+<td style="text-align: center;">169 (82%)</td>
+<td style="text-align: center;">36 (80%)</td>
+<td style="text-align: center;">53 (79%)</td>
+<td style="text-align: center;">53 (82%)</td>
+<td style="text-align: center;">27 (90%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">present</td>
+<td style="text-align: center;">38 (18%)</td>
+<td style="text-align: center;">9 (20%)</td>
+<td style="text-align: center;">14 (21%)</td>
+<td style="text-align: center;">12 (18%)</td>
+<td style="text-align: center;">3 (10%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">193</td>
+<td style="text-align: center;">32</td>
+<td style="text-align: center;">70</td>
+<td style="text-align: center;">73</td>
+<td style="text-align: center;">18</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<td style="text-align: left; padding: 0;"><sup>1</sup> Median (Q1, Q3); n (%)</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Characteristic</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">1<br>
+N = 91</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">2<br>
+N = 62</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">3<br>
+N = 65</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">4<br>
+N = 48</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">5<br>
+N = 83</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">6<br>
+N = 51</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">age_at_bleed</span></td>
+<td style="text-align: center;">51 (42, 55)</td>
+<td style="text-align: center;">50 (41, 54)</td>
+<td style="text-align: center;">51 (39, 58)</td>
+<td style="text-align: center;">49 (38, 55)</td>
+<td style="text-align: center;">52 (43, 60)</td>
+<td style="text-align: center;">51 (46, 54)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">gender</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">female</td>
+<td style="text-align: center;">63 (69%)</td>
+<td style="text-align: center;">41 (66%)</td>
+<td style="text-align: center;">56 (86%)</td>
+<td style="text-align: center;">40 (83%)</td>
+<td style="text-align: center;">57 (69%)</td>
+<td style="text-align: center;">35 (69%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">male</td>
+<td style="text-align: center;">28 (31%)</td>
+<td style="text-align: center;">21 (34%)</td>
+<td style="text-align: center;">9 (14%)</td>
+<td style="text-align: center;">8 (17%)</td>
+<td style="text-align: center;">26 (31%)</td>
+<td style="text-align: center;">16 (31%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">race</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">white</td>
+<td style="text-align: center;">50 (55%)</td>
+<td style="text-align: center;">39 (63%)</td>
+<td style="text-align: center;">42 (65%)</td>
+<td style="text-align: center;">17 (35%)</td>
+<td style="text-align: center;">55 (66%)</td>
+<td style="text-align: center;">28 (55%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">not_white</td>
+<td style="text-align: center;">41 (45%)</td>
+<td style="text-align: center;">23 (37%)</td>
+<td style="text-align: center;">23 (35%)</td>
+<td style="text-align: center;">31 (65%)</td>
+<td style="text-align: center;">28 (34%)</td>
+<td style="text-align: center;">23 (45%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">vital_status</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">alive</td>
+<td style="text-align: center;">79 (87%)</td>
+<td style="text-align: center;">55 (90%)</td>
+<td style="text-align: center;">51 (78%)</td>
+<td style="text-align: center;">38 (79%)</td>
+<td style="text-align: center;">72 (87%)</td>
+<td style="text-align: center;">46 (90%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">deceased</td>
+<td style="text-align: center;">12 (13%)</td>
+<td style="text-align: center;">6 (9.8%)</td>
+<td style="text-align: center;">14 (22%)</td>
+<td style="text-align: center;">10 (21%)</td>
+<td style="text-align: center;">11 (13%)</td>
+<td style="text-align: center;">5 (9.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">GMCSF</span></td>
+<td style="text-align: center;">1,426 (875, 2,147)</td>
+<td style="text-align: center;">1,270 (851, 1,956)</td>
+<td style="text-align: center;">1,029 (830, 1,341)</td>
+<td style="text-align: center;">3,706 (2,772, 4,555)</td>
+<td style="text-align: center;">1,677 (996, 2,309)</td>
+<td style="text-align: center;">25,669 (15,459, 58,786)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">RO52</span></td>
+<td style="text-align: center;">644,169 (414,635, 929,840)</td>
+<td style="text-align: center;">45,336 (27,519, 88,821)</td>
+<td style="text-align: center;">2,148,979 (1,739,004, 2,560,953)</td>
+<td style="text-align: center;">1,921,399 (1,485,672, 2,337,233)</td>
+<td style="text-align: center;">7,881 (5,630, 11,413)</td>
+<td style="text-align: center;">655,541 (246,029, 1,469,567)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">ild_present</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">ILD absent</td>
+<td style="text-align: center;">9 (9.9%)</td>
+<td style="text-align: center;">3 (4.8%)</td>
+<td style="text-align: center;">5 (7.8%)</td>
+<td style="text-align: center;">2 (4.2%)</td>
+<td style="text-align: center;">16 (19%)</td>
+<td style="text-align: center;">4 (7.8%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">ILD present</td>
+<td style="text-align: center;">79 (87%)</td>
+<td style="text-align: center;">58 (94%)</td>
+<td style="text-align: center;">57 (89%)</td>
+<td style="text-align: center;">46 (96%)</td>
+<td style="text-align: center;">67 (81%)</td>
+<td style="text-align: center;">45 (88%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">unavailable</td>
+<td style="text-align: center;">3 (3.3%)</td>
+<td style="text-align: center;">1 (1.6%)</td>
+<td style="text-align: center;">2 (3.1%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">2 (3.9%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">ild_type</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">fibrotic NSIP</td>
+<td style="text-align: center;">4 (5.2%)</td>
+<td style="text-align: center;">3 (5.4%)</td>
+<td style="text-align: center;">4 (7.1%)</td>
+<td style="text-align: center;">3 (7.1%)</td>
+<td style="text-align: center;">3 (4.5%)</td>
+<td style="text-align: center;">3 (6.7%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">GGO</td>
+<td style="text-align: center;">12 (16%)</td>
+<td style="text-align: center;">7 (13%)</td>
+<td style="text-align: center;">11 (20%)</td>
+<td style="text-align: center;">3 (7.1%)</td>
+<td style="text-align: center;">8 (12%)</td>
+<td style="text-align: center;">1 (2.2%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">nodules</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">1 (1.5%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">NSIP</td>
+<td style="text-align: center;">26 (34%)</td>
+<td style="text-align: center;">19 (34%)</td>
+<td style="text-align: center;">11 (20%)</td>
+<td style="text-align: center;">21 (50%)</td>
+<td style="text-align: center;">30 (45%)</td>
+<td style="text-align: center;">13 (29%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">NSIP-OP</td>
+<td style="text-align: center;">2 (2.6%)</td>
+<td style="text-align: center;">4 (7.1%)</td>
+<td style="text-align: center;">2 (3.6%)</td>
+<td style="text-align: center;">2 (4.8%)</td>
+<td style="text-align: center;">2 (3.0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">OP</td>
+<td style="text-align: center;">1 (1.3%)</td>
+<td style="text-align: center;">1 (1.8%)</td>
+<td style="text-align: center;">2 (3.6%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">2 (3.0%)</td>
+<td style="text-align: center;">2 (4.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">OTHER</td>
+<td style="text-align: center;">2 (2.6%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">1 (1.5%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">subpleural fibrosis</td>
+<td style="text-align: center;">11 (14%)</td>
+<td style="text-align: center;">11 (20%)</td>
+<td style="text-align: center;">6 (11%)</td>
+<td style="text-align: center;">6 (14%)</td>
+<td style="text-align: center;">13 (20%)</td>
+<td style="text-align: center;">14 (31%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">UIP</td>
+<td style="text-align: center;">8 (10%)</td>
+<td style="text-align: center;">7 (13%)</td>
+<td style="text-align: center;">9 (16%)</td>
+<td style="text-align: center;">5 (12%)</td>
+<td style="text-align: center;">4 (6.1%)</td>
+<td style="text-align: center;">7 (16%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">unavailable</td>
+<td style="text-align: center;">11 (14%)</td>
+<td style="text-align: center;">4 (7.1%)</td>
+<td style="text-align: center;">11 (20%)</td>
+<td style="text-align: center;">2 (4.8%)</td>
+<td style="text-align: center;">2 (3.0%)</td>
+<td style="text-align: center;">5 (11%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">rads_severity</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">mild</td>
+<td style="text-align: center;">37 (61%)</td>
+<td style="text-align: center;">33 (69%)</td>
+<td style="text-align: center;">28 (62%)</td>
+<td style="text-align: center;">10 (26%)</td>
+<td style="text-align: center;">38 (62%)</td>
+<td style="text-align: center;">20 (53%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">moderate</td>
+<td style="text-align: center;">17 (28%)</td>
+<td style="text-align: center;">9 (19%)</td>
+<td style="text-align: center;">13 (29%)</td>
+<td style="text-align: center;">18 (46%)</td>
+<td style="text-align: center;">14 (23%)</td>
+<td style="text-align: center;">15 (39%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">severe</td>
+<td style="text-align: center;">7 (11%)</td>
+<td style="text-align: center;">6 (13%)</td>
+<td style="text-align: center;">4 (8.9%)</td>
+<td style="text-align: center;">11 (28%)</td>
+<td style="text-align: center;">9 (15%)</td>
+<td style="text-align: center;">3 (7.9%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">13</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">number_of_active_medications</span></td>
+<td style="text-align: center;">2.00 (1.00, 3.00)</td>
+<td style="text-align: center;">2.00 (2.00, 3.00)</td>
+<td style="text-align: center;">2.00 (2.00, 3.00)</td>
+<td style="text-align: center;">2.00 (2.00, 4.00)</td>
+<td style="text-align: center;">2.00 (2.00, 3.00)</td>
+<td style="text-align: center;">3.00 (2.00, 4.00)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_prednisone</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">17 (19%)</td>
+<td style="text-align: center;">7 (11%)</td>
+<td style="text-align: center;">9 (14%)</td>
+<td style="text-align: center;">13 (27%)</td>
+<td style="text-align: center;">7 (8.4%)</td>
+<td style="text-align: center;">14 (27%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">15 (16%)</td>
+<td style="text-align: center;">5 (8.1%)</td>
+<td style="text-align: center;">7 (11%)</td>
+<td style="text-align: center;">6 (13%)</td>
+<td style="text-align: center;">21 (25%)</td>
+<td style="text-align: center;">5 (9.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">59 (65%)</td>
+<td style="text-align: center;">50 (81%)</td>
+<td style="text-align: center;">49 (75%)</td>
+<td style="text-align: center;">29 (60%)</td>
+<td style="text-align: center;">55 (66%)</td>
+<td style="text-align: center;">32 (63%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_methotrexate</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">54 (59%)</td>
+<td style="text-align: center;">46 (74%)</td>
+<td style="text-align: center;">40 (62%)</td>
+<td style="text-align: center;">34 (71%)</td>
+<td style="text-align: center;">40 (48%)</td>
+<td style="text-align: center;">29 (57%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">15 (16%)</td>
+<td style="text-align: center;">5 (8.1%)</td>
+<td style="text-align: center;">7 (11%)</td>
+<td style="text-align: center;">6 (13%)</td>
+<td style="text-align: center;">21 (25%)</td>
+<td style="text-align: center;">5 (9.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">22 (24%)</td>
+<td style="text-align: center;">11 (18%)</td>
+<td style="text-align: center;">18 (28%)</td>
+<td style="text-align: center;">8 (17%)</td>
+<td style="text-align: center;">22 (27%)</td>
+<td style="text-align: center;">17 (33%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_azathioprine</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">40 (44%)</td>
+<td style="text-align: center;">36 (58%)</td>
+<td style="text-align: center;">28 (43%)</td>
+<td style="text-align: center;">22 (46%)</td>
+<td style="text-align: center;">44 (53%)</td>
+<td style="text-align: center;">29 (57%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">15 (16%)</td>
+<td style="text-align: center;">5 (8.1%)</td>
+<td style="text-align: center;">7 (11%)</td>
+<td style="text-align: center;">6 (13%)</td>
+<td style="text-align: center;">21 (25%)</td>
+<td style="text-align: center;">5 (9.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">36 (40%)</td>
+<td style="text-align: center;">21 (34%)</td>
+<td style="text-align: center;">30 (46%)</td>
+<td style="text-align: center;">20 (42%)</td>
+<td style="text-align: center;">18 (22%)</td>
+<td style="text-align: center;">17 (33%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_mycophenolate_mofetil</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">55 (60%)</td>
+<td style="text-align: center;">33 (53%)</td>
+<td style="text-align: center;">45 (69%)</td>
+<td style="text-align: center;">22 (46%)</td>
+<td style="text-align: center;">34 (41%)</td>
+<td style="text-align: center;">29 (57%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">15 (16%)</td>
+<td style="text-align: center;">5 (8.1%)</td>
+<td style="text-align: center;">7 (11%)</td>
+<td style="text-align: center;">6 (13%)</td>
+<td style="text-align: center;">21 (25%)</td>
+<td style="text-align: center;">5 (9.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">21 (23%)</td>
+<td style="text-align: center;">24 (39%)</td>
+<td style="text-align: center;">13 (20%)</td>
+<td style="text-align: center;">20 (42%)</td>
+<td style="text-align: center;">28 (34%)</td>
+<td style="text-align: center;">17 (33%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_rituximab</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">67 (74%)</td>
+<td style="text-align: center;">47 (76%)</td>
+<td style="text-align: center;">49 (75%)</td>
+<td style="text-align: center;">29 (60%)</td>
+<td style="text-align: center;">49 (59%)</td>
+<td style="text-align: center;">40 (78%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">15 (16%)</td>
+<td style="text-align: center;">5 (8.1%)</td>
+<td style="text-align: center;">7 (11%)</td>
+<td style="text-align: center;">6 (13%)</td>
+<td style="text-align: center;">21 (25%)</td>
+<td style="text-align: center;">5 (9.8%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">9 (9.9%)</td>
+<td style="text-align: center;">10 (16%)</td>
+<td style="text-align: center;">9 (14%)</td>
+<td style="text-align: center;">13 (27%)</td>
+<td style="text-align: center;">13 (16%)</td>
+<td style="text-align: center;">6 (12%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">clinical_myositis_diagnosis</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">amyopathic dermatomyositis</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">6 (13%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">2 (4.4%)</td>
+<td style="text-align: center;">2 (5.4%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">dermatomyositis</td>
+<td style="text-align: center;">46 (75%)</td>
+<td style="text-align: center;">27 (59%)</td>
+<td style="text-align: center;">30 (61%)</td>
+<td style="text-align: center;">21 (75%)</td>
+<td style="text-align: center;">36 (80%)</td>
+<td style="text-align: center;">23 (62%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">inclusion body myositis</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">1 (2.2%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">1 (2.2%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">polymyositis</td>
+<td style="text-align: center;">15 (25%)</td>
+<td style="text-align: center;">12 (26%)</td>
+<td style="text-align: center;">19 (39%)</td>
+<td style="text-align: center;">7 (25%)</td>
+<td style="text-align: center;">6 (13%)</td>
+<td style="text-align: center;">12 (32%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">20</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">proxweak</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">absent</td>
+<td style="text-align: center;">5 (7.5%)</td>
+<td style="text-align: center;">9 (21%)</td>
+<td style="text-align: center;">7 (13%)</td>
+<td style="text-align: center;">6 (19%)</td>
+<td style="text-align: center;">7 (15%)</td>
+<td style="text-align: center;">3 (8.1%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">present</td>
+<td style="text-align: center;">62 (93%)</td>
+<td style="text-align: center;">34 (79%)</td>
+<td style="text-align: center;">46 (87%)</td>
+<td style="text-align: center;">25 (81%)</td>
+<td style="text-align: center;">39 (85%)</td>
+<td style="text-align: center;">34 (92%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">distalweak</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">absent</td>
+<td style="text-align: center;">37 (80%)</td>
+<td style="text-align: center;">31 (91%)</td>
+<td style="text-align: center;">30 (86%)</td>
+<td style="text-align: center;">16 (70%)</td>
+<td style="text-align: center;">27 (71%)</td>
+<td style="text-align: center;">28 (90%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">present</td>
+<td style="text-align: center;">9 (20%)</td>
+<td style="text-align: center;">3 (8.8%)</td>
+<td style="text-align: center;">5 (14%)</td>
+<td style="text-align: center;">7 (30%)</td>
+<td style="text-align: center;">11 (29%)</td>
+<td style="text-align: center;">3 (9.7%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">45</td>
+<td style="text-align: center;">20</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<td style="text-align: left; padding: 0;"><sup>1</sup> Median (Q1, Q3); n (%)</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>                             Value Std. Error       t value      p value
-gmcsf_statuspositive -4.956905e-01 0.47795552 -1.0371059746 0.2996864711
-age_at_bleed          2.283776e-05 0.02464979  0.0009264892 0.9992607687
-gendermale            3.749472e-01 0.46073598  0.8138006217 0.4157591789
-racenot_white         1.651103e+00 0.49739566  3.3194971477 0.0009017973
-mild|moderate         5.043850e-01 1.52035960  0.3317537539 0.7400752073
-moderate|severe       3.036275e+00 1.55559552  1.9518408816 0.0509570989</code></pre>
+<pre><code>Call:
+coxph(formula = Surv(survival_time, event) ~ log2(RO52) + log2(GMCSF) + 
+    age_at_bleed + gender + race, data = dt_wide.km)
+
+  n= 250, number of events= 47 
+
+                  coef exp(coef) se(coef)      z Pr(&gt;|z|)  
+log2(RO52)     0.13052   1.13942  0.05687  2.295   0.0217 *
+log2(GMCSF)   -0.25239   0.77694  0.12273 -2.056   0.0397 *
+age_at_bleed   0.01591   1.01604  0.01335  1.192   0.2333  
+gendermale    -0.62830   0.53350  0.40092 -1.567   0.1171  
+racenot_white  0.03564   1.03629  0.31220  0.114   0.9091  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+              exp(coef) exp(-coef) lower .95 upper .95
+log2(RO52)       1.1394     0.8776    1.0192    1.2738
+log2(GMCSF)      0.7769     1.2871    0.6108    0.9882
+age_at_bleed     1.0160     0.9842    0.9898    1.0430
+gendermale       0.5335     1.8744    0.2431    1.1706
+racenot_white    1.0363     0.9650    0.5620    1.9109
+
+Concordance= 0.62  (se = 0.044 )
+Likelihood ratio test= 18.33  on 5 df,   p=0.003
+Wald test            = 16.32  on 5 df,   p=0.006
+Score (logrank) test = 17.32  on 5 df,   p=0.004</code></pre>
 </div>
 </div>
-<p><strong>Conclusion:</strong> In an ordinal logistic regression for radiologic ILD severity adjusted for gender, race, and age_at_bleed, GMCSF status does NOT significantly predict radiologic severity of ILD on CT chest (p = 0.2996865).</p>
+<div style="page-break-after: always;"></div>
 </section>
+<section id="pca-clustering-using-gmcsf-ro52-jo1-vs-nonjo1-status" class="level1">
+<h1>PCA Clustering Using GMCSF + RO52 + JO1-vs-nonJO1 Status</h1>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-28-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-28-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Call:
+coxph(formula = Surv(survival_time, event) ~ cluster + age_at_bleed + 
+    gender, data = dt_wide.with_kmedoids)
+
+  n= 250, number of events= 47 
+
+                 coef exp(coef) se(coef)      z Pr(&gt;|z|)  
+cluster2     -0.81287   0.44358  0.61531 -1.321   0.1865  
+cluster3     -1.26554   0.28209  0.49626 -2.550   0.0108 *
+cluster4     -0.33427   0.71586  0.35193 -0.950   0.3422  
+cluster5     -1.34013   0.26181  1.03685 -1.293   0.1962  
+age_at_bleed  0.01545   1.01557  0.01316  1.175   0.2401  
+gendermale   -0.74655   0.47400  0.39785 -1.876   0.0606 .
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+             exp(coef) exp(-coef) lower .95 upper .95
+cluster2        0.4436     2.2544   0.13281    1.4816
+cluster3        0.2821     3.5450   0.10665    0.7461
+cluster4        0.7159     1.3969   0.35914    1.4269
+cluster5        0.2618     3.8195   0.03431    1.9978
+age_at_bleed    1.0156     0.9847   0.98972    1.0421
+gendermale      0.4740     2.1097   0.21734    1.0338
+
+Concordance= 0.615  (se = 0.043 )
+Likelihood ratio test= 17.26  on 6 df,   p=0.008
+Wald test            = 14.71  on 6 df,   p=0.02
+Score (logrank) test = 16.15  on 6 df,   p=0.01</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             chisq df     p
+cluster       8.33  4 0.080
+age_at_bleed  4.27  1 0.039
+gender        3.48  1 0.062
+GLOBAL       14.28  6 0.027</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-28-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-28-4.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-28-5.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This plot (and table printed above) suggests that the hazard from age is not proportional, meaning the model assumptions are violated.</p>
+<p>We can adjust for this by stratifying based on age.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>Call:
+coxph(formula = Surv(survival_time, event) ~ cluster + gender + 
+    strata(age_quartile), data = dt_wide.with_kmedoids[survival_time &lt;= 
+    365.25 * 10])
+
+  n= 250, number of events= 47 
+
+              coef exp(coef) se(coef)      z Pr(&gt;|z|)  
+cluster1    1.2092    3.3507   0.5070  2.385   0.0171 *
+cluster2    0.3072    1.3596   0.7558  0.406   0.6844  
+cluster4    0.9551    2.5989   0.5425  1.761   0.0783 .
+cluster5    0.1417    1.1522   1.1259  0.126   0.8999  
+gendermale -0.7136    0.4899   0.4034 -1.769   0.0769 .
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+           exp(coef) exp(-coef) lower .95 upper .95
+cluster1      3.3507     0.2984    1.2405     9.051
+cluster2      1.3596     0.7355    0.3091     5.980
+cluster4      2.5989     0.3848    0.8975     7.526
+cluster5      1.1522     0.8679    0.1268    10.468
+gendermale    0.4899     2.0413    0.2222     1.080
+
+Concordance= 0.603  (se = 0.044 )
+Likelihood ratio test= 15.01  on 5 df,   p=0.01
+Wald test            = 12.4  on 5 df,   p=0.03
+Score (logrank) test = 13.77  on 5 df,   p=0.02</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="explore_gmcsf_files/figure-html/unnamed-chunk-29-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<table class="table caption-top table-sm table-striped small">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Characteristic</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">3<br>
+N = 55</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">1<br>
+N = 83</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">2<br>
+N = 33</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">4<br>
+N = 71</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">5<br>
+N = 8</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">age_at_bleed</span></td>
+<td style="text-align: center;">53 (46, 60)</td>
+<td style="text-align: center;">52 (42, 60)</td>
+<td style="text-align: center;">54 (40, 60)</td>
+<td style="text-align: center;">50 (41, 54)</td>
+<td style="text-align: center;">47 (38, 53)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">gender</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">female</td>
+<td style="text-align: center;">35 (64%)</td>
+<td style="text-align: center;">65 (78%)</td>
+<td style="text-align: center;">26 (79%)</td>
+<td style="text-align: center;">51 (72%)</td>
+<td style="text-align: center;">7 (88%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">male</td>
+<td style="text-align: center;">20 (36%)</td>
+<td style="text-align: center;">18 (22%)</td>
+<td style="text-align: center;">7 (21%)</td>
+<td style="text-align: center;">20 (28%)</td>
+<td style="text-align: center;">1 (13%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">race</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">white</td>
+<td style="text-align: center;">30 (55%)</td>
+<td style="text-align: center;">56 (67%)</td>
+<td style="text-align: center;">28 (85%)</td>
+<td style="text-align: center;">22 (31%)</td>
+<td style="text-align: center;">5 (63%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">not_white</td>
+<td style="text-align: center;">25 (45%)</td>
+<td style="text-align: center;">27 (33%)</td>
+<td style="text-align: center;">5 (15%)</td>
+<td style="text-align: center;">49 (69%)</td>
+<td style="text-align: center;">3 (38%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">vital_status</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">alive</td>
+<td style="text-align: center;">50 (91%)</td>
+<td style="text-align: center;">58 (70%)</td>
+<td style="text-align: center;">30 (91%)</td>
+<td style="text-align: center;">58 (82%)</td>
+<td style="text-align: center;">7 (88%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">deceased</td>
+<td style="text-align: center;">5 (9.1%)</td>
+<td style="text-align: center;">25 (30%)</td>
+<td style="text-align: center;">3 (9.1%)</td>
+<td style="text-align: center;">13 (18%)</td>
+<td style="text-align: center;">1 (13%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">GMCSF</span></td>
+<td style="text-align: center;">2,009 (1,539, 3,629)</td>
+<td style="text-align: center;">1,073 (851, 1,717)</td>
+<td style="text-align: center;">964 (875, 1,243)</td>
+<td style="text-align: center;">3,690 (2,369, 5,516)</td>
+<td style="text-align: center;">21,077 (16,510, 34,668)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">RO52</span></td>
+<td style="text-align: center;">12,583 (7,015, 35,620)</td>
+<td style="text-align: center;">1,384,480 (818,598, 2,203,875)</td>
+<td style="text-align: center;">12,531 (6,440, 48,580)</td>
+<td style="text-align: center;">1,324,792 (628,398, 2,071,725)</td>
+<td style="text-align: center;">976,622 (535,165, 1,257,039)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">ild_present</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">ILD absent</td>
+<td style="text-align: center;">5 (9.1%)</td>
+<td style="text-align: center;">5 (6.0%)</td>
+<td style="text-align: center;">3 (9.1%)</td>
+<td style="text-align: center;">5 (7.0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">ILD present</td>
+<td style="text-align: center;">49 (89%)</td>
+<td style="text-align: center;">73 (88%)</td>
+<td style="text-align: center;">30 (91%)</td>
+<td style="text-align: center;">65 (92%)</td>
+<td style="text-align: center;">7 (88%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">unavailable</td>
+<td style="text-align: center;">1 (1.8%)</td>
+<td style="text-align: center;">5 (6.0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">1 (1.4%)</td>
+<td style="text-align: center;">1 (13%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">ild_type</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">fibrotic NSIP</td>
+<td style="text-align: center;">4 (8.0%)</td>
+<td style="text-align: center;">7 (9.3%)</td>
+<td style="text-align: center;">1 (3.7%)</td>
+<td style="text-align: center;">1 (1.8%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">GGO</td>
+<td style="text-align: center;">7 (14%)</td>
+<td style="text-align: center;">19 (25%)</td>
+<td style="text-align: center;">4 (15%)</td>
+<td style="text-align: center;">3 (5.3%)</td>
+<td style="text-align: center;">1 (13%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">nodules</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">NSIP</td>
+<td style="text-align: center;">17 (34%)</td>
+<td style="text-align: center;">16 (21%)</td>
+<td style="text-align: center;">13 (48%)</td>
+<td style="text-align: center;">31 (54%)</td>
+<td style="text-align: center;">2 (25%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">NSIP-OP</td>
+<td style="text-align: center;">4 (8.0%)</td>
+<td style="text-align: center;">2 (2.7%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">3 (5.3%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">OP</td>
+<td style="text-align: center;">2 (4.0%)</td>
+<td style="text-align: center;">1 (1.3%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">2 (3.5%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">OTHER</td>
+<td style="text-align: center;">1 (2.0%)</td>
+<td style="text-align: center;">1 (1.3%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">subpleural fibrosis</td>
+<td style="text-align: center;">9 (18%)</td>
+<td style="text-align: center;">13 (17%)</td>
+<td style="text-align: center;">4 (15%)</td>
+<td style="text-align: center;">9 (16%)</td>
+<td style="text-align: center;">2 (25%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">UIP</td>
+<td style="text-align: center;">3 (6.0%)</td>
+<td style="text-align: center;">3 (4.0%)</td>
+<td style="text-align: center;">3 (11%)</td>
+<td style="text-align: center;">4 (7.0%)</td>
+<td style="text-align: center;">1 (13%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">unavailable</td>
+<td style="text-align: center;">3 (6.0%)</td>
+<td style="text-align: center;">13 (17%)</td>
+<td style="text-align: center;">2 (7.4%)</td>
+<td style="text-align: center;">4 (7.0%)</td>
+<td style="text-align: center;">2 (25%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">rads_severity</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">mild</td>
+<td style="text-align: center;">23 (56%)</td>
+<td style="text-align: center;">36 (64%)</td>
+<td style="text-align: center;">18 (72%)</td>
+<td style="text-align: center;">18 (35%)</td>
+<td style="text-align: center;">3 (60%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">moderate</td>
+<td style="text-align: center;">12 (29%)</td>
+<td style="text-align: center;">15 (27%)</td>
+<td style="text-align: center;">7 (28%)</td>
+<td style="text-align: center;">20 (38%)</td>
+<td style="text-align: center;">2 (40%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">severe</td>
+<td style="text-align: center;">6 (15%)</td>
+<td style="text-align: center;">5 (8.9%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">14 (27%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">27</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">number_of_active_medications</span></td>
+<td style="text-align: center;">3.00 (2.00, 4.00)</td>
+<td style="text-align: center;">2.00 (2.00, 3.00)</td>
+<td style="text-align: center;">2.00 (1.00, 4.00)</td>
+<td style="text-align: center;">3.00 (1.00, 4.00)</td>
+<td style="text-align: center;">1.50 (1.00, 2.50)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_prednisone</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">4 (7.3%)</td>
+<td style="text-align: center;">16 (19%)</td>
+<td style="text-align: center;">5 (15%)</td>
+<td style="text-align: center;">19 (27%)</td>
+<td style="text-align: center;">2 (25%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">10 (18%)</td>
+<td style="text-align: center;">10 (12%)</td>
+<td style="text-align: center;">8 (24%)</td>
+<td style="text-align: center;">10 (14%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">41 (75%)</td>
+<td style="text-align: center;">57 (69%)</td>
+<td style="text-align: center;">20 (61%)</td>
+<td style="text-align: center;">42 (59%)</td>
+<td style="text-align: center;">6 (75%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_methotrexate</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">34 (62%)</td>
+<td style="text-align: center;">50 (60%)</td>
+<td style="text-align: center;">18 (55%)</td>
+<td style="text-align: center;">47 (66%)</td>
+<td style="text-align: center;">6 (75%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">10 (18%)</td>
+<td style="text-align: center;">10 (12%)</td>
+<td style="text-align: center;">8 (24%)</td>
+<td style="text-align: center;">10 (14%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">11 (20%)</td>
+<td style="text-align: center;">23 (28%)</td>
+<td style="text-align: center;">7 (21%)</td>
+<td style="text-align: center;">14 (20%)</td>
+<td style="text-align: center;">2 (25%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_azathioprine</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">35 (64%)</td>
+<td style="text-align: center;">37 (45%)</td>
+<td style="text-align: center;">15 (45%)</td>
+<td style="text-align: center;">33 (46%)</td>
+<td style="text-align: center;">6 (75%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">10 (18%)</td>
+<td style="text-align: center;">10 (12%)</td>
+<td style="text-align: center;">8 (24%)</td>
+<td style="text-align: center;">10 (14%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">10 (18%)</td>
+<td style="text-align: center;">36 (43%)</td>
+<td style="text-align: center;">10 (30%)</td>
+<td style="text-align: center;">28 (39%)</td>
+<td style="text-align: center;">2 (25%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_mycophenolate_mofetil</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">20 (36%)</td>
+<td style="text-align: center;">52 (63%)</td>
+<td style="text-align: center;">15 (45%)</td>
+<td style="text-align: center;">31 (44%)</td>
+<td style="text-align: center;">7 (88%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">10 (18%)</td>
+<td style="text-align: center;">10 (12%)</td>
+<td style="text-align: center;">8 (24%)</td>
+<td style="text-align: center;">10 (14%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">25 (45%)</td>
+<td style="text-align: center;">21 (25%)</td>
+<td style="text-align: center;">10 (30%)</td>
+<td style="text-align: center;">30 (42%)</td>
+<td style="text-align: center;">1 (13%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">on_rituximab</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">false</td>
+<td style="text-align: center;">30 (55%)</td>
+<td style="text-align: center;">62 (75%)</td>
+<td style="text-align: center;">19 (58%)</td>
+<td style="text-align: center;">43 (61%)</td>
+<td style="text-align: center;">8 (100%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">no records available</td>
+<td style="text-align: center;">10 (18%)</td>
+<td style="text-align: center;">10 (12%)</td>
+<td style="text-align: center;">8 (24%)</td>
+<td style="text-align: center;">10 (14%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">true</td>
+<td style="text-align: center;">15 (27%)</td>
+<td style="text-align: center;">11 (13%)</td>
+<td style="text-align: center;">6 (18%)</td>
+<td style="text-align: center;">18 (25%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">clinical_myositis_diagnosis</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">amyopathic dermatomyositis</td>
+<td style="text-align: center;">5 (19%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">dermatomyositis</td>
+<td style="text-align: center;">17 (63%)</td>
+<td style="text-align: center;">32 (54%)</td>
+<td style="text-align: center;">6 (55%)</td>
+<td style="text-align: center;">18 (78%)</td>
+<td style="text-align: center;">3 (43%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">inclusion body myositis</td>
+<td style="text-align: center;">2 (7.4%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">polymyositis</td>
+<td style="text-align: center;">3 (11%)</td>
+<td style="text-align: center;">27 (46%)</td>
+<td style="text-align: center;">5 (45%)</td>
+<td style="text-align: center;">5 (22%)</td>
+<td style="text-align: center;">4 (57%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">28</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">48</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">proxweak</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">absent</td>
+<td style="text-align: center;">8 (38%)</td>
+<td style="text-align: center;">3 (4.8%)</td>
+<td style="text-align: center;">0 (0%)</td>
+<td style="text-align: center;">9 (31%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">present</td>
+<td style="text-align: center;">13 (62%)</td>
+<td style="text-align: center;">59 (95%)</td>
+<td style="text-align: center;">12 (100%)</td>
+<td style="text-align: center;">20 (69%)</td>
+<td style="text-align: center;">7 (100%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">34</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span style=" font-weight: bold;    ">distalweak</span></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">absent</td>
+<td style="text-align: center;">12 (71%)</td>
+<td style="text-align: center;">30 (73%)</td>
+<td style="text-align: center;">10 (91%)</td>
+<td style="text-align: center;">14 (74%)</td>
+<td style="text-align: center;">5 (100%)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">present</td>
+<td style="text-align: center;">5 (29%)</td>
+<td style="text-align: center;">11 (27%)</td>
+<td style="text-align: center;">1 (9.1%)</td>
+<td style="text-align: center;">5 (26%)</td>
+<td style="text-align: center;">0 (0%)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; padding-left: 2em;" data-indentlevel="1">Unknown</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">52</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<td style="text-align: left; padding: 0;"><sup>1</sup> Median (Q1, Q3); n (%)</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+</div>
+<p>The above is based on limiting follow-up time to 10 years following the bleed_date.</p>
+<p>It seems there is a group of both JO1 and non-JO1 patients (groups 1 and 4, respectively), with high RO52 and low GMCSF, who have an increased hazard (for group 1: HR 3.3507099 [95% CI 1.2404952, 9.050625]) relative to patients with low RO52, regardless of their GMCSF levels.</p>
 </section>
 
 </main>
